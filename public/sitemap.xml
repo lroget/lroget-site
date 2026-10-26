@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url><loc>https://lroget.com/</loc><xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/"/></url>
 <url><loc>https://lroget.com/en/</loc><xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/"/></url>
+<url><loc>https://lroget.com/dipnoo/</loc></url>
+<url><loc>https://lroget.com/novedades/</loc><xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/"/><xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/"/></url>
+<url><loc>https://lroget.com/en/news/</loc><xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/"/><xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/"/></url>
 <url><loc>https://lroget.com/proyectos/argentinat/</loc><xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/proyectos/argentinat/"/><xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/projects/argentinat/"/></url>
 <url><loc>https://lroget.com/en/projects/argentinat/</loc><xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/proyectos/argentinat/"/><xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/projects/argentinat/"/></url>
 <url><loc>https://lroget.com/proyectos/coa-carancho/</loc><xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/proyectos/coa-carancho/"/><xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/projects/coa-carancho/"/></url>

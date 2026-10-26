@@ -187,7 +187,13 @@ dialog button{position:fixed;top:14px;right:18px;background:none;border:1px soli
 .prose.alt{background:var(--bone-2)}
 .prose.alt .counters{margin:1rem 0 0}
 .prose .trips ul{margin-top:1rem}
+.novedades .go{margin:1.4rem 0 0;font-family:var(--display);font-weight:700}
+.novedades .go a{text-decoration-color:var(--ochre);text-decoration-thickness:2px;text-underline-offset:5px}
+.prose.trips li .row{padding:18px 0}
 @media (max-width:820px){.cards{grid-template-columns:1fr}}
+.novedades li .row,.prose.trips li .row{grid-template-columns:9.5rem 1fr 1.4fr}
+.prose.trips li .row.two{grid-template-columns:1fr 1.7fr}
+@media (max-width:820px){.novedades li .row,.prose.trips li .row,.prose.trips li .row.two{grid-template-columns:1fr;gap:4px}.novedades .what,.prose.trips .what{grid-column:1}}
 </style>
 </head>
 <body>
@@ -199,6 +205,7 @@ dialog button{position:fixed;top:14px;right:18px;background:none;border:1px soli
     <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#proyectos">Projects</a>
+      <a href="/en/news/">News</a>
       <a href="#registros">Field plates</a>
       <a href="#viajes">Expeditions</a>
       <a href="#contacto">Contact</a>
@@ -289,12 +296,27 @@ dialog button{position:fixed;top:14px;right:18px;background:none;border:1px soli
       <li class="card">
         <h3>Dipnoo</h3>
         <p>Socio-environmental education services, in person in the Buenos Aires metropolitan area and online.</p>
-        <p class="soon">Coming soon.</p>
+        <p class="go"><a href="/dipnoo/">See Dipnoo (in Spanish)</a></p>
       </li>
     </ul>
   </div>
 </section>
 
+<section class="trips novedades" id="novedades" aria-labelledby="h-news">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-news">News</h2>
+      <p>Upcoming activities and the latest talks and workshops.</p>
+    </div>
+    <ul>
+<li><div class="row"><span class="yr">29 Oct 2026, 5 pm</span><span class="name">Urban Biodiversity Workshop</span><span class="what">Predio Tren de la Costa, Lasalle 600, San Isidro. In person and free. Organized by UNSO Sostenible, Universidad Nacional Raúl Scalabrini Ortiz. Topics: landscape evolution, flora, fauna and fungi.</span></div></li>
+<li><div class="row"><span class="yr">Mar 2024</span><span class="name">Earth Hour</span><span class="what">Presenter at "Connecting with Earth: One Planet, Many Voices", a WWF staff event ahead of the campaign. Also a citizen science session in a global education webinar (22 March) and a nature interpretation walk in Vicente López (23 March).</span></div></li>
+<li><div class="row"><span class="yr">23 Apr 2023</span><span class="name">VII National Congress on Biodiversity Conservation</span><span class="what">Puerto Iguazú, Misiones. Speaker: "Mapeando la biodiversidad de forma colaborativa" (mapping biodiversity collaboratively). <a href="https://congreso-biodiversidad.com/" rel="noopener">Congress website</a>.</span></div></li>
+<li><div class="row"><span class="yr">5 Nov 2022</span><span class="name">6th Ave Encuentro</span><span class="what">Pueblo General Belgrano, Entre Ríos. Talk: "Ciencia ciudadana: pasión, ciencia y educación" (citizen science: passion, science and education).</span></div></li>
+</ul>
+    <p class="go"><a href="/en/news/">See all news</a></p>
+  </div>
+</section>
 <section class="trips trayectoria" id="trayectoria" aria-labelledby="h-tray">
   <div class="wrap">
     <div class="head">
