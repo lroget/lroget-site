@@ -394,3 +394,25 @@ main h2::after{content:"";display:block;width:1.1em;height:.055em;min-height:4px
   .plate:nth-child(n):last-child figcaption{padding:14px var(--gutter) 0}
   .hero::before{background:radial-gradient(90% 40% at 10% 100%,rgba(255,138,31,.3),transparent 70%),radial-gradient(60% 30% at 0% 55%,rgba(255,74,43,.2),transparent 70%),radial-gradient(60% 30% at 100% 85%,rgba(255,79,147,.16),transparent 70%)}
 }
+
+/* ---------- novedades: destacados y línea de tiempo ---------- */
+.hlg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(20px,3vw,36px);margin-top:clamp(20px,3vw,36px)}
+.hlc{padding:20px 0 0;border-top:3px solid var(--h,var(--accent))}
+.hlc:nth-child(4n+1){--h:var(--accent-text)}
+.hlc:nth-child(4n+2){--h:var(--amber)}
+.hlc:nth-child(4n+3){--h:var(--ember)}
+.hlc:nth-child(4n+4){--h:var(--rose)}
+.hlc .hy{margin:0 0 .4rem;font-family:var(--ui);font-stretch:80%;font-weight:700;font-size:1.05rem;color:var(--h)}
+.hlc h3{font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.04;letter-spacing:-.015em;margin-bottom:.6rem}
+.hlc p{font-size:1.1rem;line-height:1.5;color:var(--fg-soft);max-width:none}
+.hlc .hlk{margin:.8rem 0 0;font-family:var(--ui);font-stretch:85%;font-weight:700}
+.hlc .hlk a{text-decoration-color:var(--h);text-decoration-thickness:2px;text-underline-offset:5px;color:var(--fg)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:1.2rem 0 clamp(28px,4vw,48px)}
+.chip{padding:9px 16px;font-family:var(--ui);font-stretch:85%;font-weight:700;font-size:1rem;line-height:1;color:var(--fg);background:none;border:1.5px solid var(--line);border-radius:0;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#0b0a08}
+.yg[hidden],.tline li[hidden]{display:none}
+.yh{font-size:clamp(2.4rem,5vw,4.2rem);margin:clamp(28px,4vw,52px) 0 .3em;color:var(--accent-text)}
+.yg:first-of-type .yh{margin-top:0}
+.tag{display:block;margin-top:.35rem;font-family:var(--ui);font-stretch:85%;font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-soft)}
+.tline .yr{white-space:normal}
