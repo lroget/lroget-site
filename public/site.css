@@ -10,6 +10,11 @@
   --on-night:#ece6d6;
   --on-night-soft:#a4a99f;
   --lamp:#ff8a1f;
+  /* paleta de campo: hoja, laguna, coral, sol (claros sobre noche; versiones oscuras en tema claro) */
+  --leaf:#7ed957;
+  --lagoon:#2ec4c0;
+  --coral:#ff5a76;
+  --sun:#ffc531;
 
   --bg:#060b0e;
   --bg-2:#0c141a;
@@ -36,6 +41,10 @@ html[data-theme="light"]{
   --line:rgba(16,23,26,.22);
   --accent:#d65a00;
   --accent-text:#a43d00;
+  --leaf:#2b7f2a;
+  --lagoon:#0b7480;
+  --coral:#bd2247;
+  --sun:#8a5f00;
   color-scheme:light;
 }
 
@@ -208,6 +217,85 @@ footer{margin-top:clamp(56px,9vw,120px);padding-top:20px;border-top:1px solid rg
 .counters dd{margin:0 0 .4rem;font-family:var(--display);font-size:clamp(2.4rem,4.4vw,3.6rem);line-height:1;letter-spacing:-.03em;white-space:nowrap}
 .counters .src{grid-column:1/-1;display:block;border:0;padding:0;font-family:var(--body);font-size:.95rem;color:var(--fg-soft)}
 
+/* ---------- color: la paleta del campo, sin barroquismo ---------- */
+.hero,.plates,.field,.contact,.phead,.bar{--leaf:#7ed957;--lagoon:#2ec4c0;--coral:#ff5a76;--sun:#ffc531}
+.bar{border-bottom:0}
+.bar::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,#7ed957 0,#2ec4c0 25%,#ffc531 50%,#ff8a1f 75%,#ff5a76 100%);opacity:.9}
+.hero::before{background:
+    linear-gradient(to top,var(--night) 0,rgba(4,8,11,.72) 16%,rgba(4,8,11,0) 44%),
+    radial-gradient(70% 55% at 10% 100%,rgba(255,138,31,.2),transparent 70%),
+    radial-gradient(42% 46% at 4% 26%,rgba(46,196,192,.2),transparent 70%),
+    radial-gradient(40% 40% at 46% 100%,rgba(126,217,87,.16),transparent 70%),
+    radial-gradient(30% 34% at 58% 0%,rgba(255,90,118,.1),transparent 70%)}
+.hero .facts::before{content:"";display:block;width:3.4rem;height:3px;margin-bottom:.8rem;background:linear-gradient(90deg,var(--leaf),var(--lagoon),var(--sun),var(--lamp),var(--coral))}
+
+.cards .card:nth-child(4n+1){--h:var(--leaf)}
+.cards .card:nth-child(4n+2){--h:var(--accent-text)}
+.cards .card:nth-child(4n+3){--h:var(--lagoon)}
+.cards .card:nth-child(4n+4){--h:var(--coral)}
+.card{border-top:2px solid var(--h,var(--line))}
+.cards{border-bottom-color:var(--line)}
+.card:hover h3{color:var(--h,var(--accent-text))}
+.card .go a{color:var(--h,inherit)}
+.card .go a::after,.card:hover .go a::after{background:var(--h,var(--accent))}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,color-mix(in srgb,var(--h,var(--accent)) 11%,transparent),transparent 55%);opacity:0;transition:opacity .4s}
+.card:hover::before{opacity:1}
+.projects{isolation:isolate}
+
+.trips li:nth-child(5n+1){--h:var(--accent-text)}
+.trips li:nth-child(5n+2){--h:var(--leaf)}
+.trips li:nth-child(5n+3){--h:var(--lagoon)}
+.trips li:nth-child(5n+4){--h:var(--coral)}
+.trips li:nth-child(5n+5){--h:var(--sun)}
+.trips .yr{color:var(--h,var(--accent-text))}
+.trips li>a,.trips li .row{border-bottom-color:color-mix(in srgb,var(--h,var(--accent)) 38%,transparent)}
+.trips li>a:hover{background:linear-gradient(90deg,color-mix(in srgb,var(--h,var(--accent)) 14%,transparent),transparent 72%)}
+.trips .what a,.trips .name a{text-decoration-color:var(--h,var(--accent))}
+.novedades{background:linear-gradient(180deg,color-mix(in srgb,var(--leaf) 9%,var(--bg)),var(--bg) 70%)}
+.trayectoria{background:linear-gradient(180deg,color-mix(in srgb,var(--lagoon) 9%,var(--bg)),var(--bg) 70%)}
+.trips#viajes{background:linear-gradient(180deg,color-mix(in srgb,var(--coral) 8%,var(--bg-2)),var(--bg-2) 70%)}
+.projects{background:linear-gradient(180deg,color-mix(in srgb,var(--sun) 8%,var(--bg-2)),var(--bg-2) 60%)}
+main h2::after{content:"";display:block;width:1.1em;height:.055em;min-height:4px;margin-top:.22em;background:linear-gradient(90deg,var(--leaf),var(--lagoon),var(--sun),var(--accent),var(--coral))}
+.contact h2::after,.phead h1::after{display:none}
+.prose h2::after{width:.9em}
+
+.plates{background:
+    radial-gradient(46% 12% at 100% 12%,rgba(46,196,192,.14),transparent 70%),
+    radial-gradient(40% 12% at 0% 40%,rgba(126,217,87,.12),transparent 70%),
+    radial-gradient(46% 12% at 100% 66%,rgba(255,90,118,.11),transparent 70%),
+    radial-gradient(40% 12% at 0% 92%,rgba(255,197,49,.1),transparent 70%),
+    var(--night)}
+.plate:nth-child(4n+1){--h:var(--lamp)}
+.plate:nth-child(4n+2){--h:var(--leaf)}
+.plate:nth-child(4n+3){--h:var(--lagoon)}
+.plate:nth-child(4n+4){--h:var(--coral)}
+.plate .sci{border-bottom-color:var(--h,var(--lamp))}
+.plate:nth-child(3n+2):last-child{grid-column:1/-1;padding:0}
+.plate:nth-child(3n+2):last-child img{aspect-ratio:16/9;max-height:94svh}
+.plate:nth-child(3n+2):last-child figcaption{padding-left:var(--gutter);padding-right:var(--gutter)}
+.plates .more a,.field a{text-decoration-color:var(--leaf)}
+.strip{scrollbar-color:var(--lagoon) transparent}
+
+.contact::before{background:
+    radial-gradient(60% 70% at 85% 105%,rgba(255,138,31,.22),transparent 70%),
+    radial-gradient(45% 55% at 10% 100%,rgba(46,196,192,.18),transparent 70%),
+    radial-gradient(35% 45% at 55% 110%,rgba(126,217,87,.14),transparent 70%),
+    radial-gradient(30% 40% at 100% 0%,rgba(255,90,118,.1),transparent 70%)}
+.contact .links a:nth-child(1){text-decoration-color:var(--lagoon)}
+.contact .links a:nth-child(2){text-decoration-color:var(--leaf)}
+.phead::before{background:
+    radial-gradient(70% 90% at 88% 0%,rgba(255,138,31,.22),transparent 62%),
+    radial-gradient(60% 80% at 0% 100%,rgba(46,196,192,.2),transparent 60%),
+    radial-gradient(40% 60% at 50% 110%,rgba(126,217,87,.14),transparent 70%),
+    radial-gradient(30% 50% at 100% 100%,rgba(255,90,118,.12),transparent 70%)}
+
+.counters div:nth-child(4n+1){--h:var(--leaf)}
+.counters div:nth-child(4n+2){--h:var(--lagoon)}
+.counters div:nth-child(4n+3){--h:var(--sun)}
+.counters div:nth-child(4n+4){--h:var(--coral)}
+.counters div{border-top-color:var(--h,var(--accent))}
+.counters dd{color:var(--h,inherit)}
+
 /* ---------- movimiento: mínimo, solo CSS ---------- */
 @media (prefers-reduced-motion:no-preference){
   @keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
@@ -215,6 +303,7 @@ footer{margin-top:clamp(56px,9vw,120px);padding-top:20px;border-top:1px solid rg
   @keyframes fade{from{opacity:0}to{opacity:1}}
   @keyframes unveil{from{opacity:0;transform:scale(1.16);clip-path:inset(9% 7% 9% 7%)}to{opacity:1;transform:none;clip-path:inset(0)}}
   @keyframes progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
 
   .hero img{animation:lamp 2.8s cubic-bezier(.2,.6,.2,1) both}
   .hero h1 span{animation:rise 1.2s cubic-bezier(.2,.7,.2,1) .45s both}
@@ -233,7 +322,7 @@ footer{margin-top:clamp(56px,9vw,120px);padding-top:20px;border-top:1px solid rg
       animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
     .plate img,.about figure img{animation:unveil linear both;animation-timeline:view();animation-range:entry 0% cover 42%}
     .strip img{animation:fade linear both;animation-timeline:view(inline);animation-range:entry 0% entry 70%}
-    html::after{content:"";position:fixed;z-index:70;top:0;left:0;right:0;height:3px;background:var(--lamp);transform-origin:0 50%;animation:progress linear both;animation-timeline:scroll(root)}
+    html::after{content:"";position:fixed;z-index:70;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7ed957,#2ec4c0,#ffc531,#ff8a1f,#ff5a76);animation:wipe linear both;animation-timeline:scroll(root)}
   }
   @view-transition{navigation:auto}
   ::view-transition-old(root),::view-transition-new(root){animation-duration:.4s}
@@ -274,4 +363,7 @@ footer{margin-top:clamp(56px,9vw,120px);padding-top:20px;border-top:1px solid rg
   .plate:nth-child(n) img{aspect-ratio:4/5;max-height:none}
   .plate:nth-child(n) figcaption{padding:14px var(--gutter) 0}
   .strip img{height:min(70svh,520px)}
+  .plate:nth-child(n):last-child img{aspect-ratio:4/5;max-height:none}
+  .plate:nth-child(n):last-child figcaption{padding:14px var(--gutter) 0}
+  .hero::before{background:radial-gradient(90% 40% at 10% 100%,rgba(255,138,31,.2),transparent 70%),radial-gradient(60% 30% at 0% 55%,rgba(46,196,192,.16),transparent 70%),radial-gradient(60% 30% at 100% 85%,rgba(126,217,87,.14),transparent 70%)}
 }
