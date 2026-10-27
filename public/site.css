@@ -184,6 +184,9 @@ dialog button:hover{background:var(--on-night);color:var(--night)}
 .field{background:var(--night);color:var(--on-night);padding:0 0 clamp(80px,12vw,160px)}
 .field h3{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:clamp(20px,3vw,36px)}
 .strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gutter) 18px;scrollbar-color:var(--lamp) transparent}
+.strip figure{flex:0 0 auto;margin:0;scroll-snap-align:start}
+.strip figure img{height:min(80svh,720px)}
+.strip figcaption{padding:10px 2px 0;font-family:var(--ui);font-stretch:85%;font-size:.95rem;color:var(--on-night-soft)}
 .strip img{flex:0 0 auto;display:block;height:min(80svh,720px);width:auto;max-width:none;scroll-snap-align:start}
 
 /* ---------- contacto ---------- */
@@ -386,7 +389,7 @@ main h2::after{content:"";display:block;width:1.1em;height:.055em;min-height:4px
   .plate:nth-child(n){grid-column:1;padding:0;margin-top:0}
   .plate:nth-child(n) img{aspect-ratio:4/5;max-height:none}
   .plate:nth-child(n) figcaption{padding:14px var(--gutter) 0}
-  .strip img{height:min(70svh,520px)}
+  .strip img,.strip figure img{height:min(70svh,520px)}
   .plate:nth-child(n):last-child img{aspect-ratio:4/5;max-height:none}
   .plate:nth-child(n):last-child figcaption{padding:14px var(--gutter) 0}
   .hero::before{background:radial-gradient(90% 40% at 10% 100%,rgba(255,138,31,.3),transparent 70%),radial-gradient(60% 30% at 0% 55%,rgba(255,74,43,.2),transparent 70%),radial-gradient(60% 30% at 100% 85%,rgba(255,79,147,.16),transparent 70%)}
