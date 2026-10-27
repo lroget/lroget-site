@@ -420,3 +420,30 @@ main h2::after{content:"";display:block;width:1.1em;height:.055em;min-height:4px
 .yg:first-of-type .yh{margin-top:0}
 .tag{display:block;margin-top:.35rem;font-family:var(--ui);font-stretch:85%;font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-soft)}
 .tline .yr{white-space:normal}
+
+/* ---------- lineas separadoras con degradado en movimiento ---------- */
+@property --o{syntax:'<percentage>';inherits:true;initial-value:0%}
+:root,.hero,.plates,.field,.contact,.phead,.bar,#viajes,.trips,.cards,.projects,.novedades,footer{
+  --flow:repeating-linear-gradient(90deg,
+    color-mix(in srgb,var(--amber) 85%,transparent) calc(var(--o) + 0%),
+    color-mix(in srgb,var(--lamp) 85%,transparent) calc(var(--o) + 25%),
+    color-mix(in srgb,var(--ember) 85%,transparent) calc(var(--o) + 50%),
+    color-mix(in srgb,var(--rose) 85%,transparent) calc(var(--o) + 75%),
+    color-mix(in srgb,var(--amber) 85%,transparent) calc(var(--o) + 100%))}
+.trips.trayectoria{--flow:repeating-linear-gradient(90deg,
+    rgba(28,10,4,.85) calc(var(--o) + 0%),
+    rgba(130,32,6,.55) calc(var(--o) + 33%),
+    rgba(28,10,4,.35) calc(var(--o) + 66%),
+    rgba(28,10,4,.85) calc(var(--o) + 100%))}
+.cards{border-bottom-color:transparent;border-image:var(--flow) 1}
+.card{border-top-color:transparent;border-image:var(--flow) 1}
+.trips ul{border-top-color:transparent;border-image:var(--flow) 1}
+.trips li>a,.trips li .row{border-bottom-color:transparent;border-image:var(--flow) 1}
+.hlc{border-top-color:transparent;border-image:var(--flow) 1}
+.counters div{border-top-color:transparent;border-image:var(--flow) 1}
+footer{border-top-color:transparent;border-image:var(--flow) 1}
+main h2::after,.trips.trayectoria h2::after,.trips.trayectoria main h2::after,.hero .facts::before{background:var(--flow)}
+@media (prefers-reduced-motion:no-preference){
+  @keyframes oflow{to{--o:100%}}
+  :root{animation:oflow 14s linear infinite}
+}
