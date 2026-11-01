@@ -196,6 +196,11 @@ dialog button:hover{background:var(--on-night);color:var(--night)}
 .contact p{color:var(--on-night)}
 .contact a.mail{display:inline-block;font-family:var(--display);font-size:clamp(1.6rem,5.4vw,4.6rem);line-height:1.05;letter-spacing:-.03em;text-decoration-color:var(--lamp);text-decoration-thickness:3px;text-underline-offset:10px;word-break:break-all}
 .contact .links{margin-top:2.2rem}
+.social{display:flex;flex-wrap:wrap;gap:14px;list-style:none;margin:2.2rem 0 0;padding:0}
+.social a{display:grid;place-items:center;width:52px;height:52px;border:1.5px solid rgba(236,230,214,.4);border-radius:50%;color:var(--on-night);text-decoration:none;transition:color .2s,background-color .2s,border-color .2s}
+.social svg{width:22px;height:22px;fill:currentColor}
+.social a:hover,.social a:focus-visible{background:var(--lamp);border-color:var(--lamp);color:var(--night)}
+.social a:focus-visible{outline:2px solid var(--on-night);outline-offset:3px}
 footer{margin-top:clamp(56px,9vw,120px);padding-top:20px;border-top:1px solid rgba(236,230,214,.16);font-family:var(--ui);font-stretch:90%;font-size:.92rem;line-height:1.5;color:var(--on-night-soft)}
 
 /* ---------- páginas interiores ---------- */
