@@ -199,6 +199,8 @@ dialog button:hover{background:var(--on-night);color:var(--night)}
 .social{display:flex;flex-wrap:wrap;gap:14px;list-style:none;margin:2.2rem 0 0;padding:0}
 .social a{display:grid;place-items:center;width:52px;height:52px;border:1.5px solid rgba(236,230,214,.4);border-radius:50%;color:var(--on-night);text-decoration:none;transition:color .2s,background-color .2s,border-color .2s}
 .social svg{width:22px;height:22px;fill:currentColor}
+.social li.wide a{width:auto;padding:0 20px;border-radius:26px}
+.social .ico-ebird{display:block;width:58px;height:20px;background:currentColor;-webkit-mask:url(/img/ebird-mask.png) center/contain no-repeat;mask:url(/img/ebird-mask.png) center/contain no-repeat}
 .social .ico-inat{display:block;width:26px;height:26px;background:currentColor;-webkit-mask:url(/img/inat-mask.png) center/contain no-repeat;mask:url(/img/inat-mask.png) center/contain no-repeat}
 .social a:hover,.social a:focus-visible{background:var(--lamp);border-color:var(--lamp);color:var(--night)}
 .social a:focus-visible{outline:2px solid var(--on-night);outline-offset:3px}
