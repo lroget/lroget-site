@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2024-12-31"
-  tipo: "convenio"
-  titulo: "Fundación Natura Argentina | Convenio"
-  fecha: "Dic 2024"
-  resumen: "Uso de iNaturalist y ArgentiNat en sus proyectos, del 26 nov 2024 al 26 nov 2026. Lo redacté y lo gestioné."
-en:
-  titulo: "Fundación Natura Argentina | Agreement"
-  fecha: "Dec 2024"
-  resumen: "iNaturalist and ArgentiNat in its projects, 26 Nov 2024 to 26 Nov 2026. I drafted it and managed it."
+fecha_orden: 2024-12-31
+tipo: convenio
+titulo: Fundación Natura Argentina | Convenio
+fecha: Dic 2024
+resumen: Uso de iNaturalist y ArgentiNat en sus proyectos, del 26 nov 2024 al 26 nov 2026. Lo redacté y lo gestioné.

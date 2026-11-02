@@ -1,8 +1,8 @@
 // Genera la línea de tiempo y las páginas de entrada a partir de content/trayectoria.
-import {readFileSync,writeFileSync,readdirSync,mkdirSync,rmSync,existsSync} from 'node:fs';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {join} from 'node:path';
-import YAML from 'yaml';
 import {marked} from 'marked';
+import {leer} from './contenido.mjs';
 
 const LANGS={
   es:{page:'public/novedades/index.html',base:'/novedades/',other:'/en/news/',root:'Inicio',rootHref:'/',sec:'Novedades',photo:'Foto',
@@ -15,13 +15,8 @@ const attr=s=>esc(s).replace(/"/g,'&quot;');
 const inline=s=>esc(s).replace(/\*([^*]+)\*/g,'<em>$1</em>');
 const plain=s=>String(s??'').replace(/\*/g,'');
 
-const dir='content/trayectoria';
-const items=readdirSync(dir).filter(f=>/\.ya?ml$/.test(f)).map(f=>{
-  const d=YAML.parse(readFileSync(join(dir,f),'utf8'));
-  const es=d.es||{},en=d.en||{};
-  const year=String(es.fecha_orden).slice(0,4);
-  return {slug:f.replace(/\.ya?ml$/,''),date:String(es.fecha_orden),year,tipo:es.tipo||'hito',es,en:{...en,fotos:en.fotos||es.fotos}};
-}).sort((a,b)=>b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug));
+const items=leer().map(i=>({...i,date:String(i.es.fecha_orden),year:String(i.es.fecha_orden).slice(0,4),tipo:i.es.tipo||'hito'}))
+  .sort((a,b)=>b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug));
 
 const hasPage=(it)=>Boolean((it.es.cuerpo||'').trim()||(it.es.fotos||[]).length);
 const field=(it,lang,k)=>it[lang][k]||it.es[k]||'';
@@ -36,7 +31,7 @@ function row(it,lang){
   if(url){
     const rel=/^https?:/.test(url)?' rel="noopener"':'';
     what+=` <a href="${url}"${rel}>${esc(field(it,lang,'enlace_texto'))}</a>.`;
-    const c=it[lang].cierre; if(c) what+=' '+esc(c);
+    const c=lang==='en'&&it.en.cierre; if(c) what+=' '+esc(c);
   }
   return `<li data-t="${dt}"><div class="row"><span class="yr">${esc(field(it,lang,'fecha'))}<span class="tag">${L.tags[it.tipo]||''}</span></span><span class="name">${name}</span><span class="what">${what}</span></div></li>`;
 }
@@ -51,9 +46,11 @@ function entry(it,lang,tpl){
   const title=plain(field(it,lang,'titulo')).replace(/"/g,'&quot;');
   const full=`${esc(title)} | Leonel Roget`;
   const desc=attr(plain(field(it,lang,'resumen')));
-  const fotos=(it[lang].fotos||[]).filter(f=>f&&f.imagen).map(f=>{
-    const cap=f.epigrafe?`<figcaption>${esc(f.epigrafe)}</figcaption>`:'';
-    return `<figure><img src="${attr(f.imagen)}" alt="${attr(f.epigrafe||field(it,lang,'titulo'))}" loading="lazy">${cap}</figure>`;
+  // Las fotos salen siempre del español: mismo orden en los dos idiomas.
+  const fotos=(it.es.fotos||[]).filter(f=>f&&f.imagen).map((f,i)=>{
+    const ep=lang==='en'?(it.en.epigrafes||[])[i]||f.epigrafe:f.epigrafe;
+    const cap=ep?`<figcaption>${esc(ep)}</figcaption>`:'';
+    return `<figure><img src="${attr(encodeURI(f.imagen))}" alt="${attr(ep||field(it,lang,'titulo'))}" loading="lazy">${cap}</figure>`;
   }).join('');
   const url=field(it,lang,'enlace_url');
   const link=url?`<p class="go"><a href="${url}"${/^https?:/.test(url)?' rel="noopener"':''}>${esc(field(it,lang,'enlace_texto'))}</a></p>`:'';
@@ -113,5 +110,6 @@ const cfg=readFileSync('cms/config.yml','utf8').replace('__BRANCH__',branch);
 mkdirSync('public/admin',{recursive:true});
 writeFileSync('public/admin/config.yml',cfg);
 if(process.env.SITE_STAGING==='1') writeFileSync('public/_headers','/*\n  X-Robots-Tag: noindex, nofollow\n');
-for(const it of items){const n=plain(it.es.resumen).length+(it.es.enlace_texto?it.es.enlace_texto.length+2:0);if(n>140)console.warn('Más de 140 caracteres:',it.slug,n)}
+const pend=items.filter(i=>i.pendiente).map(i=>i.slug);
+if(pend.length) console.warn('Traducción pendiente:',pend.join(', '));
 console.log(items.length,'entradas;',items.filter(hasPage).length,'con página');

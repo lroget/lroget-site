@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2019-11-21"
-  tipo: "charla"
-  titulo: "Museo Argentino de Ciencias Naturales | Presentación de ArgentiNat"
-  fecha: "21 nov 2019"
-  resumen: "Presenté la plataforma y moderé un panel con GBIF, Aves Argentinas y Naturalista.mx. A partir de acá, hubo que mantenerla."
-en:
-  titulo: "Museo Argentino de Ciencias Naturales | ArgentiNat launch"
-  fecha: "21 Nov 2019"
-  resumen: "I presented the platform and moderated a panel with GBIF, Aves Argentinas and Naturalista.mx. From here on, it had to be kept running."
+fecha_orden: 2019-11-21
+tipo: charla
+titulo: Museo Argentino de Ciencias Naturales | Presentación de ArgentiNat
+fecha: 21 nov 2019
+resumen: Presenté la plataforma y moderé un panel con GBIF, Aves Argentinas y Naturalista.mx. A partir de acá, hubo que mantenerla.

@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2016-01-01"
-  tipo: "pub"
-  titulo: "Fundación Vida Silvestre Argentina | Dossier de pastizales bonaerenses"
-  fecha: "2016"
-  resumen: "Cuadernillo *Del Escritorio al Campo* n.º 134, Fundación Vida Silvestre Argentina."
-en:
-  titulo: "Fundación Vida Silvestre Argentina | Buenos Aires grasslands dossier"
-  fecha: "2016"
-  resumen: "*Del Escritorio al Campo* booklet no. 134, Fundación Vida Silvestre Argentina. In Spanish."
+fecha_orden: 2016-01-01
+tipo: pub
+titulo: Fundación Vida Silvestre Argentina | Dossier de pastizales bonaerenses
+fecha: "2016"
+resumen: Cuadernillo *Del Escritorio al Campo* n.º 134, Fundación Vida Silvestre Argentina.

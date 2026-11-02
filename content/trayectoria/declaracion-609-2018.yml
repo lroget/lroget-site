@@ -1,14 +1,7 @@
-es:
-  fecha_orden: "2018-06-01"
-  tipo: "reco"
-  titulo: "Legislatura de la Ciudad de Buenos Aires | Declaración 609/2018"
-  fecha: "Jun 2018"
-  resumen: "Declaró de interés ambiental las actividades del COA Carancho, que fundé. El Estado, cada tanto, mira para arriba."
-  enlace_url: "http://parlamentaria.legislatura.gov.ar/pages/download.aspx?IdDoc=164602"
-  enlace_texto: "Texto"
-en:
-  titulo: "Buenos Aires City Legislature | Declaration 609/2018"
-  fecha: "Jun 2018"
-  resumen: "Declared the activities of COA Carancho, which I founded, of environmental interest. Now and then, the State looks up."
-  enlace_url: "http://parlamentaria.legislatura.gov.ar/pages/download.aspx?IdDoc=164602"
-  enlace_texto: "Text"
+fecha_orden: 2018-06-01
+tipo: reco
+titulo: Legislatura de la Ciudad de Buenos Aires | Declaración 609/2018
+fecha: Jun 2018
+resumen: Declaró de interés ambiental las actividades del COA Carancho, que fundé. El Estado, cada tanto, mira para arriba.
+enlace_url: http://parlamentaria.legislatura.gov.ar/pages/download.aspx?IdDoc=164602
+enlace_texto: Texto

@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2015-01-10"
-  tipo: "hito"
-  titulo: "COA Carancho | Liberación de rapaces"
-  fecha: "10 ene 2015"
-  resumen: "Soltamos diez rapaces rescatadas, con el Zoo de Buenos Aires y la Fundación Caburé-í. Más de 200 personas mirando."
-en:
-  titulo: "COA Carancho | Raptor release"
-  fecha: "10 Jan 2015"
-  resumen: "We released ten rescued raptors with the Buenos Aires Zoo and Fundación Caburé-í. Over 200 people watching."
+fecha_orden: 2015-01-10
+tipo: hito
+titulo: COA Carancho | Liberación de rapaces
+fecha: 10 ene 2015
+resumen: Soltamos diez rapaces rescatadas, con el Zoo de Buenos Aires y la Fundación Caburé-í. Más de 200 personas mirando.

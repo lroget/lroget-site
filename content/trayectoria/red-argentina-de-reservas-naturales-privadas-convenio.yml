@@ -1,14 +1,7 @@
-es:
-  fecha_orden: "2022-06-15"
-  tipo: "convenio"
-  titulo: "Red Argentina de Reservas Naturales Privadas | Convenio"
-  fecha: "15 jun 2022"
-  resumen: "Primer convenio firmado para promover ArgentiNat. Después vinieron los otros."
-  enlace_url: "https://economis.com.ar/?p=257635"
-  enlace_texto: "Nota"
-en:
-  titulo: "Argentine Network of Private Nature Reserves | Agreement"
-  fecha: "15 Jun 2022"
-  resumen: "First agreement signed to promote ArgentiNat. The others came after."
-  enlace_url: "https://economis.com.ar/?p=257635"
-  enlace_texto: "Article"
+fecha_orden: 2022-06-15
+tipo: convenio
+titulo: Red Argentina de Reservas Naturales Privadas | Convenio
+fecha: 15 jun 2022
+resumen: Primer convenio firmado para promover ArgentiNat. Después vinieron los otros.
+enlace_url: https://economis.com.ar/?p=257635
+enlace_texto: Nota

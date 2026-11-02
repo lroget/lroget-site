@@ -1,14 +1,7 @@
-es:
-  fecha_orden: "2021-12-01"
-  tipo: "congreso"
-  titulo: "CIACIAR | III Congreso Argentino de Ciencia Abierta y Ciudadana"
-  fecha: "1–3 dic 2021"
-  resumen: "Ponencia virtual «ArgentiNat y bioblitzes de alcance nacional», con Anabela Plos."
-  enlace_url: "https://sedici.unlp.edu.ar/handle/10915/161866"
-  enlace_texto: "Actas"
-en:
-  titulo: "CIACIAR | III Argentine Congress on Open and Citizen Science"
-  fecha: "1–3 Dec 2021"
-  resumen: "Virtual paper \"ArgentiNat and nationwide bioblitzes\", with Anabela Plos."
-  enlace_url: "https://sedici.unlp.edu.ar/handle/10915/161866"
-  enlace_texto: "Proceedings"
+fecha_orden: 2021-12-01
+tipo: congreso
+titulo: CIACIAR | III Congreso Argentino de Ciencia Abierta y Ciudadana
+fecha: 1–3 dic 2021
+resumen: Ponencia virtual «ArgentiNat y bioblitzes de alcance nacional», con Anabela Plos.
+enlace_url: https://sedici.unlp.edu.ar/handle/10915/161866
+enlace_texto: Actas

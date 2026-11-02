@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2024-03-22"
-  tipo: "charla"
-  titulo: "Hora del Planeta (WWF) | Earth Hour 2024"
-  fecha: "Mar 2024"
-  resumen: "Dos días. El 22 presenté ante personal de WWF y en un webinar global. El 23 coordiné una recorrida en Vicente López."
-en:
-  titulo: "Earth Hour (WWF) | Earth Hour 2024"
-  fecha: "Mar 2024"
-  resumen: "Two days. On the 22nd, WWF staff and a global webinar. On the 23rd, I coordinated a walk in Vicente López."
+fecha_orden: 2024-03-22
+tipo: charla
+titulo: Hora del Planeta (WWF) | Earth Hour 2024
+fecha: Mar 2024
+resumen: Dos días. El 22 presenté ante personal de WWF y en un webinar global. El 23 coordiné una recorrida en Vicente López.

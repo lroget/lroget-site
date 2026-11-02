@@ -1,28 +1,14 @@
-es:
-  fecha_orden: "2026-04-20"
-  tipo: "taller"
-  titulo: "Talleres y capacitaciones en Misiones"
-  fecha: "20–24 abr 2026"
-  resumen: "Cuatro capacitaciones en cinco días: INTA San Pedro, dos secundarias y estudiantes de guardaparques. El tiempo que sobró fue para el monte."
-  cuerpo: |
-    Cuatro capacitaciones en cinco días, del 20 al 24 de abril de 2026.
+fecha_orden: 2026-04-20
+tipo: taller
+titulo: Talleres y capacitaciones en Misiones
+fecha: 20–24 abr 2026
+resumen: "Cuatro capacitaciones en cinco días: INTA San Pedro, dos secundarias y estudiantes de guardaparques. El tiempo que sobró fue para el monte."
+cuerpo: |
+  Cuatro capacitaciones en cinco días, del 20 al 24 de abril de 2026.
 
-    - Personal del INTA San Pedro.
-    - Escuela secundaria de Tobuna.
-    - Escuela secundaria de Cruce Caballero.
-    - Estudiantes de guardaparques de la Universidad Nacional de Misiones.
+  - Personal del INTA San Pedro.
+  - Escuela secundaria de Tobuna.
+  - Escuela secundaria de Cruce Caballero.
+  - Estudiantes de guardaparques de la Universidad Nacional de Misiones.
 
-    El tiempo que sobró fue para el Parque Cruce Caballero.
-en:
-  titulo: "Workshops and training in Misiones"
-  fecha: "20–24 Apr 2026"
-  resumen: "Four trainings in five days: INTA San Pedro, two secondary schools and park ranger students. The time left over went to the forest."
-  cuerpo: |
-    Four trainings in five days, from 20 to 24 April 2026.
-
-    - INTA San Pedro staff.
-    - Tobuna secondary school.
-    - Cruce Caballero secondary school.
-    - Park ranger students at Universidad Nacional de Misiones.
-
-    The time left over went to Cruce Caballero Park.
+  El tiempo que sobró fue para el Parque Cruce Caballero.

@@ -1,14 +1,7 @@
-es:
-  fecha_orden: "2016-05-07"
-  tipo: "hito"
-  titulo: "COA Carancho | #caranchofest"
-  fecha: "7–28 may 2016"
-  resumen: "Seis actividades en un mes por el quinto aniversario del COA Carancho. Cumplir años dio trabajo."
-  enlace_url: "/proyectos/coa-carancho/"
-  enlace_texto: "Ver el proyecto"
-en:
-  titulo: "COA Carancho | #caranchofest"
-  fecha: "7–28 May 2016"
-  resumen: "Six activities in one month for COA Carancho's fifth anniversary. Turning five took work."
-  enlace_url: "/en/projects/coa-carancho/"
-  enlace_texto: "See the project"
+fecha_orden: 2016-05-07
+tipo: hito
+titulo: "COA Carancho | #caranchofest"
+fecha: 7–28 may 2016
+resumen: Seis actividades en un mes por el quinto aniversario del COA Carancho. Cumplir años dio trabajo.
+enlace_url: /proyectos/coa-carancho/
+enlace_texto: Ver el proyecto

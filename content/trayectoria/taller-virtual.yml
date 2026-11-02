@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2024-12-17"
-  tipo: "taller"
-  titulo: "Ministerio de Ambiente de la Provincia de Buenos Aires | Taller virtual"
-  fecha: "17 dic 2024"
-  resumen: "Tres horas sobre planes de manejo de áreas protegidas. Llevé ArgentiNat; había otras plataformas en la mesa."
-en:
-  titulo: "Buenos Aires Province Ministry of Environment | Virtual workshop"
-  fecha: "17 Dec 2024"
-  resumen: "Three hours on protected area management plans. I brought ArgentiNat; other platforms were at the table."
+fecha_orden: 2024-12-17
+tipo: taller
+titulo: Ministerio de Ambiente de la Provincia de Buenos Aires | Taller virtual
+fecha: 17 dic 2024
+resumen: Tres horas sobre planes de manejo de áreas protegidas. Llevé ArgentiNat; había otras plataformas en la mesa.

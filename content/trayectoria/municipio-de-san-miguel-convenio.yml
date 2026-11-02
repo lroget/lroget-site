@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2023-06-01"
-  tipo: "convenio"
-  titulo: "Municipio de San Miguel | Convenio"
-  fecha: "Jun 2023"
-  resumen: "ArgentiNat en sus áreas protegidas y espacios verdes."
-en:
-  titulo: "San Miguel Municipality | Agreement"
-  fecha: "Jun 2023"
-  resumen: "ArgentiNat in its protected areas and green spaces."
+fecha_orden: 2023-06-01
+tipo: convenio
+titulo: Municipio de San Miguel | Convenio
+fecha: Jun 2023
+resumen: ArgentiNat en sus áreas protegidas y espacios verdes.

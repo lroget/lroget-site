@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2024-09-25"
-  tipo: "hito"
-  titulo: "MinCyT y MACN | Gira de ArgentiNat por Tucumán y Catamarca"
-  fecha: "25 sep – 1 oct 2024"
-  resumen: "Charlas y talleres, con parada en la Fundación Miguel Lillo. Lo pagó un subsidio de ciencia ciudadana. Lo organicé y lo hice."
-en:
-  titulo: "MinCyT and MACN | ArgentiNat tour of Tucumán and Catamarca"
-  fecha: "25 Sep – 1 Oct 2024"
-  resumen: "Talks and workshops, with a stop at Fundación Miguel Lillo. A citizen science grant paid for it. I organized it and did it."
+fecha_orden: 2024-09-25
+tipo: hito
+titulo: MinCyT y MACN | Gira de ArgentiNat por Tucumán y Catamarca
+fecha: 25 sep – 1 oct 2024
+resumen: Charlas y talleres, con parada en la Fundación Miguel Lillo. Lo pagó un subsidio de ciencia ciudadana. Lo organicé y lo hice.

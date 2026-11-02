@@ -1,14 +1,7 @@
-es:
-  fecha_orden: "2023-08-01"
-  tipo: "convenio"
-  titulo: "Municipalidad de Santa Fe | Convenio"
-  fecha: "Ago 2023"
-  resumen: "Cooperación con Vida Silvestre en el marco de ArgentiNat."
-  enlace_url: "https://www.ellitoral.com/area-metropolitana/reservanatural-mirador-inclusion-santafe-ciudad-flora-fauna_0_Pg7LSyDg41.html"
-  enlace_texto: "Nota"
-en:
-  titulo: "Santa Fe Municipality | Agreement"
-  fecha: "Aug 2023"
-  resumen: "Cooperation with Vida Silvestre within ArgentiNat."
-  enlace_url: "https://www.ellitoral.com/area-metropolitana/reservanatural-mirador-inclusion-santafe-ciudad-flora-fauna_0_Pg7LSyDg41.html"
-  enlace_texto: "Article"
+fecha_orden: 2023-08-01
+tipo: convenio
+titulo: Municipalidad de Santa Fe | Convenio
+fecha: Ago 2023
+resumen: Cooperación con Vida Silvestre en el marco de ArgentiNat.
+enlace_url: https://www.ellitoral.com/area-metropolitana/reservanatural-mirador-inclusion-santafe-ciudad-flora-fauna_0_Pg7LSyDg41.html
+enlace_texto: Nota

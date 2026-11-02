@@ -1,15 +1,7 @@
-es:
-  fecha_orden: "2015-01-01"
-  tipo: "pub"
-  titulo: "Fundación Vida Silvestre Argentina | Isla Martín García: aves y plantas"
-  fecha: "Ene 2015"
-  resumen: "Cuadernillo *Del Escritorio al Campo* n.º 130, Fundación Vida Silvestre Argentina."
-  enlace_url: "http://awsassets.wwfar.panda.org/downloads/del_escritorio_130.pdf"
-  enlace_texto: "Ver el PDF"
-en:
-  titulo: "Fundación Vida Silvestre Argentina | Martín García Island: birds and plants"
-  fecha: "Jan 2015"
-  resumen: "*Del Escritorio al Campo* booklet no. 130, Fundación Vida Silvestre Argentina."
-  enlace_url: "http://awsassets.wwfar.panda.org/downloads/del_escritorio_130.pdf"
-  enlace_texto: "See the PDF"
-  cierre: "In Spanish."
+fecha_orden: 2015-01-01
+tipo: pub
+titulo: "Fundación Vida Silvestre Argentina | Isla Martín García: aves y plantas"
+fecha: Ene 2015
+resumen: Cuadernillo *Del Escritorio al Campo* n.º 130, Fundación Vida Silvestre Argentina.
+enlace_url: http://awsassets.wwfar.panda.org/downloads/del_escritorio_130.pdf
+enlace_texto: Ver el PDF

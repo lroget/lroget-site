@@ -1,14 +1,7 @@
-es:
-  fecha_orden: "2020-11-09"
-  tipo: "congreso"
-  titulo: "LACA 2020 | Congreso Internacional de Biología de la Conservación"
-  fecha: "9 nov 2020"
-  resumen: "Presentación en el taller «La conservación a través de la sociedad: ciencia ciudadana»."
-  enlace_url: "https://www.youtube.com/watch?v=fGnNl7yaatY"
-  enlace_texto: "Ver video"
-en:
-  titulo: "LACA 2020 | International Congress of Conservation Biology"
-  fecha: "9 Nov 2020"
-  resumen: "Talk at the workshop \"Conservation through society: citizen science\"."
-  enlace_url: "https://www.youtube.com/watch?v=fGnNl7yaatY"
-  enlace_texto: "Watch video"
+fecha_orden: 2020-11-09
+tipo: congreso
+titulo: LACA 2020 | Congreso Internacional de Biología de la Conservación
+fecha: 9 nov 2020
+resumen: "Presentación en el taller «La conservación a través de la sociedad: ciencia ciudadana»."
+enlace_url: https://www.youtube.com/watch?v=fGnNl7yaatY
+enlace_texto: Ver video

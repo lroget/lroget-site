@@ -49,5 +49,13 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/talleres-y-capacitaciones-en-misiones/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/talleres-y-capacitaciones-en-misiones/"/>
   </url>
+  <url><loc>https://lroget.com/novedades/mirar-lo-invisible/</loc><lastmod>2018-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/mirar-lo-invisible/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/mirar-lo-invisible/"/>
+  </url>
+  <url><loc>https://lroget.com/en/news/mirar-lo-invisible/</loc><lastmod>2018-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/mirar-lo-invisible/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/mirar-lo-invisible/"/>
+  </url>
 <!--/entradas-->
 </urlset>

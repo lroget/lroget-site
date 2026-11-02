@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2012-01-01"
-  tipo: "voluntariado"
-  titulo: "BirdingPal | Guía de observación de aves"
-  fecha: "Ene 2012 – dic 2016"
-  resumen: "Guié por Buenos Aires a observadores y científicos de Sudáfrica, Australia, Dinamarca, EE. UU., Italia y Canadá. Vinieron por los pájaros."
-en:
-  titulo: "BirdingPal | Birdwatching guide"
-  fecha: "Jan 2012 – Dec 2016"
-  resumen: "Guided birders and scientists from South Africa, Australia, Denmark, the USA, Italy and Canada around Buenos Aires. They came for the birds."
+fecha_orden: 2012-01-01
+tipo: voluntariado
+titulo: BirdingPal | Guía de observación de aves
+fecha: Ene 2012 – dic 2016
+resumen: Guié por Buenos Aires a observadores y científicos de Sudáfrica, Australia, Dinamarca, EE. UU., Italia y Canadá. Vinieron por los pájaros.

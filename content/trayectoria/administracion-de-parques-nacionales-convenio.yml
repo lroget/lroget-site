@@ -1,14 +1,7 @@
-es:
-  fecha_orden: "2022-09-30"
-  tipo: "convenio"
-  titulo: "Administración de Parques Nacionales | Convenio"
-  fecha: "Sep 2022"
-  resumen: "ArgentiNat en las áreas protegidas nacionales."
-  enlace_url: "https://www.argentina.gob.ar/noticias/la-administracion-de-parques-nacionales-se-suma-la-plataforma-comunitaria-de-registro-e"
-  enlace_texto: "Nota"
-en:
-  titulo: "National Parks Administration | Agreement"
-  fecha: "Sep 2022"
-  resumen: "ArgentiNat in national protected areas."
-  enlace_url: "https://www.argentina.gob.ar/noticias/la-administracion-de-parques-nacionales-se-suma-la-plataforma-comunitaria-de-registro-e"
-  enlace_texto: "Article"
+fecha_orden: 2022-09-30
+tipo: convenio
+titulo: Administración de Parques Nacionales | Convenio
+fecha: Sep 2022
+resumen: ArgentiNat en las áreas protegidas nacionales.
+enlace_url: https://www.argentina.gob.ar/noticias/la-administracion-de-parques-nacionales-se-suma-la-plataforma-comunitaria-de-registro-e
+enlace_texto: Nota

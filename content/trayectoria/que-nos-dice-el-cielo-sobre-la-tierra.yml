@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2016-05-26"
-  tipo: "charla"
-  titulo: "Planetario de Buenos Aires | Qué nos dice el cielo sobre la Tierra"
-  fecha: "26 may 2016"
-  resumen: "La naturaleza vista desde la cultura celeste. La organicé y la di."
-en:
-  titulo: "Buenos Aires Planetarium | What the sky tells us about Earth"
-  fecha: "26 May 2016"
-  resumen: "Nature seen through celestial culture. I organized it and gave it."
+fecha_orden: 2016-05-26
+tipo: charla
+titulo: Planetario de Buenos Aires | Qué nos dice el cielo sobre la Tierra
+fecha: 26 may 2016
+resumen: La naturaleza vista desde la cultura celeste. La organicé y la di.

@@ -1,14 +1,7 @@
-es:
-  fecha_orden: "2024-09-01"
-  tipo: "convenio"
-  titulo: "Municipio de Tigre | Convenio"
-  fecha: "Sep 2024"
-  resumen: "Convenio marco y específico: registrar el patrimonio natural del distrito con ArgentiNat. Lo gestioné."
-  enlace_url: "https://www.corresponsables.com/arg/actualidad/el-municipio-de-tigre-y-la-fundacion-vida-silvestre-acordaron-trabajar-en-la-sostenibilidad-ambiental/"
-  enlace_texto: "Nota"
-en:
-  titulo: "Tigre Municipality | Agreement"
-  fecha: "Sep 2024"
-  resumen: "Framework and specific agreements: record the district's natural heritage with ArgentiNat. I managed them."
-  enlace_url: "https://www.corresponsables.com/arg/actualidad/el-municipio-de-tigre-y-la-fundacion-vida-silvestre-acordaron-trabajar-en-la-sostenibilidad-ambiental/"
-  enlace_texto: "Article"
+fecha_orden: 2024-09-01
+tipo: convenio
+titulo: Municipio de Tigre | Convenio
+fecha: Sep 2024
+resumen: "Convenio marco y específico: registrar el patrimonio natural del distrito con ArgentiNat. Lo gestioné."
+enlace_url: https://www.corresponsables.com/arg/actualidad/el-municipio-de-tigre-y-la-fundacion-vida-silvestre-acordaron-trabajar-en-la-sostenibilidad-ambiental/
+enlace_texto: Nota

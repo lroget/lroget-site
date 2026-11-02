@@ -1,10 +1,5 @@
-es:
-  fecha_orden: "2024-10-09"
-  tipo: "taller"
-  titulo: "Fundación Vida Silvestre Argentina | Taller virtual «Ciencia ciudadana para docentes»"
-  fecha: "9 oct 2024"
-  resumen: "Una hora, gratis, para docentes de todo el país, con apoyo de Toyota Argentina. Armé los contenidos y lo dicté."
-en:
-  titulo: "Fundación Vida Silvestre Argentina | Virtual workshop \"Citizen science for teachers\""
-  fecha: "9 Oct 2024"
-  resumen: "One hour, free, for teachers across the country, supported by Toyota Argentina. I built the content and taught it."
+fecha_orden: 2024-10-09
+tipo: taller
+titulo: Fundación Vida Silvestre Argentina | Taller virtual «Ciencia ciudadana para docentes»
+fecha: 9 oct 2024
+resumen: Una hora, gratis, para docentes de todo el país, con apoyo de Toyota Argentina. Armé los contenidos y lo dicté.
