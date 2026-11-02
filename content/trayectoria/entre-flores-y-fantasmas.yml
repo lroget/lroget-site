@@ -1,0 +1,15 @@
+es:
+  fecha_orden: "2019-03-09"
+  tipo: "pub"
+  titulo: "FARN | Entre flores y fantasmas"
+  fecha: "9 mar 2019"
+  resumen: "Sobre recuperar la naturaleza en las ciudades, en el Informe Ambiental 2019 de FARN."
+  enlace_url: "https://farn.org.ar/iafonline2019/articulos/2-5-entre-flores-y-fantasmas-recuperando-la-naturaleza-en-las-ciudades/"
+  enlace_texto: "Leer el artículo"
+en:
+  titulo: "FARN | Between flowers and ghosts"
+  fecha: "9 Mar 2019"
+  resumen: "On bringing nature back into cities, in FARN's 2019 Environmental Report."
+  enlace_url: "https://farn.org.ar/iafonline2019/articulos/2-5-entre-flores-y-fantasmas-recuperando-la-naturaleza-en-las-ciudades/"
+  enlace_texto: "Read the article"
+  cierre: "In Spanish."

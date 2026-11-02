@@ -40,4 +40,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/projects/coa-carancho/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lroget.com/proyectos/coa-carancho/"/>
   </url>
+<!--entradas-->
+  <url><loc>https://lroget.com/novedades/talleres-y-capacitaciones-en-misiones/</loc><lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/talleres-y-capacitaciones-en-misiones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/talleres-y-capacitaciones-en-misiones/"/>
+  </url>
+  <url><loc>https://lroget.com/en/news/talleres-y-capacitaciones-en-misiones/</loc><lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/talleres-y-capacitaciones-en-misiones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/talleres-y-capacitaciones-en-misiones/"/>
+  </url>
+<!--/entradas-->
 </urlset>

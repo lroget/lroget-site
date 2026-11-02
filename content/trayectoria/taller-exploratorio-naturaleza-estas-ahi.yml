@@ -1,0 +1,14 @@
+es:
+  fecha_orden: "2023-04-22"
+  tipo: "taller"
+  titulo: "Centro Cultural de la Ciencia (C3) | Taller «Exploratorio Naturaleza, ¿Estás ahí?»"
+  fecha: "22 abr 2023"
+  resumen: "Mes de la ciencia ciudadana. A la mañana, capacitación de guías. Después, actividad abierta al público."
+  enlace_url: "https://www.argentina.gob.ar/noticias/experiencias-en-el-mes-de-la-ciencia-ciudadana"
+  enlace_texto: "Nota"
+en:
+  titulo: "Centro Cultural de la Ciencia (C3) | Workshop \"Exploratorio Naturaleza, ¿Estás ahí?\""
+  fecha: "22 Apr 2023"
+  resumen: "Citizen Science Month. Guide training in the morning. After that, an activity open to the public."
+  enlace_url: "https://www.argentina.gob.ar/noticias/experiencias-en-el-mes-de-la-ciencia-ciudadana"
+  enlace_texto: "Article"

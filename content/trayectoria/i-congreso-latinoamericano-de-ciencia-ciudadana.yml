@@ -1,0 +1,14 @@
+es:
+  fecha_orden: "2021-06-09"
+  tipo: "congreso"
+  titulo: "I Congreso Latinoamericano de Ciencia Ciudadana"
+  fecha: "9 jun 2021"
+  resumen: "Presenté ArgentiNat en \"Una forma colectiva de conocer la biodiversidad\", con Anabela Plos."
+  enlace_url: "https://www.youtube.com/watch?v=iyqBwGr-bi8&t=7882s"
+  enlace_texto: "Ver video"
+en:
+  titulo: "1st Latin American Citizen Science Congress"
+  fecha: "9 Jun 2021"
+  resumen: "I presented ArgentiNat in \"Una forma colectiva de conocer la biodiversidad\" (a collective way to know it), with Anabela Plos."
+  enlace_url: "https://www.youtube.com/watch?v=iyqBwGr-bi8&t=7882s"
+  enlace_texto: "Watch video"

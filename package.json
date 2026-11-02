@@ -1,0 +1,7 @@
+{
+  "name": "lroget-site",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node scripts/build.mjs" },
+  "dependencies": { "marked": "18.1.2", "yaml": "2.8.1" }
+}

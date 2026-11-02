@@ -1,0 +1,14 @@
+es:
+  fecha_orden: "2023-04-25"
+  tipo: "congreso"
+  titulo: "VII Congreso Nacional de Conservación de la Biodiversidad"
+  fecha: "25–28 abr 2023"
+  resumen: "Puerto Iguazú, Misiones. Hablé de \"Mapeando la biodiversidad de forma colaborativa\"."
+  enlace_url: "https://congreso-biodiversidad.com/"
+  enlace_texto: "Sitio del congreso"
+en:
+  titulo: "VII National Congress on Biodiversity Conservation"
+  fecha: "25–28 Apr 2023"
+  resumen: "Puerto Iguazú, Misiones. I talked about \"Mapeando la biodiversidad de forma colaborativa\" (collaborative mapping)."
+  enlace_url: "https://congreso-biodiversidad.com/"
+  enlace_texto: "Congress website"

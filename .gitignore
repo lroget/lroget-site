@@ -1,0 +1,5 @@
+node_modules
+public/novedades/*/
+public/en/news/*/
+public/admin/config.yml
+public/_headers

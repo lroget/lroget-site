@@ -455,3 +455,11 @@ main h2::after,.trips.trayectoria h2::after,.trips.trayectoria main h2::after,.h
   @keyframes oflow{to{--o:100%}}
   :root{animation:oflow 14s linear infinite}
 }
+
+/* Páginas de entrada */
+.phead.entry h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:1;letter-spacing:-.01em}
+.fotos{padding:0 0 clamp(56px,8vw,112px)}
+.fotos .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px}
+.fotos figure{margin:0;min-width:0}
+.fotos img{display:block;width:100%;height:auto}
+.fotos figcaption{padding-top:8px;font-family:var(--ui);font-stretch:85%;font-size:.95rem;color:var(--fg-soft)}

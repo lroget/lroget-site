@@ -1,0 +1,14 @@
+es:
+  fecha_orden: "2023-03-30"
+  tipo: "convenio"
+  titulo: "Ciudad de Mendoza | Convenio"
+  fecha: "30 mar 2023"
+  resumen: "ArgentiNat en espacios verdes y áreas de valor ambiental del municipio."
+  enlace_url: "https://prensa.ciudaddemendoza.gob.ar/2023/03/30/la-ciudad-de-mendoza-firmo-un-importante-acuerdo-con-fundacion-vida-silvestre-argentina/"
+  enlace_texto: "Nota"
+en:
+  titulo: "City of Mendoza | Agreement"
+  fecha: "30 Mar 2023"
+  resumen: "ArgentiNat in the city's green spaces and areas of environmental value."
+  enlace_url: "https://prensa.ciudaddemendoza.gob.ar/2023/03/30/la-ciudad-de-mendoza-firmo-un-importante-acuerdo-con-fundacion-vida-silvestre-argentina/"
+  enlace_texto: "Article"

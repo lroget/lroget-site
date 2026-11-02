@@ -1,0 +1,61 @@
+backend:
+  name: github
+  repo: lroget/lroget-site
+  branch: __BRANCH__
+  commit_messages:
+    create: "Panel: nueva entrada {{slug}}"
+    update: "Panel: edición de {{slug}}"
+    delete: "Panel: borrado de {{slug}}"
+    uploadMedia: "Panel: foto {{path}}"
+    deleteMedia: "Panel: foto borrada {{path}}"
+media_folder: public/img/entradas
+public_folder: /img/entradas
+i18n:
+  structure: single_file
+  locales: [es, en]
+  default_locale: es
+collections:
+  - name: trayectoria
+    label: Línea de tiempo
+    label_singular: Entrada
+    folder: content/trayectoria
+    extension: yml
+    format: yaml
+    create: true
+    delete: true
+    i18n: true
+    identifier_field: titulo
+    slug: "{{slug}}"
+    summary: "{{fecha}} · {{titulo}}"
+    sortable_fields: [fecha_orden, titulo]
+    fields:
+      - {label: "Título", name: titulo, widget: string, i18n: true, hint: "Institución primero: Municipio de Tigre | Convenio"}
+      - {label: "Fecha que se muestra", name: fecha, widget: string, i18n: true, hint: "Como se lee en el sitio: 20–24 abr 2026"}
+      - {label: "Fecha para ordenar", name: fecha_orden, widget: datetime, time_format: false, format: "YYYY-MM-DD", hint: "Define el año y la posición en la línea de tiempo"}
+      - label: "Tipo"
+        name: tipo
+        widget: select
+        options:
+          - {label: Charla, value: charla}
+          - {label: Taller, value: taller}
+          - {label: Congreso, value: congreso}
+          - {label: Convenio, value: convenio}
+          - {label: Reconocimiento, value: reco}
+          - {label: Prensa, value: prensa}
+          - {label: Publicación, value: pub}
+          - {label: Hito, value: hito}
+          - {label: Voluntariado, value: voluntariado}
+      - {label: "Resumen", name: resumen, widget: text, i18n: true, maxlength: 140, hint: "Máximo 140 caracteres. Nunca FVSA: en público es Vida Silvestre."}
+      - {label: "Enlace (dirección)", name: enlace_url, widget: string, i18n: true, required: false}
+      - {label: "Enlace (texto)", name: enlace_texto, widget: string, i18n: true, required: false}
+      - {label: "Nota final", name: cierre, widget: string, i18n: true, required: false, hint: "Opcional, por ejemplo: In Spanish."}
+      - {label: "Texto de la página", name: cuerpo, widget: markdown, i18n: true, required: false, hint: "Si tiene texto o fotos, la entrada tiene página propia."}
+      - label: "Fotos"
+        name: fotos
+        widget: list
+        i18n: true
+        required: false
+        hint: "Sin rostros de menores."
+        fields:
+          - {label: "Foto", name: imagen, widget: image, i18n: duplicate}
+          - {label: "Epígrafe", name: epigrafe, widget: string, i18n: true, required: false}
