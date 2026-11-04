@@ -2,7 +2,7 @@
 /* Se apaga la luz: al pasar al tema oscuro, la pantalla cae a negro y lo que brilla aparece de a poco. */
 (function(){
   var tb=document.getElementById('themeBtn'),root=document.documentElement,meta=document.querySelector('meta[name="theme-color"]'),paso=false;
-  function color(){if(meta)meta.content=root.dataset.theme==='dark'?'#0f1214':'#eadfcb'}
+  function color(){if(meta)meta.content=root.dataset.theme==='dark'?'#0e1012':'#eadfcb'}
   color();
   if(!tb)return;
   tb.addEventListener('click',function(e){
@@ -11,8 +11,9 @@
     e.stopImmediatePropagation();
     var t=document.createElement('div');t.className='apagon';document.body.appendChild(t);
     t.animate([{opacity:0},{opacity:1}],{duration:110,fill:'forwards',easing:'steps(3)'}).onfinish=function(){
-      paso=true;tb.click();
-      setTimeout(function(){t.animate([{opacity:1},{opacity:0}],{duration:1500,fill:'forwards',easing:'cubic-bezier(.5,0,.3,1)'}).onfinish=function(){t.remove()}},420)}
+      paso=true;root.classList.add('encendiendo');tb.click();
+      setTimeout(function(){root.classList.remove('encendiendo')},3400);
+      setTimeout(function(){t.animate([{opacity:1},{opacity:0}],{duration:500,fill:'forwards',easing:'ease-out'}).onfinish=function(){t.remove()}},320)}
   },true);
 })();
 
