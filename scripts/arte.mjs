@@ -27,3 +27,8 @@ function trazo(c,ancho,pasos=90,punta=0){const A=[],B=[];
 {let d='';const a=ruido(3);
  for(const [o,g] of [[-7,9],[1,13],[9,8]]){const w=ruido(4);d+=trazo(t=>[8+t*484,27+o+6*a(t)],t=>g+3.5*w(t),60,3.5)}
  writeFileSync(`${OUT}/pincelada.svg`,svg(500,54,`<path d="${d}"/>`))}
+
+// C: formas irregulares para recortar fotos
+for(const n of [1,2]){const a=rnd()*TAU,b=rnd()*TAU,c=rnd()*TAU,p=[];
+ for(let i=0;i<72;i++){const t=i/72*TAU,r=445*(1+.06*Math.sin(2*t+a)+.045*Math.sin(3*t+b)+.02*Math.sin(5*t+c));p.push([500+r*Math.cos(t),500+r*Math.sin(t)])}
+ writeFileSync(`${OUT}/mancha-${n}.svg`,svg(1000,1000,`<path d="${cerrado(p)}"/>`))}
