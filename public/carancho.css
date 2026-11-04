@@ -136,6 +136,12 @@ html[data-theme="light"] .about figure img,html[data-theme="light"] .fotos img{f
 .about figure img{flex:1 1 0;min-height:0}
 .about figcaption,.fotos figcaption{position:static;margin:.3rem 0 0;text-align:center;color:var(--fg-soft)}
 
+/* Lamparita: prendida en claro, apagada en oscuro */
+#themeBtn,html[data-theme="light"] #themeBtn,html[data-theme="dark"] #themeBtn{padding:0 6px;border:0;background:none;font-size:1.45rem;line-height:1;cursor:pointer;box-shadow:none}
+html[data-theme="light"] #themeBtn:hover,html[data-theme="dark"] #themeBtn:hover{background:none;transform:scale(1.12)}
+html[data-theme="dark"] #themeBtn{filter:grayscale(1) brightness(.72)}
+#themeBtn:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+
 /* Propósito y visión */
 .rumbo{display:grid;gap:clamp(22px,3vw,34px);margin:clamp(30px,4vw,52px) 0;padding:clamp(28px,3.6vw,46px) clamp(26px,3.4vw,44px);border-radius:150px 26px 170px 30px/34px 150px 28px 170px}
 .rumbo div{margin:0}
