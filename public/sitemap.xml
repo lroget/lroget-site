@@ -10,6 +10,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lroget.com/"/>
   </url>
+  <url><loc>https://lroget.com/encuentros/</loc><lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/encuentros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/gatherings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lroget.com/encuentros/"/>
+  </url>
+  <url><loc>https://lroget.com/en/gatherings/</loc><lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/encuentros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/gatherings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lroget.com/encuentros/"/>
+  </url>
   <url><loc>https://lroget.com/novedades/</loc><lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/"/>
@@ -41,21 +51,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lroget.com/proyectos/coa-carancho/"/>
   </url>
 <!--entradas-->
-  <url><loc>https://lroget.com/novedades/talleres-y-capacitaciones-en-misiones/</loc><lastmod>2026-04-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/talleres-y-capacitaciones-en-misiones/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/talleres-y-capacitaciones-en-misiones/"/>
+  <url><loc>https://lroget.com/encuentros/talleres-y-capacitaciones-en-misiones/</loc><lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/encuentros/talleres-y-capacitaciones-en-misiones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/gatherings/talleres-y-capacitaciones-en-misiones/"/>
   </url>
-  <url><loc>https://lroget.com/en/news/talleres-y-capacitaciones-en-misiones/</loc><lastmod>2026-04-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/talleres-y-capacitaciones-en-misiones/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/talleres-y-capacitaciones-en-misiones/"/>
+  <url><loc>https://lroget.com/en/gatherings/talleres-y-capacitaciones-en-misiones/</loc><lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/encuentros/talleres-y-capacitaciones-en-misiones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/gatherings/talleres-y-capacitaciones-en-misiones/"/>
   </url>
-  <url><loc>https://lroget.com/novedades/mirar-lo-invisible/</loc><lastmod>2018-11-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/mirar-lo-invisible/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/mirar-lo-invisible/"/>
+  <url><loc>https://lroget.com/encuentros/mirar-lo-invisible/</loc><lastmod>2018-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/encuentros/mirar-lo-invisible/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/gatherings/mirar-lo-invisible/"/>
   </url>
-  <url><loc>https://lroget.com/en/news/mirar-lo-invisible/</loc><lastmod>2018-11-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/novedades/mirar-lo-invisible/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/news/mirar-lo-invisible/"/>
+  <url><loc>https://lroget.com/en/gatherings/mirar-lo-invisible/</loc><lastmod>2018-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/encuentros/mirar-lo-invisible/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/gatherings/mirar-lo-invisible/"/>
   </url>
 <!--/entradas-->
 </urlset>

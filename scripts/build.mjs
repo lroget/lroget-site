@@ -10,6 +10,9 @@ const LANGS={
   en:{home:'public/en/index.html',page:'public/en/news/index.html',base:'/en/news/',other:'/novedades/',root:'Home',rootHref:'/en/',sec:'News',photo:'Photo',
       tags:{charla:'Talk',taller:'Workshop',congreso:'Conference',convenio:'Agreement',reco:'Recognition',prensa:'Press',pub:'Publication',hito:'Milestone',voluntariado:'Volunteer'}}
 };
+for(const [l,page,base,other,sec] of [['es','public/encuentros/index.html','/encuentros/','/en/gatherings/','Encuentros'],['en','public/en/gatherings/index.html','/en/gatherings/','/encuentros/','Gatherings']])
+  LANGS[l].enc={page,base,other,sec};
+const ENC=['charla','taller','congreso'];
 const esc=s=>String(s??'').replace(/&(?![a-z#0-9]+;)/gi,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const attr=s=>esc(s).replace(/"/g,'&quot;');
 const inline=s=>esc(s).replace(/\*([^*]+)\*/g,'<em>$1</em>');
@@ -18,6 +21,9 @@ const plain=s=>String(s??'').replace(/\*/g,'');
 const items=leer().map(i=>({...i,date:String(i.es.fecha_orden),year:String(i.es.fecha_orden).slice(0,4),tipo:i.es.tipo||'hito'}))
   .sort((a,b)=>b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug));
 
+const esEnc=it=>ENC.includes(it.tipo);
+const lim=new Date(Date.now()-365*864e5).toISOString().slice(0,10);
+const sitio=(it,lang)=>esEnc(it)?LANGS[lang].enc:LANGS[lang];
 const hasPage=(it)=>Boolean((it.es.cuerpo||'').trim()||(it.es.fotos||[]).length);
 const field=(it,lang,k)=>it[lang][k]||it.es[k]||'';
 
@@ -25,7 +31,7 @@ function row(it,lang){
   const L=LANGS[lang];
   const dt=it.tipo==='voluntariado'?'hito':it.tipo;
   const title=field(it,lang,'titulo');
-  const name=hasPage(it)?`<a href="${L.base}${it.slug}/">${esc(title)}</a>`:esc(title);
+  const name=hasPage(it)?`<a href="${sitio(it,lang).base}${it.slug}/">${esc(title)}</a>`:esc(title);
   let what=inline(field(it,lang,'resumen'));
   const url=field(it,lang,'enlace_url');
   if(url){
@@ -37,18 +43,17 @@ function row(it,lang){
 }
 // Portada: solo charlas, talleres y congresos del último año, hasta tres.
 function recientes(lang){
-  const L=LANGS[lang], lim=new Date(Date.now()-365*864e5).toISOString().slice(0,10);
-  return items.filter(i=>['charla','taller','congreso'].includes(i.tipo)&&i.date>=lim).slice(0,3).map(it=>{
+  return items.filter(i=>esEnc(i)&&i.date>=lim).slice(0,3).map(it=>{
     const r=row(it,lang).replace(/<span class="tag">.*?<\/span>/,'').replace(/^<li data-t="\w+">/,'<li>');
     return r;
   }).join('\n');
 }
-function timeline(lang){
-  const years=[...new Set(items.map(i=>i.year))].sort((a,b)=>b-a);
-  return years.map(y=>`<div class="yg"><h3 class="yh">${y}</h3>\n<ul>\n${items.filter(i=>i.year===y).map(i=>row(i,lang)).join('\n')}\n</ul></div>`).join('\n');
+function timeline(lang,lista){
+  const years=[...new Set(lista.map(i=>i.year))].sort((a,b)=>b-a);
+  return years.map(y=>`<div class="yg"><h3 class="yh">${y}</h3>\n<ul>\n${lista.filter(i=>i.year===y).map(i=>row(i,lang)).join('\n')}\n</ul></div>`).join('\n');
 }
 function entry(it,lang,tpl){
-  const L=LANGS[lang];
+  const L={...LANGS[lang],...sitio(it,lang)};
   const path=L.base+it.slug+'/', other=L.other+it.slug+'/';
   const esPath=lang==='es'?path:other, enPath=lang==='en'?path:other;
   const title=plain(field(it,lang,'titulo')).replace(/"/g,'&quot;');
@@ -94,20 +99,23 @@ ${marked.parse(field(it,lang,'cuerpo')||'')}${link}
 for(const lang of ['es','en']){
   const L=LANGS[lang];
   let html=readFileSync(L.page,'utf8');
-  html=html.replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang)}<!--/tl-->`);
+  // Novedades: todavía guarda lo que no es un encuentro, y los encuentros del último año.
+  html=html.replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(i=>!esEnc(i)||i.date>=lim))}<!--/tl-->`);
   writeFileSync(L.page,html);
+  let enc=readFileSync(L.enc.page,'utf8').replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(esEnc))}<!--/tl-->`);
+  writeFileSync(L.enc.page,enc);
   const home=readFileSync(L.home,'utf8').replace(/<!--rec-->.*<!--\/rec-->/s,`<!--rec-->${recientes(lang)}\n<!--/rec-->`);
   writeFileSync(L.home,home);
   for(const it of items.filter(hasPage)){
-    const dir='public'+L.base+it.slug;
+    const dir='public'+sitio(it,lang).base+it.slug;
     mkdirSync(dir,{recursive:true});
-    writeFileSync(join(dir,'index.html'),entry(it,lang,html));
+    writeFileSync(join(dir,'index.html'),entry(it,lang,esEnc(it)?enc:html));
   }
 }
 
 let sm=readFileSync('public/sitemap.xml','utf8').replace(/<!--entradas-->.*<!--\/entradas-->\n?/s,'');
 const urls=items.filter(hasPage).flatMap(it=>['es','en'].map(l=>{
-  const a=`https://lroget.com/novedades/${it.slug}/`,b=`https://lroget.com/en/news/${it.slug}/`;
+  const a=`https://lroget.com${sitio(it,'es').base}${it.slug}/`,b=`https://lroget.com${sitio(it,'en').base}${it.slug}/`;
   return `  <url><loc>${l==='es'?a:b}</loc><lastmod>${it.date}</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="${a}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${b}"/>
