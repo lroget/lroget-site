@@ -37,18 +37,17 @@ function trazo(c,ancho,pasos=90,punta=0){const A=[],B=[];
 
 // C: mancha irregular
 {const a=rnd()*TAU,b=rnd()*TAU,c=rnd()*TAU,p=[];
- for(let i=0;i<72;i++){const t=i/72*TAU,r=470*(1+.065*Math.sin(2*t+a)+.05*Math.sin(3*t+b)+.022*Math.sin(5*t+c));p.push([500+r*Math.cos(t),500+r*Math.sin(t)])}
+ for(let i=0;i<72;i++){const t=i/72*TAU,r=415*(1+.065*Math.sin(2*t+a)+.05*Math.sin(3*t+b)+.022*Math.sin(5*t+c));p.push([500+r*Math.cos(t),500+r*Math.sin(t)])}
  writeFileSync(`${OUT}/mancha.svg`,svg(1000,1000,`<path d="${cerrado(p)}"/>`))}
 
-// D: barrado del pecho, en mosaico: barras onduladas, finas e irregulares
-{let d='';const W=496,H=150,cw=62,rh=15;
- for(let row=0;row<H/rh;row++)for(let col=0;col<W/cw;col++){
-   const cx=col*cw+(row%2?cw/2:0)+(rnd()-.5)*12,cy=row*rh+7.5+(rnd()-.5)*3,L=44+rnd()*18,cur=2.5+rnd()*4,g=rnd()*3;
-   const w0=ruido(2),m=t=>[cx-L/2+L*t,cy+cur*Math.sin(Math.PI*t)-cur/2+1.6*Math.sin(TAU*(1.5*t+g))];
-   const copias=[0];if(cx+L/2>W)copias.push(-W);if(cx-L/2<0)copias.push(W);
-   for(const ox of copias){d+=trazo(t=>{const [x,y]=m(t);return [x+ox,y]},t=>5+1.7*w0(t),10,3)}
- }
- writeFileSync(`${OUT}/pecho.svg`,svg(W,H,`<path d="${d}"/>`))}
+// D: haz de esquina: cada línea entra por arriba y sale por la izquierda, sin cortes
+{const a=ruido(3),b=ruido(3);let d='';
+ for(let k=0;k<12;k++){const w=ruido(4),q=ruido(2),sx=230+k*(50+rnd()*3),ey=34+k*(19+rnd()*1.5);
+   const c=t=>{const s=Math.sin(Math.PI*t);return [
+     sx*(1-t)-50*t+(70+k*7)*s+22*Math.sin(TAU*(1.4*t+.1))+14*a(t)+5*q(t),
+     -50*(1-t)+ey*t+(52+k*4)*s+24*Math.sin(TAU*(1.2*t+.55))+10*b(t)]};
+   d+=trazo(c,t=>11+3.4*w(t),100)}
+ writeFileSync(`${OUT}/esquina.svg`,svg(1000,560,`<path d="${d}"/>`))}
 
 // E: línea a mano que empalma, para separadores
 {const a=ruido(4),w=ruido(5),W=1800;
