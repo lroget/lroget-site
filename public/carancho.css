@@ -81,7 +81,6 @@ html[data-theme="light"] .card,html[data-theme="light"] .hlc,html[data-theme="li
 /* Portada: negra, nombre naranja y ondas blancas */
 html[data-theme="light"] .hero{position:relative;z-index:6;overflow-x:clip;overflow-y:visible;--night:#010206;--on-night:#f7f1e6;--on-night-soft:#c9bdb0;background:#010206;color:#f7f1e6}
 html[data-theme="light"] .hero::before{background:linear-gradient(to top,#010206 0,rgba(1,2,6,.6) 14%,rgba(1,2,6,0) 38%)}
-html[data-theme="light"] .hero img{filter:grayscale(1) contrast(1.08) brightness(.94)!important}
 html[data-theme="light"] .hero h1{color:var(--rojo)}
 html[data-theme="light"] .hero .btn{border-color:var(--rojo);color:var(--rojo)}
 html[data-theme="light"] .hero .btn.solid{background:var(--rojo);border-color:var(--rojo);color:#010206}
