@@ -1,4 +1,21 @@
 /* Ondas dibujadas en vivo: ondulan con el scroll. Si la persona pidió menos movimiento, quedan quietas. */
+/* Se apaga la luz: al pasar al tema oscuro, la pantalla cae a negro y lo que brilla aparece de a poco. */
+(function(){
+  var tb=document.getElementById('themeBtn'),root=document.documentElement,meta=document.querySelector('meta[name="theme-color"]'),paso=false;
+  function color(){if(meta)meta.content=root.dataset.theme==='dark'?'#0f1214':'#eadfcb'}
+  color();
+  if(!tb)return;
+  tb.addEventListener('click',function(e){
+    if(paso){paso=false;setTimeout(color);return}
+    if(root.dataset.theme==='dark'||matchMedia('(prefers-reduced-motion: reduce)').matches||!document.body.animate){setTimeout(color);return}
+    e.stopImmediatePropagation();
+    var t=document.createElement('div');t.className='apagon';document.body.appendChild(t);
+    t.animate([{opacity:0},{opacity:1}],{duration:110,fill:'forwards',easing:'steps(3)'}).onfinish=function(){
+      paso=true;tb.click();
+      setTimeout(function(){t.animate([{opacity:1},{opacity:0}],{duration:1500,fill:'forwards',easing:'cubic-bezier(.5,0,.3,1)'}).onfinish=function(){t.remove()}},420)}
+  },true);
+})();
+
 (function(){
   var NS='http://www.w3.org/2000/svg',TAU=Math.PI*2;
   var quieto=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -66,11 +83,12 @@
   function flujo(host,clase,dir){
     var W=angosto?800:1600,L=lienzo(host,'flujo '+clase,W,120),n=ruido(4),a=rnd()*TAU,c1=angosto?.85:1.25,c2=angosto?1.7:2.7;
     host.classList.add('con-flujo');
+    var luz=document.createElementNS(NS,'path');luz.setAttribute('class','flujo-luz');L.svg.appendChild(luz);
     function y(t,g){return 58+31*Math.sin(TAU*c1*t+g+a)+15*Math.sin(TAU*c2*t-g*1.4)+6*n(t)}
     if(clase==='flujo-negro')bordeNegro=function(t,g){return y(t,g)/120*L.svg.getBoundingClientRect().height};
     olas.push({el:L.svg,v:dir,dibujar:function(g){var p=[],i,t;
       for(i=0;i<=70;i++){t=i/70;p.push(f(t*W)+' '+f(y(t,g)))}
-      L.path.setAttribute('d','M0 -2L'+p.join('L')+'L'+W+' -2Z')}})}
+      L.path.setAttribute('d','M0 -2L'+p.join('L')+'L'+W+' -2Z');luz.setAttribute('d','M'+p.join('L'))}})}
 
   var hero=document.querySelector('.hero'),ph=document.querySelector('.phead');
   if(hero){
