@@ -7,7 +7,7 @@
   --rojo:#f82c00;
   --naranja:#a8520e;
   --marron:#3a1c10;
-  --petroleo:#0e4a54;
+  --petroleo:#0a3440;
   --blanco:#f7f1e6;
   --trazo:#ff8a1f;
   --periodo:1800px;
@@ -61,14 +61,14 @@ html[data-theme="light"] main h2::after{background:var(--rojo)}
 html[data-theme="light"] .trips li>a:hover,html[data-theme="light"] .trips.trayectoria li>a:hover{background:color-mix(in srgb,var(--h,var(--accent)) 9%,transparent)}
 html[data-theme="light"] .btn{border-color:var(--tinta);color:var(--tinta)}
 html[data-theme="light"] .btn.solid{background:var(--rojo);border-color:var(--rojo);color:var(--tinta)}
-html[data-theme="light"] .btn:hover,html[data-theme="light"] .btn.solid:hover{background:var(--tinta);border-color:var(--tinta);color:#f6efe2}
+html[data-theme="light"] .btn:hover,html[data-theme="light"] .btn.solid:hover{background:var(--petroleo);border-color:var(--petroleo);color:#f6efe2}
 html[data-theme="light"] .chip.on{background:var(--rojo);border-color:var(--rojo);color:var(--tinta)}
 html[data-theme="light"] ::selection{background:var(--rojo);color:var(--tinta)}
 html[data-theme="light"] .social a{border-color:rgba(21,18,17,.5)}
 html[data-theme="light"] .social a:hover,html[data-theme="light"] .social a:focus-visible{color:var(--tinta)}
 html[data-theme="light"] footer{border-top-color:var(--line)}
 html[data-theme="light"] .contact .ola{fill:var(--marron)}
-html[data-theme="light"] .novedades .ola{fill:var(--rojo)}
+html[data-theme="light"] .novedades .ola{fill:var(--petroleo)}
 html[data-theme="light"] .ola-esquina.espejo{fill:var(--rojo)}
 /* líneas a mano también en tarjetas y destacados */
 html[data-theme="light"] .cards{border:0;border-image:none}
@@ -104,7 +104,7 @@ html[data-theme="light"] .trips.trayectoria li:nth-child(n){--h:var(--tinta)}
 html[data-theme="light"] .trips.trayectoria .what a,html[data-theme="light"] .trips.trayectoria .name a{text-decoration-color:var(--tinta)}
 html[data-theme="light"] .trips.trayectoria+section{padding-top:calc(clamp(64px,8vw,110px) + clamp(40px,6vw,80px))}
 
-/* Expediciones: bloque púrpura plano */
+/* Expediciones: bloque petróleo plano */
 html[data-theme="light"] #viajes{--fg:#f7f1e6;--fg-soft:#eadfd6;--line:rgba(247,241,230,.35);--accent:#f7f1e6;--accent-text:#f7f1e6;--h:#f7f1e6;--amber:#f7f1e6;--ember:#f7f1e6;--rose:#f7f1e6;--trazo:#f7f1e6;
   background:var(--petroleo);background-image:none;color:#f7f1e6}
 html[data-theme="light"] #viajes h2::after{background:var(--rojo)}
@@ -112,6 +112,21 @@ html[data-theme="light"] #viajes li:nth-child(n){--h:#f7f1e6}
 html[data-theme="light"] #viajes a{text-decoration-color:var(--rojo)}
 html[data-theme="light"] .contact.con-flujo{padding-top:calc(clamp(64px,8vw,110px) + 24px)}
 html[data-theme="light"] .flujo-petroleo{fill:var(--petroleo)}
+
+/* Proyectos: bloque negro */
+html[data-theme="light"] .projects{--fg:#f7f1e6;--fg-soft:#d8cdbf;--line:rgba(247,241,230,.35);--accent:var(--rojo);--accent-text:var(--rojo);--h:var(--rojo);--amber:var(--rojo);--ember:var(--rojo);--rose:var(--rojo);
+  background:#010206;background-image:none;color:#f7f1e6;padding-top:calc(clamp(64px,8vw,110px) + 24px)}
+html[data-theme="light"] main>section.projects:not(.hero){background:#010206;background-image:none}
+html[data-theme="light"] .projects .ola{fill:var(--blanco)}
+html[data-theme="light"] .projects .card{--h:var(--rojo);background:none;border-top:1px solid rgba(247,241,230,.3)}
+html[data-theme="light"] .projects .card h3,html[data-theme="light"] .projects h2{color:#f7f1e6}
+/* Azul de acento en lo claro */
+html[data-theme="light"] .about h2::after,html[data-theme="light"] .novedades h2::after{background:var(--petroleo)}
+html[data-theme="light"] .about strong{color:var(--petroleo)}
+html[data-theme="light"] .about .links a{text-decoration-color:var(--petroleo)}
+html[data-theme="light"] .novedades{--accent:var(--petroleo);--accent-text:var(--petroleo);--flow:linear-gradient(var(--petroleo),var(--petroleo));padding-top:calc(clamp(64px,8vw,110px) + 24px)}
+html[data-theme="light"] .novedades li:nth-child(n){--h:var(--petroleo)}
+html[data-theme="light"] .novedades .name a,html[data-theme="light"] .novedades .what a{text-decoration-color:var(--petroleo)}
 
 @media (max-width:820px){
   .hero h1{font-size:clamp(3.5rem,19.2vw,7.2rem)}

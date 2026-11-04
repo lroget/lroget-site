@@ -78,6 +78,9 @@
     var so=document.querySelector('.about');if(so)flujo(so,'flujo-negro',1)}
   if(ph)esquina(ph,'ola-esquina espejo',-1);
   [['.projects',1],['.novedades',-1],['.contact',1]].forEach(function(x){var e=document.querySelector(x[0]);if(e)franja(e,x[1])});
+  var pr=document.querySelector('.projects'),nv=document.querySelector('.novedades');
+  if(pr)flujo(pr,'flujo-papel',1);
+  if(nv)flujo(nv,'flujo-negro',-1);
   var tr=document.querySelector('.trips.trayectoria');
   if(tr){flujo(tr,'flujo-papel',-1);var sig=tr.nextElementSibling;if(sig&&sig.tagName==='SECTION'){flujo(sig,'flujo-naranja',1);var sig2=sig.nextElementSibling;if(sig2&&sig2.tagName==='SECTION')flujo(sig2,'flujo-petroleo',-1)}}
   if(!olas.length)return;
