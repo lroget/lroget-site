@@ -79,7 +79,7 @@
   if(ph)esquina(ph,'ola-esquina espejo',-1);
   [['.projects',1],['.novedades',-1],['.contact',1]].forEach(function(x){var e=document.querySelector(x[0]);if(e)franja(e,x[1])});
   var tr=document.querySelector('.trips.trayectoria');
-  if(tr){flujo(tr,'flujo-papel',-1);var sig=tr.nextElementSibling;if(sig&&sig.tagName==='SECTION'){flujo(sig,'flujo-naranja',1);var sig2=sig.nextElementSibling;if(sig2&&sig2.tagName==='SECTION')flujo(sig2,'flujo-purpura',-1)}}
+  if(tr){flujo(tr,'flujo-papel',-1);var sig=tr.nextElementSibling;if(sig&&sig.tagName==='SECTION'){flujo(sig,'flujo-naranja',1);var sig2=sig.nextElementSibling;if(sig2&&sig2.tagName==='SECTION')flujo(sig2,'flujo-petroleo',-1)}}
   if(!olas.length)return;
 
   function visible(e){var r=e.getBoundingClientRect();return r.bottom>-40&&r.top<innerHeight+40}

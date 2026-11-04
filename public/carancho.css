@@ -7,7 +7,7 @@
   --rojo:#f82c00;
   --naranja:#a8520e;
   --marron:#3a1c10;
-  --purpura:#5a2a72;
+  --petroleo:#0e4a54;
   --blanco:#f7f1e6;
   --trazo:#ff8a1f;
   --periodo:1800px;
@@ -36,7 +36,7 @@ main h2::after,.trips.trayectoria h2::after,.trips.trayectoria main h2::after{he
 /* ===== Tema principal: papel ===== */
 html[data-theme="light"]{
   --night:var(--papel);--on-night:var(--tinta);--on-night-soft:#51463e;
-  --lamp:var(--rojo);--amber:var(--naranja);--ember:var(--rojo);--rose:var(--purpura);
+  --lamp:var(--rojo);--amber:var(--naranja);--ember:var(--rojo);--rose:var(--petroleo);
   --bg:var(--papel);--bg-2:var(--papel);--fg:var(--tinta);--fg-soft:#4a3f37;--line:rgba(21,18,17,.26);
   --accent:var(--rojo);--accent-text:#b82000;
   --flow:linear-gradient(var(--marron),var(--marron));
@@ -47,7 +47,7 @@ html[data-theme="light"] body{background:var(--papel)}
 /* Textura de papel sobre todo el impreso */
 html[data-theme="light"] body::before{background:url(/img/carancho/papel.webp) 0 0/640px 640px;opacity:1;filter:none;mix-blend-mode:multiply}
 html[data-theme="light"] .plates,html[data-theme="light"] .field,html[data-theme="light"] .contact,
-html[data-theme="light"] .phead,html[data-theme="light"] .bar{--amber:var(--naranja);--ember:var(--rojo);--rose:var(--purpura)}
+html[data-theme="light"] .phead,html[data-theme="light"] .bar{--amber:var(--naranja);--ember:var(--rojo);--rose:var(--petroleo)}
 /* sin degradados: todas las secciones planas, menos la portada */
 html[data-theme="light"] main>section:not(.hero),html[data-theme="light"] .phead,html[data-theme="light"] .about .col,
 html[data-theme="light"] .field,html[data-theme="light"] .plates,html[data-theme="light"] .contact{background:var(--papel);background-image:none}
@@ -106,12 +106,12 @@ html[data-theme="light"] .trips.trayectoria+section{padding-top:calc(clamp(64px,
 
 /* Expediciones: bloque púrpura plano */
 html[data-theme="light"] #viajes{--fg:#f7f1e6;--fg-soft:#eadfd6;--line:rgba(247,241,230,.35);--accent:#f7f1e6;--accent-text:#f7f1e6;--h:#f7f1e6;--amber:#f7f1e6;--ember:#f7f1e6;--rose:#f7f1e6;--trazo:#f7f1e6;
-  background:var(--purpura);background-image:none;color:#f7f1e6}
+  background:var(--petroleo);background-image:none;color:#f7f1e6}
 html[data-theme="light"] #viajes h2::after{background:var(--rojo)}
 html[data-theme="light"] #viajes li:nth-child(n){--h:#f7f1e6}
 html[data-theme="light"] #viajes a{text-decoration-color:var(--rojo)}
 html[data-theme="light"] .contact.con-flujo{padding-top:calc(clamp(64px,8vw,110px) + 24px)}
-html[data-theme="light"] .flujo-purpura{fill:var(--purpura)}
+html[data-theme="light"] .flujo-petroleo{fill:var(--petroleo)}
 
 @media (max-width:820px){
   .hero h1{font-size:clamp(3.5rem,19.2vw,7.2rem)}
