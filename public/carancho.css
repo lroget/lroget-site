@@ -190,7 +190,6 @@ html[data-theme="dark"] .card,html[data-theme="dark"] .hlc,html[data-theme="dark
 html[data-theme="dark"] .card::before,html[data-theme="dark"] .contact::before{display:none}
 /* Ondas y líneas que brillan */
 html[data-theme="dark"] .ola,html[data-theme="dark"] .ola-esquina,html[data-theme="dark"] .ola-vertical,html[data-theme="dark"] .ola-hero{fill:var(--v);filter:drop-shadow(0 0 6px rgba(110,242,168,.6))}
-html[data-theme="dark"] .ola-vertical,html[data-theme="dark"] .ola-hero{fill:var(--b)}
 html[data-theme="dark"] .trips li>a::after,html[data-theme="dark"] .trips li .row::after{box-shadow:none;filter:drop-shadow(0 0 3px var(--v))}
 /* Portada */
 html[data-theme="dark"] .hero{position:relative;z-index:6;overflow-x:clip;overflow-y:visible;background:var(--d2);color:var(--b)}
