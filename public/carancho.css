@@ -1,0 +1,75 @@
+/* Look carancho, en prueba. Se quita borrando este archivo y su <link>. */
+:root{
+  --psico:linear-gradient(115deg,#ffc23d,#ff8a1f 28%,#ff4a2b 55%,#ff4f93 78%,#ffc23d);
+  --psico-noche:linear-gradient(115deg,#ffc23d,#ff8a1f 28%,#ff4a2b 55%,#ff4f93 78%,#ffc23d);
+  --plumaje:#3a1c10;
+  --ondas:url(/img/carancho/ondas.svg);
+  --franja:url(/img/carancho/franja.svg);
+  --mancha:url(/img/carancho/mancha.svg);
+  --pecho:url(/img/carancho/pecho.svg);
+  --linea:url(/img/carancho/linea.svg);
+  --pincelada:url(/img/carancho/pincelada.svg);
+}
+html[data-theme="light"]{--psico:linear-gradient(115deg,#7a3a12,#3a1c10 40%,#b5420e 70%,#3a1c10)}
+
+/* Portada: mancha detrás del retrato y ondas que bajan por la izquierda */
+.hero{isolation:isolate}
+.hero figure{isolation:isolate}
+.hero figure::before{content:"";position:absolute;z-index:0;top:4%;right:7%;width:min(62vw,calc(92svh));aspect-ratio:1;
+  background:#e8650f;-webkit-mask:var(--mancha) center/100% 100% no-repeat;mask:var(--mancha) center/100% 100% no-repeat}
+.hero img{position:relative;z-index:1;mix-blend-mode:lighten;filter:contrast(1.12) saturate(.92)}
+.hero::after{content:"";position:absolute;z-index:0;pointer-events:none;top:var(--bar);left:-6vw;width:min(78vw,1120px);aspect-ratio:5/6;
+  background:var(--psico-noche);background-size:220% 220%;opacity:.85;
+  -webkit-mask:var(--ondas) center/100% 100% no-repeat,linear-gradient(170deg,#000 22%,rgba(0,0,0,.42) 48%,transparent 68%);
+  mask:var(--ondas) center/100% 100% no-repeat,linear-gradient(170deg,#000 22%,rgba(0,0,0,.42) 48%,transparent 68%);
+  -webkit-mask-composite:source-in;mask-composite:intersect}
+.hero::before{background:linear-gradient(to top,var(--night) 0,rgba(10,6,5,.55) 16%,rgba(10,6,5,0) 40%)}
+.hero h1{text-shadow:0 0 .35em rgba(10,6,5,.75)}
+
+/* Cabeceras interiores: ondas saliendo por la derecha */
+.phead::after{content:"";position:absolute;z-index:-1;pointer-events:none;top:-12%;right:-6vw;width:min(58vw,760px);aspect-ratio:5/6;
+  background:var(--psico-noche);background-size:220% 220%;opacity:.75;transform:scaleX(-1);
+  -webkit-mask:var(--ondas) center/100% 100% no-repeat,linear-gradient(to left,transparent 0,#000 34%);
+  mask:var(--ondas) center/100% 100% no-repeat,linear-gradient(to left,transparent 0,#000 34%);
+  -webkit-mask-composite:source-in;mask-composite:intersect}
+.phead::before{display:none}
+
+/* Franja de ondas entre secciones */
+.projects,.novedades,.contact{position:relative}
+.projects::before,.contact::before{content:"";display:block;width:100%;height:clamp(84px,11vw,150px);margin-bottom:clamp(28px,5vw,60px);
+  background:var(--psico);background-size:220% 220%;opacity:.9;
+  -webkit-mask:var(--franja) 0 0/max(1500px,120vw) 100% repeat-x;mask:var(--franja) 0 0/max(1500px,120vw) 100% repeat-x}
+.projects{padding-top:0}.contact{padding-top:0}
+
+/* El pecho barrado, como bloque propio */
+.novedades::before{content:"";display:block;height:clamp(110px,13vw,170px);margin-bottom:clamp(20px,4vw,44px);
+  background:var(--fg);opacity:.9;
+  -webkit-mask:var(--pecho) 0 0/496px 150px repeat,linear-gradient(to bottom,transparent,#000 22%,#000 55%,transparent);
+  mask:var(--pecho) 0 0/496px 150px repeat,linear-gradient(to bottom,transparent,#000 22%,#000 55%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect}
+.novedades{padding-top:0}
+
+/* Títulos subrayados a pincel */
+main h2::after,.trips.trayectoria h2::after,.trips.trayectoria main h2::after{height:.2em;min-height:12px;width:2.6em;margin-top:.2em;
+  background:var(--psico);-webkit-mask:var(--pincelada) left center/100% 100% no-repeat;mask:var(--pincelada) left center/100% 100% no-repeat}
+.trips.trayectoria h2::after,.trips.trayectoria main h2::after{background:#1c0a04}
+
+/* Separadores a mano alzada */
+.trips ul{border-top:0;border-image:none}
+.trips li>a,.trips li .row{border-bottom:0;border-image:none}
+.trips li>a::after,.trips li .row::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;
+  background:var(--h,var(--accent));opacity:.7;-webkit-mask:var(--linea) 0 0/1800px 100% repeat-x;mask:var(--linea) 0 0/1800px 100% repeat-x}
+.trips li:nth-child(2n) .row::after,.trips li:nth-child(2n)>a::after{-webkit-mask-position:-640px 0;mask-position:-640px 0}
+
+/* Bordes de botones, dibujados */
+.btn,.chip{border-radius:255px 18px 225px 18px/18px 225px 18px 255px}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero::after,.phead::after,.projects::before,.contact::before,main h2::after{animation:psico 22s linear infinite alternate}
+  @keyframes psico{from{background-position:0 0}to{background-position:100% 100%}}
+}
+@media (max-width:720px){
+  .hero figure::before{width:96vw;top:12%;right:-14vw}
+  .hero::after{width:130vw;left:-30vw;opacity:.6}
+  .phead::after{width:92vw;opacity:.45}
+}

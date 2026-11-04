@@ -5,9 +5,9 @@ import {marked} from 'marked';
 import {leer} from './contenido.mjs';
 
 const LANGS={
-  es:{page:'public/novedades/index.html',base:'/novedades/',other:'/en/news/',root:'Inicio',rootHref:'/',sec:'Novedades',photo:'Foto',
+  es:{home:'public/index.html',page:'public/novedades/index.html',base:'/novedades/',other:'/en/news/',root:'Inicio',rootHref:'/',sec:'Novedades',photo:'Foto',
       tags:{charla:'Charla',taller:'Taller',congreso:'Congreso',convenio:'Convenio',reco:'Reconocimiento',prensa:'Prensa',pub:'Publicación',hito:'Hito',voluntariado:'Voluntariado'}},
-  en:{page:'public/en/news/index.html',base:'/en/news/',other:'/novedades/',root:'Home',rootHref:'/en/',sec:'News',photo:'Photo',
+  en:{home:'public/en/index.html',page:'public/en/news/index.html',base:'/en/news/',other:'/novedades/',root:'Home',rootHref:'/en/',sec:'News',photo:'Photo',
       tags:{charla:'Talk',taller:'Workshop',congreso:'Conference',convenio:'Agreement',reco:'Recognition',prensa:'Press',pub:'Publication',hito:'Milestone',voluntariado:'Volunteer'}}
 };
 const esc=s=>String(s??'').replace(/&(?![a-z#0-9]+;)/gi,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -34,6 +34,14 @@ function row(it,lang){
     const c=lang==='en'&&it.en.cierre; if(c) what+=' '+esc(c);
   }
   return `<li data-t="${dt}"><div class="row"><span class="yr">${esc(field(it,lang,'fecha'))}<span class="tag">${L.tags[it.tipo]||''}</span></span><span class="name">${name}</span><span class="what">${what}</span></div></li>`;
+}
+// Portada: solo charlas, talleres y congresos del último año, hasta tres.
+function recientes(lang){
+  const L=LANGS[lang], lim=new Date(Date.now()-365*864e5).toISOString().slice(0,10);
+  return items.filter(i=>['charla','taller','congreso'].includes(i.tipo)&&i.date>=lim).slice(0,3).map(it=>{
+    const r=row(it,lang).replace(/<span class="tag">.*?<\/span>/,'').replace(/^<li data-t="\w+">/,'<li>');
+    return r;
+  }).join('\n');
 }
 function timeline(lang){
   const years=[...new Set(items.map(i=>i.year))].sort((a,b)=>b-a);
@@ -88,6 +96,8 @@ for(const lang of ['es','en']){
   let html=readFileSync(L.page,'utf8');
   html=html.replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang)}<!--/tl-->`);
   writeFileSync(L.page,html);
+  const home=readFileSync(L.home,'utf8').replace(/<!--rec-->.*<!--\/rec-->/s,`<!--rec-->${recientes(lang)}\n<!--/rec-->`);
+  writeFileSync(L.home,home);
   for(const it of items.filter(hasPage)){
     const dir='public'+L.base+it.slug;
     mkdirSync(dir,{recursive:true});
