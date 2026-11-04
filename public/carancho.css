@@ -136,11 +136,25 @@ html[data-theme="light"] .about figure img,html[data-theme="light"] .fotos img{f
 .about figure img{flex:1 1 0;min-height:0}
 .about figcaption,.fotos figcaption{position:static;margin:.3rem 0 0;text-align:center;color:var(--fg-soft)}
 
-/* Lamparita: prendida en claro, apagada en oscuro */
-#themeBtn,html[data-theme="light"] #themeBtn,html[data-theme="dark"] #themeBtn{padding:0 6px;border:0;background:none;font-size:1.45rem;line-height:1;cursor:pointer;box-shadow:none}
-html[data-theme="light"] #themeBtn:hover,html[data-theme="dark"] #themeBtn:hover{background:none;transform:scale(1.12)}
-html[data-theme="dark"] #themeBtn{filter:grayscale(1) brightness(.72)}
-#themeBtn:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+/* Interruptores: tema (I encendido, O apagado) e idioma */
+.bar nav #themeBtn,.bar nav a.lang{position:relative;display:inline-block;flex:0 0 auto;width:60px;height:30px;padding:0;border:1.5px solid currentColor;border-radius:255px 18px 225px 18px/18px 225px 18px 255px;background:none;cursor:pointer;color:var(--fg);box-shadow:none;transition:opacity .2s}
+.bar nav #themeBtn::before,.bar nav a.lang::before{content:"";position:absolute;z-index:0;top:1px;left:1px;width:27px;height:25px;border-radius:255px 18px 225px 18px/18px 225px 18px 255px;background:var(--fg);transition:transform .25s cubic-bezier(.3,.8,.3,1)}
+.bar nav #themeBtn::before{display:grid;place-items:center;font:800 .95rem/1 var(--ui);color:var(--bar-fondo,var(--bg))}
+.bar nav #themeBtn::after{position:absolute;top:50%;transform:translate(-50%,-50%);font:700 .9rem/1 var(--ui);opacity:.6}
+html[data-theme="light"] .bar nav #themeBtn::before{content:"I";transform:translateX(29px)}
+html[data-theme="light"] .bar nav #themeBtn::after{content:"O";left:15px}
+html[data-theme="dark"] .bar nav #themeBtn::before{content:"O"}
+html[data-theme="dark"] .bar nav #themeBtn::after{content:"I";left:42px}
+html[lang="en"] .bar nav a.lang::before{transform:translateX(29px)}
+.bar .ico{position:absolute;z-index:1;top:50%;width:20px;height:20px;margin-top:-10px;background:currentColor;opacity:.65;-webkit-mask:var(--ico) center/contain no-repeat;mask:var(--ico) center/contain no-repeat}
+.bar .ico.mate{--ico:url(/img/carancho/mate.svg);left:5px}
+.bar .ico.burger{--ico:url(/img/carancho/hamburguesa.svg);right:5px}
+html[lang="es"] .bar .ico.mate,html[lang="en"] .bar .ico.burger{color:var(--bg);opacity:1}
+html[data-theme] .bar nav #themeBtn:hover,html[data-theme] .bar nav a.lang:hover{background:none;color:var(--fg);opacity:.8}
+.bar nav #themeBtn:focus-visible,.bar nav a.lang:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+html[data-theme="dark"] .bar nav #themeBtn,html[data-theme="dark"] .bar nav a.lang{--fg:var(--v);border-color:var(--v);box-shadow:0 0 7px rgba(110,242,168,.3)}
+html[data-theme="dark"] .bar nav #themeBtn::before,html[data-theme="dark"] .bar nav a.lang::before{box-shadow:0 0 7px rgba(110,242,168,.55)}
+@media (prefers-reduced-motion:reduce){.bar nav #themeBtn::before,.bar nav a.lang::before{transition:none}}
 
 /* Propósito y visión */
 .rumbo{display:grid;gap:clamp(22px,3vw,34px);margin:clamp(30px,4vw,52px) 0;padding:clamp(28px,3.6vw,46px) clamp(26px,3.4vw,44px);border-radius:150px 26px 170px 30px/34px 150px 28px 170px}
