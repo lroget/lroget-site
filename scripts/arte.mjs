@@ -19,36 +19,6 @@ function trazo(c,ancho,pasos=90,punta=0){const A=[],B=[];
     A.push([x+nx*w/2,y+ny*w/2]);B.unshift([x-nx*w/2,y-ny*w/2])}
   return cerrado([...A,...B])}
 
-// A: haz de ondas diagonal
-{const a=ruido(3),b=ruido(3),gap=ruido(3);let d='';
- const C=t=>[1120-1250*t+150*Math.sin(TAU*(1.05*t+.08))+60*a(t),-90+1420*t+120*Math.sin(TAU*(.8*t+.55))+40*b(t)];
- for(let k=0;k<13;k++){const w=ruido(4);
-   const c=t=>{const [x,y]=C(t),[x2,y2]=C(Math.min(1,t+.003)),[x0,y0]=C(Math.max(0,t-.003));let nx=-(y2-y0),ny=x2-x0;const l=Math.hypot(nx,ny)||1;
-     const o=(k-6)*(30+8*gap(t))*(1+.35*Math.sin(TAU*(t+.2)));return [x+nx/l*o,y+ny/l*o]};
-   d+=trazo(c,t=>11+3.6*w(t),110)}
- writeFileSync(`${OUT}/ondas.svg`,svg(1000,1200,`<path d="${d}"/>`))}
-
-// B: franja horizontal que empalma consigo misma
-{const a=ruido(3);let d='';const W=2400,H=320;
- for(let k=0;k<8;k++){const w=ruido(4),q=ruido(2);
-   const c=t=>[t*W,48+k*31+62*a(t)+16*q(t)*(k/7)];
-   d+=trazo(c,t=>9.5+3*w(t),160)}
- writeFileSync(`${OUT}/franja.svg`,svg(W,H,`<path d="${d}"/>`))}
-
-// C: mancha irregular
-{const a=rnd()*TAU,b=rnd()*TAU,c=rnd()*TAU,p=[];
- for(let i=0;i<72;i++){const t=i/72*TAU,r=415*(1+.065*Math.sin(2*t+a)+.05*Math.sin(3*t+b)+.022*Math.sin(5*t+c));p.push([500+r*Math.cos(t),500+r*Math.sin(t)])}
- writeFileSync(`${OUT}/mancha.svg`,svg(1000,1000,`<path d="${cerrado(p)}"/>`))}
-
-// D: haz de esquina: cada línea entra por arriba y sale por la izquierda, sin cortes
-{const a=ruido(3),b=ruido(3);let d='';
- for(let k=0;k<12;k++){const w=ruido(4),q=ruido(2),sx=230+k*(50+rnd()*3),ey=34+k*(19+rnd()*1.5);
-   const c=t=>{const s=Math.sin(Math.PI*t);return [
-     sx*(1-t)-50*t+(70+k*7)*s+22*Math.sin(TAU*(1.4*t+.1))+14*a(t)+5*q(t),
-     -50*(1-t)+ey*t+(52+k*4)*s+24*Math.sin(TAU*(1.2*t+.55))+10*b(t)]};
-   d+=trazo(c,t=>11+3.4*w(t),100)}
- writeFileSync(`${OUT}/esquina.svg`,svg(1000,560,`<path d="${d}"/>`))}
-
 // E: línea a mano que empalma, para separadores
 {const a=ruido(4),w=ruido(5),W=1800;
  writeFileSync(`${OUT}/linea.svg`,svg(W,12,`<path d="${trazo(t=>[t*W,6+3*a(t)],t=>1.5+.8*w(t),200)}"/>`))}
