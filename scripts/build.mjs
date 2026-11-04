@@ -13,6 +13,8 @@ const LANGS={
 for(const [l,page,base,other,sec] of [['es','public/encuentros/index.html','/encuentros/','/en/gatherings/','Encuentros'],['en','public/en/gatherings/index.html','/en/gatherings/','/encuentros/','Gatherings']])
   LANGS[l].enc={page,base,other,sec};
 const ENC=['charla','taller','congreso'];
+Object.assign(LANGS.es,{com:'public/comunicacion/index.html',arg:'public/proyectos/argentinat/index.html',coa:'public/proyectos/coa-carancho/index.html'});
+Object.assign(LANGS.en,{com:'public/en/communication/index.html',arg:'public/en/projects/argentinat/index.html',coa:'public/en/projects/coa-carancho/index.html'});
 const esc=s=>String(s??'').replace(/&(?![a-z#0-9]+;)/gi,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const attr=s=>esc(s).replace(/"/g,'&quot;');
 const inline=s=>esc(s).replace(/\*([^*]+)\*/g,'<em>$1</em>');
@@ -21,7 +23,8 @@ const plain=s=>String(s??'').replace(/\*/g,'');
 const items=leer().map(i=>({...i,date:String(i.es.fecha_orden),year:String(i.es.fecha_orden).slice(0,4),tipo:i.es.tipo||'hito'}))
   .sort((a,b)=>b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug));
 
-const esEnc=it=>ENC.includes(it.tipo);
+const destino=it=>it.es.destino||(ENC.includes(it.tipo)?'encuentros':it.tipo==='convenio'?'argentinat':['pub','prensa'].includes(it.tipo)?'comunicacion':'novedades');
+const esEnc=it=>destino(it)==='encuentros';
 const lim=new Date(Date.now()-365*864e5).toISOString().slice(0,10);
 const sitio=(it,lang)=>esEnc(it)?LANGS[lang].enc:LANGS[lang];
 const hasPage=(it)=>Boolean((it.es.cuerpo||'').trim()||(it.es.fotos||[]).length);
@@ -99,11 +102,18 @@ ${marked.parse(field(it,lang,'cuerpo')||'')}${link}
 for(const lang of ['es','en']){
   const L=LANGS[lang];
   let html=readFileSync(L.page,'utf8');
-  // Novedades: todavía guarda lo que no es un encuentro, y los encuentros del último año.
-  html=html.replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(i=>!esEnc(i)||i.date>=lim))}<!--/tl-->`);
+  // Novedades: solo lo del último año. El resto vive en su página temática.
+  html=html.replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(i=>destino(i)!=='ninguno'&&i.date>=lim))}<!--/tl-->`);
   writeFileSync(L.page,html);
   let enc=readFileSync(L.enc.page,'utf8').replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(esEnc))}<!--/tl-->`);
   writeFileSync(L.enc.page,enc);
+  const com=readFileSync(L.com,'utf8').replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(i=>destino(i)==='comunicacion'))}<!--/tl-->`);
+  writeFileSync(L.com,com);
+  const plano=l=>l.map(i=>row(i,lang).replace(/<span class="tag">.*?<\/span>/,'').replace(/^<li data-t="\w+">/,'<li>')).join('\n');
+  const arg=readFileSync(L.arg,'utf8').replace(/<!--arg-->.*<!--\/arg-->/s,`<!--arg-->${plano(items.filter(i=>destino(i)==='argentinat'))}\n<!--/arg-->`);
+  writeFileSync(L.arg,arg);
+  const coa=readFileSync(L.coa,'utf8').replace(/<!--coa-->.*<!--\/coa-->/s,`<!--coa-->${plano(items.filter(i=>destino(i)==='coa'))}\n<!--/coa-->`);
+  writeFileSync(L.coa,coa);
   const home=readFileSync(L.home,'utf8').replace(/<!--rec-->.*<!--\/rec-->/s,`<!--rec-->${recientes(lang)}\n<!--/rec-->`);
   writeFileSync(L.home,home);
   for(const it of items.filter(hasPage)){

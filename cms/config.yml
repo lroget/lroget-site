@@ -40,6 +40,18 @@ collections:
           - {label: Publicación, value: pub}
           - {label: Hito, value: hito}
           - {label: Voluntariado, value: voluntariado}
+      - label: "Dónde se muestra"
+        name: destino
+        widget: select
+        required: false
+        hint: "Si lo dejás vacío, sale del tipo: charla, taller y congreso van a Encuentros; convenio a ArgentiNat; publicación y prensa a Comunicación."
+        options:
+          - {label: Encuentros, value: encuentros}
+          - {label: ArgentiNat, value: argentinat}
+          - {label: COA Carancho, value: coa}
+          - {label: Comunicación, value: comunicacion}
+          - {label: Solo Novedades, value: novedades}
+          - {label: "Ninguna (ya figura en otra página)", value: ninguno}
       - {label: "Resumen", name: resumen, widget: text, hint: "Nunca FVSA: en público es Vida Silvestre."}
       - {label: "Enlace (dirección)", name: enlace_url, widget: string, required: false}
       - {label: "Enlace (texto)", name: enlace_texto, widget: string, required: false}
