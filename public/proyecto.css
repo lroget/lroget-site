@@ -38,7 +38,7 @@ html[data-theme="dark"] .pj .mancha{filter:drop-shadow(0 0 14px rgba(110,242,168
 .ph-hero .lead{max-width:30ch}
 .ph-hero .vis-hero{position:relative;align-self:end}
 .ph-hero .vis-hero .mancha{width:min(100%,560px);margin-left:auto}
-.sello{position:absolute;left:-4%;bottom:-6%;width:clamp(130px,17vw,240px);transform:rotate(-9deg);filter:drop-shadow(0 6px 14px rgba(0,0,0,.25))}
+.sello{position:absolute;left:-5%;top:-8%;width:clamp(130px,17vw,240px);transform:rotate(-9deg);filter:drop-shadow(0 6px 14px rgba(0,0,0,.25))}
 .sello img{display:block;width:100%;height:auto}
 html[data-theme="dark"] .sello{filter:drop-shadow(0 0 16px rgba(110,242,168,.35))}
 
@@ -84,7 +84,7 @@ html:not([data-theme="light"]) .datos div{background:none;border-top:2px solid v
 /* dos fotos en mancha: una grande y una chica que se le cruza */
 .par{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:start}
 .par>figure:nth-child(1){grid-column:1/10;grid-row:1}
-.par>figure:nth-child(2){grid-column:7/13;grid-row:1;margin-top:58%;position:relative;z-index:1}
+.par>figure:nth-child(2){grid-column:6/13;grid-row:1;margin-top:46%;position:relative;z-index:1}
 .par>figure:nth-child(2) figcaption{text-align:right}
 .par .zoom img{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
 .par .zoom:hover img{transform:scale(1.03)}
@@ -174,7 +174,7 @@ html[data-theme] .hacelo .btn:hover{background:#f7f1e6;border-color:#f7f1e6;colo
   .js .programa.vis li{opacity:1;transform:none}
   @supports (animation-timeline:view()){
     .sello{animation:gira linear both;animation-timeline:scroll(root);animation-range:0 90vh}
-    @keyframes gira{from{transform:rotate(-9deg)}to{transform:rotate(14deg) translateY(-12px)}}
+    @keyframes gira{from{transform:rotate(-9deg)}to{transform:rotate(10deg) translateY(10px)}}
   }
 }
 @media (prefers-reduced-motion:reduce){.bosque i{opacity:1;transform:none;transition:none}}
@@ -183,7 +183,7 @@ html[data-theme] .hacelo .btn:hover{background:#f7f1e6;border-color:#f7f1e6;colo
 @media (max-width:820px){
   .ph-hero .wrap,.manifiesto .wrap,.ficha,.creditos .wrap,.hacelo .wrap{grid-template-columns:minmax(0,1fr)}
   .ph-hero .vis-hero{order:-1;max-width:420px;margin:0 auto;width:100%}
-  .sello{left:auto;right:0;bottom:-2%;width:clamp(110px,32vw,150px)}
+  .sello{left:auto;right:0;top:-6%;bottom:auto;width:clamp(110px,32vw,150px)}
   .datos{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}
   .ficha:nth-child(even)>.txt{order:0}
   .ficha .media{order:2}
@@ -200,4 +200,38 @@ html[data-theme] .hacelo .btn:hover{background:#f7f1e6;border-color:#f7f1e6;colo
 /* ritmo: menos aire entre secciones que en las páginas de texto */
 .pj>section.prose{padding:clamp(48px,6vw,88px) 0}
 .pj .ficha{padding:clamp(40px,5.5vw,80px) 0}
-.ph-hero .vis-hero figcaption{text-align:right}
+
+
+/* recorte: la mancha se adapta a la proporción de cada foto en vez de forzar un cuadrado */
+.pj .mancha img{aspect-ratio:auto;height:auto;-webkit-mask-size:100% 100%;mask-size:100% 100%}
+.pj .mancha.vertical img{aspect-ratio:4/5;object-fit:cover}
+
+/* fotos rectas, en grilla como los afiches (decisión de Leo, 5/11/2026): sin máscara de mancha */
+.pj .mancha img,.pj .mancha.m2 img{-webkit-mask:none;mask:none;object-fit:cover}
+html[data-theme="dark"] .pj .mancha{filter:none}
+html[data-theme="dark"] .pj .mancha img{box-shadow:0 0 0 1px rgba(110,242,168,.22)}
+.pj .media.par{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.pj .par>figure:nth-child(1){grid-column:1;grid-row:1;margin:0}
+.pj .par>figure:nth-child(2){grid-column:2;grid-row:1;margin-top:64px}
+.pj .par>figure:nth-child(2) figcaption{text-align:left}
+.pj .par .mancha img{aspect-ratio:4/5}
+.pj .lugar .collage .mancha img{aspect-ratio:4/5}
+.pj .lugar .collage figure:nth-child(1) img{aspect-ratio:4/3}
+.pj .vecinos .tira .mancha img{aspect-ratio:4/5}
+.pj .ph-hero .vis-hero .mancha img{aspect-ratio:4/3}
+.pj .manifiesto .mancha img,.pj .hacelo .mancha img{aspect-ratio:4/5}
+
+/* bandas negras con las formas de la portada (ondas de borde y haz de líneas, de carancho.js) */
+html[data-theme] main>section.frase{background:#010206;background-image:none;color:#f7f1e6}
+.frase{position:relative;overflow:hidden}
+.frase p{color:#f7f1e6}
+.frase p em{color:#ff8a1f}
+.frase .kicker{color:#ff8a1f}
+.frase .ola,.hacelo .ola{fill:#f7f1e6;margin-bottom:clamp(32px,5vw,64px)}
+.pj section.con-flujo{padding-top:calc(clamp(64px,8vw,110px) + 24px)}
+.pj section.frase.con-flujo,.pj section.hacelo.con-flujo{padding-top:clamp(64px,8vw,110px)}
+html[data-theme="dark"] main>section.frase,html[data-theme="dark"] main>section.hacelo{background:var(--n-verde)}
+html[data-theme="dark"] .frase .flujo-papel,html[data-theme="dark"] .hacelo .flujo-papel{fill:var(--n-noche)}
+html[data-theme="dark"] .vecinos .flujo-negro{fill:var(--n-verde)}
+html[data-theme="dark"] .frase .ola,html[data-theme="dark"] .hacelo .ola{fill:var(--v)}
+html[data-theme="dark"] .frase p em,html[data-theme="dark"] .frase .kicker{color:var(--v)}
