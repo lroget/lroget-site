@@ -29,26 +29,8 @@
 <link rel="preload" href="/fonts/bricolage-latin-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
 <link rel="stylesheet" href="/carancho.css">
-<style>
-.coa-intro .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
-.coa-fig{margin:0}.coa-fig button,.ggrid button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
-.coa-fig img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;-webkit-mask:var(--mancha-1) center/100% 100% no-repeat;mask:var(--mancha-1) center/100% 100% no-repeat}
-.coa-fig figcaption,.ggrid figcaption{padding-top:8px;text-align:center;font-family:var(--ui);font-stretch:85%;font-size:.95rem;color:var(--fg-soft)}
-html[data-theme="light"] .coa-fig img{filter:saturate(.8) sepia(.14) contrast(1.05)}
-html[data-theme="dark"] .coa-fig img{filter:grayscale(1) contrast(1.08) brightness(.94)}
-.coa-gal .wrap{display:block}.gnote{margin:.2rem 0 0;color:var(--fg-soft);font-size:1.1rem!important}
-.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:clamp(18px,3vw,36px) 18px}
-.ggrid figure{margin:0;min-width:0}.ggrid figure[hidden]{display:none}
-.ggrid img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;-webkit-mask:var(--mancha-1) center/100% 100% no-repeat;mask:var(--mancha-1) center/100% 100% no-repeat;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.ggrid figure:nth-child(2n) img{-webkit-mask-image:var(--mancha-2);mask-image:var(--mancha-2)}
-.ggrid button:hover img{transform:scale(1.03)}
-html[data-theme="light"] .ggrid img{filter:saturate(.85) sepia(.1) contrast(1.04)}
-html[data-theme="dark"] .ggrid img{filter:grayscale(1) contrast(1.08) brightness(.94)}
-.fl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px;align-items:start;margin-top:1rem}
-.fl figure{margin:0}.fl img{display:block;width:100%;height:auto;border:1.5px solid var(--line)}
-.fl figcaption{padding-top:8px;font-family:var(--ui);font-stretch:85%;font-size:.95rem;color:var(--fg-soft)}
-@media(max-width:820px){.coa-intro .wrap{grid-template-columns:1fr}.coa-fig{max-width:420px}}
-</style>
+<link rel="stylesheet" href="/proyecto.css">
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 
@@ -70,84 +52,225 @@ html[data-theme="dark"] .ggrid img{filter:grayscale(1) contrast(1.08) brightness
   </div>
 </header>
 
-<main id="top">
-<section class="phead">
+<main id="top" class="pj">
+<section class="phead ph-hero">
   <div class="wrap">
-    <p class="crumb"><a href="/#proyectos">Proyectos</a> / COA Carancho</p>
-    <h1>COA Carancho</h1>
-    <p class="lead">Club de Observadores de Aves de Palermo, Buenos Aires. Lo fundé en 2011.</p>
-  </div>
-</section>
-<section class="prose coa-intro">
-  <div class="wrap">
-    <div class="txt">
-      <p>El COA Carancho, o Club de Observadores de Aves de Palermo, es parte de la red de COA de Aves Argentinas, una ONG centenaria. Lo fundé en 2011 como COA Palermo, lo coordiné de 2013 a 2015 y participé hasta 2020.</p>
-      <p>La idea era un club que no se limitara a <em>mirar</em> aves: priorizar la participación antes que la observación, con las aves como punto de partida para hacer muchas cosas más.</p>
+    <div>
+      <p class="crumb"><a href="/#proyectos">Proyectos</a> / COA Carancho</p>
+      <h1>COA Carancho</h1>
+      <p class="lead">Un club de observadores de aves en los bosques de Palermo que hizo mucho más que mirar aves. Lo fundé en 2011.</p>
     </div>
-    <figure class="coa-fig"><button type="button" data-full="/img/coa/sendero-lago-1400.webp" aria-label="Ampliar: Observación junto al lago"><img src="/img/coa/sendero-lago-800.webp" srcset="/img/coa/sendero-lago-480.webp 480w, /img/coa/sendero-lago-800.webp 800w, /img/coa/sendero-lago-1400.webp 1400w" sizes="(max-width:820px) 92vw, 440px" alt="Grupo de personas mirando aves en un sendero junto al lago, bajo un árbol grande" style="object-position:45% 50%"></button><figcaption>Observación junto al lago</figcaption></figure>
+    <div class="vis-hero">
+      <figure class="mancha foto "><button class="zoom" type="button" data-full="/img/coa/carancho-perfil-1400.webp"><img src="/img/coa/carancho-perfil-800.webp" srcset="/img/coa/carancho-perfil-480.webp 480w, /img/coa/carancho-perfil-800.webp 800w, /img/coa/carancho-perfil-1400.webp 1400w" sizes="(max-width:820px) 90vw, 560px" alt="Carancho de perfil, posado sobre un farol" style="object-position:62% 45%"></button><figcaption>Carancho (<em>Caracara plancus</em>)</figcaption></figure>
+      <div class="sello"><img src="/img/coa/logo-600.webp" srcset="/img/coa/logo-240.webp 240w, /img/coa/logo-600.webp 600w" sizes="240px" alt="Logo del COA Carancho: la cabeza de un carancho dentro de un círculo, con el texto Club de Observadores de Aves de Palermo" width="600" height="602"></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <dl class="datos">
+      <div><dt>2011</dt><dd>Lo fundé, como COA Palermo</dd></div>
+      <div><dt>2013–15</dt><dd>Lo coordiné</dd></div>
+      <div><dt>2016</dt><dd>#caranchofest, cinco años</dd></div>
+      <div><dt>2018</dt><dd>Interés ambiental, Legislatura porteña</dd></div>
+    </dl>
   </div>
 </section>
-<section class="prose alt trips">
+
+<section class="prose manifiesto">
   <div class="wrap">
-    <h2>Qué hicimos</h2>
-    <p>Todo en el Parque Tres de Febrero, los bosques de Palermo: lagos, el Ecoparque, el Jardín Botánico Carlos Thays, el Planetario Galileo Galilei, el Hipódromo, el Rosedal.</p>
-    <ul>
-      <li><div class="row"><span class="yr">2015</span><span class="name">Censos estacionales</span><span class="what">Conteo sistemático de las aves del parque, con rutas guiadas y abierto a todo nivel. Los diseñé con Diego Carús, quien después me sucedió en la coordinación.</span></div></li>
-      <li><div class="row"><span class="yr">2012–2016</span><span class="name">Plantaciones de nativas</span><span class="what">Un bosque de nativas en el Parque Olímpico, con el Grupo Árboles Nativos de Aves Argentinas y el Parque Tres de Febrero. Al 22 de mayo de 2016 había 100 árboles y arbustos plantados. Hoy la plaza se conoce como "parque Carancho".</span></div></li>
-      <li><div class="row"><span class="yr">2014–2016</span><span class="name">Liberaciones de rapaces</span><span class="what">Con el programa de rescate del Zoo de Buenos Aires y la Fundación Caburé-í (PCRAR). La del 10 de enero de 2015 liberó diez aves ante más de 200 personas.</span></div></li>
-      <li><div class="row"><span class="yr">2013–2016</span><span class="name">Charlas y cursos</span><span class="what">Conferencias abiertas en el Planetario, el Jardín Botánico y Aves Argentinas, y un mini-curso de ornitología.</span></div></li>
-      <li><div class="row"><span class="yr">2015</span><span class="name">Campañas</span><span class="what">"Yo no uso pirotecnia", con material para compartir en redes.</span></div></li>
-      <li><div class="row"><span class="yr">2016</span><span class="name">#caranchofest</span><span class="what">Seis actividades en un mes (del 7 al 28 de mayo), por el quinto aniversario.</span></div></li>
-      <li><div class="row"><span class="yr">2016</span><span class="name">Costanera Norte</span><span class="what">Dos jornadas de limpieza en la Reserva Ecológica Costanera Norte, que propuse y organizamos con otras personas y organizaciones, y de las que surgió el grupo informal Amigos de la Reserva Ecológica Costanera Norte. En cada una se llenó un remolque de basura provisto por el CEAMSE, la empresa estatal de gestión de residuos del área metropolitana.</span></div></li>
+    <div>
+      <span class="kicker">La idea</span>
+      <p class="grande" data-v>Un club que no se limitara a <span class="tachado">mirar</span> aves.</p>
+      <p>El COA Carancho, o Club de Observadores de Aves de Palermo, es parte de la red de COA de Aves Argentinas, una ONG centenaria. Lo fundé en 2011 como COA Palermo, lo coordiné de 2013 a 2015 y participé hasta 2020.</p>
+      <p>La idea era priorizar la participación antes que la observación, con las aves como punto de partida para hacer muchas cosas más.</p>
+    </div>
+    <figure class="mancha foto m2"><button class="zoom" type="button" data-full="/img/coa/sendero-lago-1400.webp"><img src="/img/coa/sendero-lago-800.webp" srcset="/img/coa/sendero-lago-480.webp 480w, /img/coa/sendero-lago-800.webp 800w, /img/coa/sendero-lago-1400.webp 1400w" sizes="(max-width:820px) 90vw, 440px" alt="Grupo de personas mirando aves en un sendero junto al lago, bajo un árbol grande" loading="lazy" style="object-position:45% 50%"></button><figcaption>Observación junto al lago</figcaption></figure>
+  </div>
+</section>
+
+<section class="lugar" aria-labelledby="h-lugar">
+  <div class="wrap"><span class="kicker" id="h-lugar">El lugar</span></div>
+  <p class="nombres" aria-hidden="true"><span>Parque Tres de Febrero</span><span>Lagos</span><span>Ecoparque</span><span>Jardín Botánico</span><span>Planetario</span><span>Hipódromo</span><span>Rosedal</span><span>Parque Olímpico</span></p>
+  <div class="wrap">
+    <div class="collage">
+      <figure class="mancha foto "><button class="zoom" type="button" data-full="/img/coa/eucaliptos-1400.webp"><img src="/img/coa/eucaliptos-800.webp" srcset="/img/coa/eucaliptos-480.webp 480w, /img/coa/eucaliptos-800.webp 800w, /img/coa/eucaliptos-1400.webp 1400w" sizes="(max-width:820px) 90vw, 620px" alt="Eucaliptos y pasto en un parque de Palermo" loading="lazy" style="object-position:40% 50%"></button><figcaption>Los bosques</figcaption></figure>
+      <figure class="mancha foto m2"><button class="zoom" type="button" data-full="/img/coa/patos-sauce-1400.webp"><img src="/img/coa/patos-sauce-800.webp" srcset="/img/coa/patos-sauce-480.webp 480w, /img/coa/patos-sauce-800.webp 800w, /img/coa/patos-sauce-1400.webp 1400w" sizes="(max-width:820px) 45vw, 300px" alt="Patos blancos bajo un sauce, junto a la orilla de un lago" loading="lazy" style="object-position:60% 50%"></button><figcaption>Bajo el sauce</figcaption></figure>
+      <figure class="mancha foto "><button class="zoom" type="button" data-full="/img/coa/garcita-adoquines-1400.webp"><img src="/img/coa/garcita-adoquines-800.webp" srcset="/img/coa/garcita-adoquines-480.webp 480w, /img/coa/garcita-adoquines-800.webp 800w, /img/coa/garcita-adoquines-1400.webp 1400w" sizes="(max-width:820px) 45vw, 300px" alt="Garcita blanca pescando en la orilla de adoquines" loading="lazy" style="object-position:55% 50%"></button><figcaption>Garcita blanca (<em>Egretta thula</em>)</figcaption></figure>
+    </div>
+    <p class="pie">Todo pasó en el Parque Tres de Febrero, los bosques de Palermo: los lagos, el Ecoparque, el Jardín Botánico Carlos Thays, el Planetario Galileo Galilei, el Hipódromo, el Rosedal.</p>
+  </div>
+</section>
+
+<section class="fichas" aria-labelledby="h-hicimos">
+  <div class="wrap">
+    <h2 id="h-hicimos">Qué hicimos</h2>
+
+    <article class="ficha">
+      <div class="txt" data-v>
+        <p class="num"><b>01</b>2015</p>
+        <h3>Censos estacionales</h3>
+        <p>Conteo sistemático de las aves del parque, con rutas guiadas y abierto a todo nivel. Una lista, una libreta y una vuelta por estación.</p>
+        <p class="nota">Los diseñé con Diego Carús, quien después me sucedió en la coordinación.</p>
+      </div>
+      <div class="media pila" data-v>
+        <figure style="--ar:4/3"><button class="zoom" type="button" data-full="/img/coa/libreta-1400.webp"><img src="/img/coa/libreta-1400.webp" srcset="/img/coa/libreta-480.webp 480w, /img/coa/libreta-800.webp 800w, /img/coa/libreta-1400.webp 1400w" sizes="(max-width:820px) 75vw, 440px" alt="Manos con una libreta y una lista de aves tildada a mano" loading="lazy" style="object-position:50% 50%"></button><figcaption>La planilla, a mano</figcaption></figure>
+        <figure style="--ar:4/3"><button class="zoom" type="button" data-full="/img/coa/censo-960.webp"><img src="/img/coa/censo-960.webp" srcset="/img/coa/censo-480.webp 480w, /img/coa/censo-960.webp 960w" sizes="(max-width:820px) 75vw, 440px" alt="Grupo de personas en ronda sobre el pasto, durante un censo de aves" loading="lazy" style="object-position:50% 50%"></button><figcaption>Un censo en el parque</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <div class="txt" data-v>
+        <p class="num"><b>02</b>2012–2016</p>
+        <h3>Plantaciones de nativas</h3>
+        <p>Un bosque de nativas en el Parque Olímpico, con el Grupo Árboles Nativos de Aves Argentinas y el Parque Tres de Febrero. Hoy la plaza se conoce como "parque Carancho".</p>
+      </div>
+      <div class="media bosque" data-v role="img" aria-label="Cien puntos: cada uno es un árbol o arbusto plantado">
+        <div class="puntos" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="cuanto">100<small>árboles y arbustos plantados al 22 de mayo de 2016. Cada punto es uno.</small></p>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <div class="txt" data-v>
+        <p class="num"><b>03</b>2014–2016</p>
+        <h3>Liberaciones de rapaces</h3>
+        <p>Con el programa de rescate del Zoo de Buenos Aires y la Fundación Caburé-í (PCRAR). La del 10 de enero de 2015 liberó diez aves ante más de 200 personas.</p>
+      </div>
+      <div class="media pila" data-v>
+        <figure style="--ar:4/3"><button class="zoom" type="button" data-full="/img/coa/liberacion-1400.webp"><img src="/img/coa/liberacion-1400.webp" srcset="/img/coa/liberacion-480.webp 480w, /img/coa/liberacion-800.webp 800w, /img/coa/liberacion-1400.webp 1400w" sizes="(max-width:820px) 75vw, 440px" alt="Persona hablando a un grupo en un parque, antes de una liberación de aves" loading="lazy" style="object-position:50% 50%"></button><figcaption>Antes de soltar</figcaption></figure>
+        <figure style="--ar:3/4"><button class="zoom" type="button" data-full="/img/coa/rafael-800.webp"><img src="/img/coa/rafael-800.webp" srcset="/img/coa/rafael-480.webp 480w, /img/coa/rafael-800.webp 800w" sizes="(max-width:820px) 75vw, 440px" alt="Hombre con guante sosteniendo un ave rapaz en un parque, rodeado de gente" loading="lazy" style="object-position:50% 50%"></button><figcaption>Una liberación</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <div class="txt" data-v>
+        <p class="num"><b>04</b>2013–2018</p>
+        <h3>Charlas y cursos</h3>
+        <p>Conferencias abiertas en el Planetario, el Jardín Botánico y Aves Argentinas, y un mini-curso de ornitología. En el Planetario di con Diego Carús "¿Qué nos dice el cielo sobre la tierra?" (2016), y en 2018 presentamos, con Diego L. Hernández, "Mirar lo invisible".</p>
+        <p class="nota">También: charqueadas con El Acuarista y la campaña "Yo no uso pirotecnia" (2015).</p>
+      </div>
+      <div class="media pila" data-v>
+        <figure style="--ar:4/3"><button class="zoom" type="button" data-full="/img/coa/planetario-cupula-960.webp"><img src="/img/coa/planetario-cupula-960.webp" srcset="/img/coa/planetario-cupula-480.webp 480w, /img/coa/planetario-cupula-960.webp 960w" sizes="(max-width:820px) 75vw, 440px" alt="Cúpula del Planetario con la imagen de un ave proyectada" loading="lazy" style="object-position:50% 50%"></button><figcaption>En la cúpula del Planetario</figcaption></figure>
+        <figure style="--ar:16/9"><button class="zoom" type="button" data-full="/img/coa/planetario-grupo-960.webp"><img src="/img/coa/planetario-grupo-960.webp" srcset="/img/coa/planetario-grupo-480.webp 480w, /img/coa/planetario-grupo-960.webp 960w" sizes="(max-width:820px) 75vw, 440px" alt="Grupo numeroso posando en la sala del Planetario después de una charla" loading="lazy" style="object-position:50% 50%"></button><figcaption>Después de la charla</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <div class="txt" data-v>
+        <p class="num"><b>05</b>Mayo de 2016</p>
+        <h3>#caranchofest</h3>
+        <p>Seis actividades en un mes, por el quinto aniversario. Lo organicé yo.</p>
+      </div>
+      <div class="media">
+        <ol class="programa" data-v>
+          <li><span class="d">Sáb</span><span class="n">7</span><span class="q">Recorrida por el Jardín Botánico</span></li>
+          <li><span class="d">Sáb</span><span class="n">14</span><span class="q">Liberación de aves recuperadas</span></li>
+          <li><span class="d">Mié</span><span class="n">18</span><span class="q">Charla en Aves Argentinas: macá tobiano (<em>Podiceps gallardoi</em>)</span></li>
+          <li><span class="d">Dom</span><span class="n">22</span><span class="q">Plantación de nativas: llegamos a 100</span></li>
+          <li><span class="d">Jue</span><span class="n">26</span><span class="q">Charla en el Planetario: "¿Qué nos dice el cielo sobre la tierra?"</span></li>
+          <li><span class="d">Sáb</span><span class="n">28</span><span class="q">Censo de otoño y cierre</span></li>
+        </ol>
+        <button class="zoom ver" type="button" data-full="/img/coa/flyer-caranchofest.webp"><img hidden src="/img/coa/flyer-caranchofest.webp" alt="Afiche del programa del #caranchofest">Ver el afiche</button>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <div class="txt" data-v>
+        <p class="num"><b>06</b>2016</p>
+        <h3>Costanera Norte</h3>
+        <p>Dos jornadas de limpieza en la Reserva Ecológica Costanera Norte, que propuse y organizamos con otras personas y organizaciones. De ahí surgió el grupo informal Amigos de la Reserva Ecológica Costanera Norte.</p>
+        <p class="nota">En cada jornada se llenó un remolque de basura provisto por el CEAMSE, la empresa estatal de gestión de residuos del área metropolitana.</p>
+      </div>
+      <div class="media pila" data-v>
+        <figure style="--ar:4/3"><button class="zoom" type="button" data-full="/img/coa/limpieza-bolsas-919.webp"><img src="/img/coa/limpieza-bolsas-919.webp" srcset="/img/coa/limpieza-bolsas-480.webp 480w, /img/coa/limpieza-bolsas-919.webp 919w" sizes="(max-width:820px) 75vw, 440px" alt="Decenas de bolsas de basura llenas apiladas sobre el pasto" loading="lazy" style="object-position:50% 50%"></button><figcaption>Lo que salió</figcaption></figure>
+        <figure style="--ar:4/3"><button class="zoom" type="button" data-full="/img/coa/limpieza-escombros-817.webp"><img src="/img/coa/limpieza-escombros-817.webp" srcset="/img/coa/limpieza-escombros-480.webp 480w, /img/coa/limpieza-escombros-817.webp 817w" sizes="(max-width:820px) 75vw, 440px" alt="Voluntarios sacando escombros y basura de la reserva" loading="lazy" style="object-position:50% 50%"></button><figcaption>Sacando escombros</figcaption></figure>
+        <figure style="--ar:4/3"><button class="zoom" type="button" data-full="/img/coa/limpieza-volquete-817.webp"><img src="/img/coa/limpieza-volquete-817.webp" srcset="/img/coa/limpieza-volquete-480.webp 480w, /img/coa/limpieza-volquete-817.webp 817w" sizes="(max-width:820px) 75vw, 440px" alt="Voluntarios sentados sobre un remolque lleno de bolsas de basura" loading="lazy" style="object-position:50% 50%"></button><figcaption>Un remolque lleno</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <div class="txt" data-v>
+        <p class="num"><b>07</b>2018</p>
+        <h3>Interés ambiental</h3>
+        <p>La Legislatura porteña declaró de interés ambiental las actividades de los integrantes del COA Carancho.</p>
+        <ul class="fuente">
 <!--coa--><li><div class="row"><span class="yr">Jun 2018</span><span class="name">Legislatura de la Ciudad de Buenos Aires | Declaración 609/2018</span><span class="what">Declaró de interés ambiental las actividades del COA Carancho, que fundé. El Estado, cada tanto, mira para arriba. <a href="http://parlamentaria.legislatura.gov.ar/pages/download.aspx?IdDoc=164602" rel="noopener">Texto</a>.</span></div></li>
 <!--/coa-->
-    </ul>
+        </ul>
+      </div>
+      <div class="media doc" data-v>
+        <figure><button class="zoom" type="button" data-full="/img/coa/diploma-1400.webp"><img src="/img/coa/diploma-800.webp" srcset="/img/coa/diploma-480.webp 480w, /img/coa/diploma-800.webp 800w, /img/coa/diploma-1400.webp 1400w" sizes="(max-width:820px) 85vw, 500px" alt="Diploma enmarcado de la Legislatura de la Ciudad Autónoma de Buenos Aires que declara de interés ambiental las actividades del COA Carancho" loading="lazy"></button><figcaption>El diploma, fechado el 19 de abril de 2018</figcaption></figure>
+      </div>
+    </article>
   </div>
 </section>
-<section class="prose">
+
+<section class="prose alt creditos" aria-labelledby="h-parte">
   <div class="wrap">
-    <h2>Mi parte</h2>
-    <p>Ideé el club y lo coordiné entre 2013 y 2015. Con Diego Carús creé los censos estacionales. Entre 2016 y 2019 seguí en las reuniones y me ocupé del diseño gráfico y las redes. Hice los flyers de las actividades desde 2012. El logo del carancho fue idea mía y lo ilustró Juan Elizalde.</p>
-    <p>Organicé el #caranchofest, en mayo de 2016. Di con Diego Carús la charla "¿Qué nos dice el cielo sobre la tierra?" en el Planetario, y en 2018 presenté ahí "Mirar lo invisible".</p>
-    <h2>Qué lo hizo distinto</h2>
-    <p>La combinación: observación de aves, intervención en el parque, comunicación y trabajo con el Zoo, el Planetario y el Jardín Botánico, todo en el mismo lugar. En 2018 la Legislatura porteña declaró de interés ambiental las actividades de sus integrantes.</p>
-  </div>
-</section>
-<section class="prose alt fotos coa-gal" id="fotos">
-  <div class="wrap">
-    <h2>Fotos</h2>
-    <p class="gnote">Todas son mías.</p>
-    <div class="chips" role="group" aria-label="Filtrar fotos">
-      <button class="chip on" type="button" data-f="all" aria-pressed="true">Todas</button>
-      <button class="chip" type="button" data-f="palermo" aria-pressed="false">Palermo</button>
-      <button class="chip" type="button" data-f="aves" aria-pressed="false">Aves</button>
-      <button class="chip" type="button" data-f="personas" aria-pressed="false">Personas</button>
+    <div data-v>
+      <h2 id="h-parte">Mi parte</h2>
+      <ul class="roles">
+        <li><span class="y">2011</span><span>Ideé el club y lo fundé, como COA Palermo.</span></li>
+        <li><span class="y">Desde 2012</span><span>Hice los flyers de las actividades.</span></li>
+        <li><span class="y">2013–2015</span><span>Lo coordiné.</span></li>
+        <li><span class="y">2015</span><span>Diseñé los censos estacionales con Diego Carús.</span></li>
+        <li><span class="y">Logo</span><span>El carancho fue idea mía; lo ilustró Juan Elizalde.</span></li>
+        <li><span class="y">2016</span><span>Organicé el #caranchofest y propuse las jornadas en Costanera Norte.</span></li>
+        <li><span class="y">2016–2019</span><span>Reuniones, diseño gráfico y redes.</span></li>
+        <li><span class="y">2016, 2018</span><span>Charlas en el Planetario.</span></li>
+      </ul>
     </div>
-    <div class="ggrid">
-      <figure data-g="palermo"><button type="button" data-full="/img/coa/eucaliptos-1400.webp" aria-label="Ampliar: Los bosques de Palermo"><img src="/img/coa/eucaliptos-800.webp" srcset="/img/coa/eucaliptos-480.webp 480w, /img/coa/eucaliptos-800.webp 800w, /img/coa/eucaliptos-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Eucaliptos y pasto en un parque de Palermo, con poca gente" loading="lazy" style="object-position:50% 50%"></button><figcaption>Los bosques de Palermo</figcaption></figure>
-      <figure data-g="palermo"><button type="button" data-full="/img/coa/patos-sauce-1400.webp" aria-label="Ampliar: Patos bajo el sauce"><img src="/img/coa/patos-sauce-800.webp" srcset="/img/coa/patos-sauce-480.webp 480w, /img/coa/patos-sauce-800.webp 800w, /img/coa/patos-sauce-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Patos blancos bajo un sauce, junto a la orilla de adoquines de un lago" loading="lazy" style="object-position:60% 50%"></button><figcaption>Patos bajo el sauce</figcaption></figure>
-      <figure data-g="palermo aves"><button type="button" data-full="/img/coa/garcita-adoquines-1400.webp" aria-label="Ampliar: Orilla de adoquines"><img src="/img/coa/garcita-adoquines-800.webp" srcset="/img/coa/garcita-adoquines-480.webp 480w, /img/coa/garcita-adoquines-800.webp 800w, /img/coa/garcita-adoquines-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Garcita blanca pescando en la orilla de adoquines" loading="lazy" style="object-position:55% 50%"></button><figcaption>Orilla de adoquines</figcaption></figure>
-      <figure data-g="palermo personas"><button type="button" data-full="/img/coa/sendero-lago-1400.webp" aria-label="Ampliar: Observación junto al lago"><img src="/img/coa/sendero-lago-800.webp" srcset="/img/coa/sendero-lago-480.webp 480w, /img/coa/sendero-lago-800.webp 800w, /img/coa/sendero-lago-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Grupo de personas mirando aves en un sendero junto al lago, bajo un árbol grande" loading="lazy" style="object-position:45% 50%"></button><figcaption>Observación junto al lago</figcaption></figure>
-      <figure data-g="aves"><button type="button" data-full="/img/coa/carancho-perfil-1400.webp" aria-label="Ampliar: Carancho (<em>Caracara plancus</em>)"><img src="/img/coa/carancho-perfil-800.webp" srcset="/img/coa/carancho-perfil-480.webp 480w, /img/coa/carancho-perfil-800.webp 800w, /img/coa/carancho-perfil-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Carancho de perfil sobre un farol" loading="lazy" style="object-position:62% 45%"></button><figcaption>Carancho (<em>Caracara plancus</em>)</figcaption></figure>
-      <figure data-g="aves"><button type="button" data-full="/img/coa/carancho-frente-1400.webp" aria-label="Ampliar: Carancho en un farol"><img src="/img/coa/carancho-frente-800.webp" srcset="/img/coa/carancho-frente-480.webp 480w, /img/coa/carancho-frente-800.webp 800w, /img/coa/carancho-frente-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Carancho asomando sobre un farol" loading="lazy" style="object-position:10% 40%"></button><figcaption>Carancho en un farol</figcaption></figure>
-      <figure data-g="aves"><button type="button" data-full="/img/coa/bigua-juvenil-1400.webp" aria-label="Ampliar: Biguá (<em>Nannopterum brasilianus</em>), juvenil"><img src="/img/coa/bigua-juvenil-800.webp" srcset="/img/coa/bigua-juvenil-480.webp 480w, /img/coa/bigua-juvenil-800.webp 800w, /img/coa/bigua-juvenil-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Retrato de un biguá juvenil de ojo celeste" loading="lazy" style="object-position:35% 40%"></button><figcaption>Biguá (<em>Nannopterum brasilianus</em>), juvenil</figcaption></figure>
-      <figure data-g="aves"><button type="button" data-full="/img/coa/aninga-garzas-1400.webp" aria-label="Ampliar: Aninga (<em>Anhinga anhinga</em>) y garzas"><img src="/img/coa/aninga-garzas-800.webp" srcset="/img/coa/aninga-garzas-480.webp 480w, /img/coa/aninga-garzas-800.webp 800w, /img/coa/aninga-garzas-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Aninga secando las alas entre garzas blancas" loading="lazy" style="object-position:50% 50%"></button><figcaption>Aninga (<em>Anhinga anhinga</em>) y garzas</figcaption></figure>
-      <figure data-g="aves"><button type="button" data-full="/img/coa/aninga-cipres-1400.webp" aria-label="Ampliar: Aninga en el ciprés"><img src="/img/coa/aninga-cipres-800.webp" srcset="/img/coa/aninga-cipres-480.webp 480w, /img/coa/aninga-cipres-800.webp 800w, /img/coa/aninga-cipres-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Aninga posada en un ciprés" loading="lazy" style="object-position:75% 55%"></button><figcaption>Aninga en el ciprés</figcaption></figure>
-      <figure data-g="aves"><button type="button" data-full="/img/coa/loro-1400.webp" aria-label="Ampliar: Loro hablador (<em>Amazona aestiva</em>)"><img src="/img/coa/loro-800.webp" srcset="/img/coa/loro-480.webp 480w, /img/coa/loro-800.webp 800w, /img/coa/loro-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Loro de frente celeste entre ramas" loading="lazy" style="object-position:35% 40%"></button><figcaption>Loro hablador (<em>Amazona aestiva</em>)</figcaption></figure>
-      <figure data-g="aves"><button type="button" data-full="/img/coa/paloma-fuente-1400.webp" aria-label="Ampliar: Paloma en una fuente"><img src="/img/coa/paloma-fuente-800.webp" srcset="/img/coa/paloma-fuente-480.webp 480w, /img/coa/paloma-fuente-800.webp 800w, /img/coa/paloma-fuente-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Paloma sobre una fuente de azulejos" loading="lazy" style="object-position:45% 60%"></button><figcaption>Paloma en una fuente</figcaption></figure>
-      <figure data-g="personas"><button type="button" data-full="/img/coa/libreta-1400.webp" aria-label="Ampliar: La lista, a mano"><img src="/img/coa/libreta-800.webp" srcset="/img/coa/libreta-480.webp 480w, /img/coa/libreta-800.webp 800w, /img/coa/libreta-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Manos con una libreta y una lista de aves tildada" loading="lazy" style="object-position:55% 50%"></button><figcaption>La lista, a mano</figcaption></figure>
-      <figure data-g="personas"><button type="button" data-full="/img/coa/grupo-noche-1400.webp" aria-label="Ampliar: Después de una actividad nocturna"><img src="/img/coa/grupo-noche-800.webp" srcset="/img/coa/grupo-noche-480.webp 480w, /img/coa/grupo-noche-800.webp 800w, /img/coa/grupo-noche-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Grupo del COA posando de noche bajo una pérgola" loading="lazy" style="object-position:50% 55%"></button><figcaption>Después de una actividad nocturna</figcaption></figure>
-      <figure data-g="personas"><button type="button" data-full="/img/coa/liberacion-1400.webp" aria-label="Ampliar: Liberación de rapaces"><img src="/img/coa/liberacion-800.webp" srcset="/img/coa/liberacion-480.webp 480w, /img/coa/liberacion-800.webp 800w, /img/coa/liberacion-1400.webp 1400w" sizes="(max-width:700px) 92vw, 380px" alt="Persona hablando a un grupo en un parque, en una liberación de aves" loading="lazy" style="object-position:40% 50%"></button><figcaption>Liberación de rapaces</figcaption></figure>
+    <div class="muro" data-v>
+      <figure><button class="zoom" type="button" data-full="/img/coa/flyer-caranchofest.webp"><img src="/img/coa/flyer-caranchofest.webp" alt="Afiche del programa del #caranchofest" loading="lazy" width="723" height="900"></button><figcaption>#caranchofest, 2016</figcaption></figure>
+      <figure><button class="zoom" type="button" data-full="/img/coa/flyer-fase-2.webp"><img src="/img/coa/flyer-fase-2.webp" alt="Afiche de la liberación de aves Volver a volar, del #caranchofest" loading="lazy" width="577" height="720"></button><figcaption>Volver a volar, 2016</figcaption></figure>
+      <figure><button class="zoom" type="button" data-full="/img/coa/flyer-centenario.webp"><img src="/img/coa/flyer-centenario.webp" alt="Afiche de una salida de observación por el centenario de Aves Argentinas" loading="lazy" width="504" height="504"></button><figcaption>Centenario de Aves Argentinas, 2016</figcaption></figure>
+      <figure><button class="zoom" type="button" data-full="/img/coa/flyer-mirar-lo-invisible.webp"><img src="/img/coa/flyer-mirar-lo-invisible.webp" alt="Afiche de la charla Mirar lo invisible en el Planetario" loading="lazy" width="896" height="900"></button><figcaption>"Mirar lo invisible", 2018</figcaption></figure>
     </div>
   </div>
 </section>
-<section class="prose afiches">
+
+<section class="frase">
+  <div class="wrap" data-v>
+    <span class="kicker">Qué lo hizo distinto</span>
+    <p>Observación de aves, intervención en el parque, comunicación y trabajo con <em>el Zoo, el Planetario y el Botánico</em>. Todo en el mismo lugar.</p>
+  </div>
+</section>
+
+<section class="vecinos" aria-labelledby="h-aves">
   <div class="wrap">
-    <h2>Del archivo</h2>
-    <div class="fl">
-      <figure><img src="/img/coa/flyer-caranchofest.webp" alt="Afiche del programa del #caranchofest" loading="lazy" width="723" height="900"><figcaption>#caranchofest, 2016</figcaption></figure>
-      <figure><img src="/img/coa/flyer-mirar-lo-invisible.webp" alt="Afiche de la charla Mirar lo invisible en el Planetario" loading="lazy" width="896" height="900"><figcaption>"Mirar lo invisible", Planetario, 2018</figcaption></figure>
-      <figure><img src="/img/coa/flyer-limpieza.webp" alt="Afiche de una jornada de limpieza en la Reserva Ecológica Costanera Norte" loading="lazy" width="900" height="675"><figcaption>Jornada de limpieza, Costanera Norte, 2016</figcaption></figure>
+    <h2 id="h-aves">Algunas aves</h2>
+    <p class="ayuda">Deslizá para ver más.</p>
+  </div>
+  <div class="tira" tabindex="0" aria-label="Fotos de aves">
+    <figure class="mancha foto m2"><button class="zoom" type="button" data-full="/img/coa/bigua-juvenil-1400.webp"><img src="/img/coa/bigua-juvenil-800.webp" srcset="/img/coa/bigua-juvenil-480.webp 480w, /img/coa/bigua-juvenil-800.webp 800w, /img/coa/bigua-juvenil-1400.webp 1400w" sizes="(max-width:820px) 70vw, 340px" alt="Retrato de un biguá juvenil de ojo celeste" loading="lazy" style="object-position:35% 40%"></button><figcaption>Biguá (<em>Nannopterum brasilianum</em>)</figcaption></figure>
+    <figure class="mancha foto "><button class="zoom" type="button" data-full="/img/coa/aninga-garzas-1400.webp"><img src="/img/coa/aninga-garzas-800.webp" srcset="/img/coa/aninga-garzas-480.webp 480w, /img/coa/aninga-garzas-800.webp 800w, /img/coa/aninga-garzas-1400.webp 1400w" sizes="(max-width:820px) 70vw, 340px" alt="Aninga secando las alas entre garzas blancas" loading="lazy" style="object-position:50% 50%"></button><figcaption>Aninga (<em>Anhinga anhinga</em>)</figcaption></figure>
+    <figure class="mancha foto m2"><button class="zoom" type="button" data-full="/img/coa/loro-1400.webp"><img src="/img/coa/loro-800.webp" srcset="/img/coa/loro-480.webp 480w, /img/coa/loro-800.webp 800w, /img/coa/loro-1400.webp 1400w" sizes="(max-width:820px) 70vw, 340px" alt="Loro de frente celeste entre ramas" loading="lazy" style="object-position:35% 40%"></button><figcaption>Loro hablador (<em>Amazona aestiva</em>)</figcaption></figure>
+    <figure class="mancha foto "><button class="zoom" type="button" data-full="/img/coa/aninga-cipres-1400.webp"><img src="/img/coa/aninga-cipres-800.webp" srcset="/img/coa/aninga-cipres-480.webp 480w, /img/coa/aninga-cipres-800.webp 800w, /img/coa/aninga-cipres-1400.webp 1400w" sizes="(max-width:820px) 70vw, 340px" alt="Aninga posada en un ciprés" loading="lazy" style="object-position:75% 55%"></button><figcaption>Aninga en el ciprés</figcaption></figure>
+    <figure class="mancha foto m2"><button class="zoom" type="button" data-full="/img/coa/paloma-fuente-1400.webp"><img src="/img/coa/paloma-fuente-800.webp" srcset="/img/coa/paloma-fuente-480.webp 480w, /img/coa/paloma-fuente-800.webp 800w, /img/coa/paloma-fuente-1400.webp 1400w" sizes="(max-width:820px) 70vw, 340px" alt="Paloma sobre una fuente de azulejos" loading="lazy" style="object-position:45% 60%"></button><figcaption>Paloma en una fuente</figcaption></figure>
+  </div>
+</section>
+
+<section class="hacelo" aria-labelledby="h-hacelo">
+  <div class="wrap">
+    <div data-v>
+      <img class="mini" src="/img/coa/logo-240.webp" alt="" width="240" height="241" loading="lazy">
+      <span class="kicker" style="color:#ff8a1f">En tu barrio</span>
+      <h2 id="h-hacelo">¿Un COA cerca tuyo?</h2>
+      <p>Los COA son parte de la red de Aves Argentinas. Esto es lo que a nosotros nos funcionó en Palermo.</p>
+      <figure class="mancha foto m2"><button class="zoom" type="button" data-full="/img/coa/grupo-noche-1400.webp"><img src="/img/coa/grupo-noche-800.webp" srcset="/img/coa/grupo-noche-480.webp 480w, /img/coa/grupo-noche-800.webp 800w, /img/coa/grupo-noche-1400.webp 1400w" sizes="(max-width:820px) 90vw, 460px" alt="Grupo del COA posando de noche bajo una pérgola" loading="lazy" style="object-position:50% 55%"></button><figcaption>Después de una actividad</figcaption></figure>
+    </div>
+    <div data-v>
+      <ol class="pasos">
+        <li><div><b>Un lugar al que volver</b><span>Siempre el mismo parque, para ver cómo cambia.</span></div></li>
+        <li><div><b>Una fecha que se repite</b><span>Un censo por estación.</span></div></li>
+        <li><div><b>Algo para hacer con las manos</b><span>Plantar nativas. Cien árboles y arbustos no se plantan en un día.</span></div></li>
+        <li><div><b>Las instituciones del barrio</b><span>Para nosotros, el Zoo, el Planetario y el Botánico.</span></div></li>
+        <li><div><b>Que se vea</b><span>Flyers, redes y un logo.</span></div></li>
+        <li><div><b>Un festejo</b><span>Seis actividades en un mes también son una invitación.</span></div></li>
+      </ol>
+      <div class="ctas">
+        <a class="btn solid" href="https://www.avesargentinas.org.ar/" rel="noopener">Aves Argentinas</a>
+        <a class="btn" href="/#contacto">Escribime</a>
+      </div>
     </div>
   </div>
 </section>
@@ -160,18 +283,6 @@ html[data-theme="dark"] .ggrid img{filter:grayscale(1) contrast(1.08) brightness
 </dialog>
 
 <script>
-const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap');
-document.querySelectorAll('[data-full]').forEach(btn=>{
-  btn.addEventListener('click',()=>{const im=btn.querySelector('img'),c=btn.parentElement.querySelector('figcaption');lbImg.src=btn.dataset.full;lbImg.alt=im.alt;lbCap.innerHTML=c?c.innerHTML:'';lb.showModal();});
-});
-document.getElementById('lbClose').addEventListener('click',()=>lb.close());
-lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
-document.querySelectorAll('.chip[data-f]').forEach(c=>c.addEventListener('click',()=>{
-  const f=c.dataset.f;
-  document.querySelectorAll('.chip[data-f]').forEach(x=>{const on=x===c;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});
-  document.querySelectorAll('.ggrid figure').forEach(g=>{g.hidden=!(f==='all'||g.dataset.g.split(' ').includes(f))});
-}));
-
 /* theme */
 const root=document.documentElement,tb=document.getElementById('themeBtn');
 function paint(){const d=root.dataset.theme==='dark';tb.textContent=d?tb.dataset.toLight:tb.dataset.toDark;tb.setAttribute('aria-pressed',d)}
@@ -195,5 +306,6 @@ Object.entries(jobs).forEach(([k,q])=>{
 });
 </script>
 <script src="/carancho.js" defer></script>
+<script src="/proyecto.js" defer></script>
 </body>
 </html>
