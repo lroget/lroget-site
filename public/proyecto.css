@@ -235,3 +235,17 @@ html[data-theme="dark"] .frase .flujo-papel,html[data-theme="dark"] .hacelo .flu
 html[data-theme="dark"] .vecinos .flujo-negro{fill:var(--n-verde)}
 html[data-theme="dark"] .frase .ola,html[data-theme="dark"] .hacelo .ola{fill:var(--v)}
 html[data-theme="dark"] .frase p em,html[data-theme="dark"] .frase .kicker{color:var(--v)}
+
+/* portada: el logo del proyecto grande, del tamaño de la foto de la portada del sitio */
+.ph-hero{padding-top:calc(var(--bar) + clamp(24px,5vh,64px))}
+.ph-hero .wrap.tope{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);min-height:calc(100svh - var(--bar) - 40px)}
+.ph-hero .vis-hero{align-self:center;justify-self:end;width:min(100%,78svh)}
+.emblema{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 34px rgba(30,14,6,.28));animation:none}
+html[data-theme="dark"] .emblema{filter:drop-shadow(0 0 28px rgba(110,242,168,.35))}
+@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){
+  .emblema{animation:gira-emblema linear both;animation-timeline:scroll(root);animation-range:0 100vh}
+  @keyframes gira-emblema{from{transform:rotate(-6deg) scale(1)}to{transform:rotate(8deg) scale(.92)}}}}
+@media (max-width:820px){
+  .ph-hero .wrap.tope{min-height:0;grid-template-columns:minmax(0,1fr)}
+  .ph-hero .vis-hero{order:-1;width:min(86vw,440px);justify-self:center;margin:8px auto 8px}
+}
