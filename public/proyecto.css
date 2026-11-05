@@ -253,3 +253,9 @@ html[data-theme="dark"] .emblema{filter:drop-shadow(0 0 28px rgba(110,242,168,.3
 /* bosque en tema oscuro: dos verdes, como los dos rojos del claro */
 html[data-theme="dark"] .bosque i{background:var(--v)}
 html[data-theme="dark"] .bosque i:nth-child(3n){background:#2a8f5e}
+
+/* Comunicación: grilla de diseños (afiches) */
+.diseno .muro{grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));margin-top:clamp(20px,3vw,40px)}
+.diseno .muro figure:nth-child(n){margin-top:0}
+.diseno .muro figure:nth-child(even){margin-top:40px}
+@media (max-width:520px){.diseno .muro{grid-template-columns:repeat(2,minmax(0,1fr))}}

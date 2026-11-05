@@ -28,6 +28,7 @@
 <link rel="preload" href="/fonts/bricolage-latin-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
 <link rel="stylesheet" href="/carancho.css">
+<link rel="stylesheet" href="/proyecto.css">
 </head>
 <body>
 
@@ -54,7 +55,7 @@
   <div class="wrap">
     <p class="crumb"><a href="/en/">Home</a> / Communication</p>
     <h1>Communication</h1>
-    <p class="lead">Publications, articles and communication volunteering, by year.</p>
+    <p class="lead">Publications, articles and communication volunteering, by year. And some design.</p>
   </div>
 </section>
 <section class="prose alt trips tline">
@@ -87,7 +88,24 @@
 </ul></div><!--/tl-->
   </div>
 </section>
+<section class="prose diseno pj" aria-labelledby="h-diseno">
+  <div class="wrap">
+    <h2 id="h-diseno">Design</h2>
+    <p>Flyers I designed for COA Carancho's activities.</p>
+    <div class="muro">
+      <figure><button class="zoom" type="button" data-full="/img/coa/flyer-caranchofest.webp"><img src="/img/coa/flyer-caranchofest.webp" alt="Poster with the #caranchofest programme" loading="lazy" width="723" height="900"></button><figcaption>#caranchofest, 2016</figcaption></figure>
+      <figure><button class="zoom" type="button" data-full="/img/coa/flyer-fase-2.webp"><img src="/img/coa/flyer-fase-2.webp" alt="Poster for the Volver a volar bird release, part of #caranchofest" loading="lazy" width="577" height="720"></button><figcaption>Volver a volar (Flying again), 2016</figcaption></figure>
+      <figure><button class="zoom" type="button" data-full="/img/coa/flyer-centenario.webp"><img src="/img/coa/flyer-centenario.webp" alt="Poster for a bird-watching outing for the Aves Argentinas centenary" loading="lazy" width="504" height="504"></button><figcaption>Aves Argentinas centenary, 2016</figcaption></figure>
+      <figure><button class="zoom" type="button" data-full="/img/coa/flyer-mirar-lo-invisible.webp"><img src="/img/coa/flyer-mirar-lo-invisible.webp" alt="Poster for the Mirar lo invisible talk at the Planetarium" loading="lazy" width="896" height="900"></button><figcaption>"Mirar lo invisible" (Seeing the invisible), 2018</figcaption></figure>
+    </div>
+  </div>
+</section>
 </main>
+<dialog id="lb" aria-label="Enlarged photo">
+  <button type="button" id="lbClose">Close</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
 <script src="/events.js"></script>
 
 <script>
@@ -149,5 +167,6 @@ Object.entries(jobs).forEach(([k,q])=>{
 });
 </script>
 <script src="/carancho.js" defer></script>
+<script src="/proyecto.js" defer></script>
 </body>
 </html>
