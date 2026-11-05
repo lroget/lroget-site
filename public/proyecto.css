@@ -249,3 +249,7 @@ html[data-theme="dark"] .emblema{filter:drop-shadow(0 0 28px rgba(110,242,168,.3
   .ph-hero .wrap.tope{min-height:0;grid-template-columns:minmax(0,1fr)}
   .ph-hero .vis-hero{order:-1;width:min(86vw,440px);justify-self:center;margin:8px auto 8px}
 }
+
+/* bosque en tema oscuro: dos verdes, como los dos rojos del claro */
+html[data-theme="dark"] .bosque i{background:var(--v)}
+html[data-theme="dark"] .bosque i:nth-child(3n){background:#2a8f5e}
