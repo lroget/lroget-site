@@ -200,3 +200,4 @@ html[data-theme] .hacelo .btn:hover{background:#f7f1e6;border-color:#f7f1e6;colo
 /* ritmo: menos aire entre secciones que en las páginas de texto */
 .pj>section.prose{padding:clamp(48px,6vw,88px) 0}
 .pj .ficha{padding:clamp(40px,5.5vw,80px) 0}
+.ph-hero .vis-hero figcaption{text-align:right}
