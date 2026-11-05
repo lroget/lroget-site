@@ -26,6 +26,8 @@ const items=leer().map(i=>({...i,date:String(i.es.fecha_orden),year:String(i.es.
 const destino=it=>it.es.destino||(ENC.includes(it.tipo)?'encuentros':it.tipo==='convenio'?'argentinat':['pub','prensa'].includes(it.tipo)?'comunicacion':'novedades');
 const esEnc=it=>destino(it)==='encuentros';
 const lim=new Date(Date.now()-365*864e5).toISOString().slice(0,10);
+// Novedades (página y portada): nada anterior al primer día del mes anterior (pedido de Leo, 5/11/2026).
+const limNov=(()=>{const d=new Date();return new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth()-1,1)).toISOString().slice(0,10)})();
 const sitio=(it,lang)=>esEnc(it)?LANGS[lang].enc:LANGS[lang];
 const hasPage=(it)=>Boolean((it.es.cuerpo||'').trim()||(it.es.fotos||[]).length);
 const field=(it,lang,k)=>it[lang][k]||it.es[k]||'';
@@ -44,9 +46,9 @@ function row(it,lang){
   }
   return `<li data-t="${dt}"><div class="row"><span class="yr">${esc(field(it,lang,'fecha'))}<span class="tag">${L.tags[it.tipo]||''}</span></span><span class="name">${name}</span><span class="what">${what}</span></div></li>`;
 }
-// Portada: solo charlas, talleres y congresos del último año, hasta tres.
+// Portada: lo mismo que Novedades (desde el mes anterior), hasta tres.
 function recientes(lang){
-  return items.filter(i=>esEnc(i)&&i.date>=lim).slice(0,3).map(it=>{
+  return items.filter(i=>destino(i)!=='ninguno'&&i.date>=limNov).slice(0,3).map(it=>{
     const r=row(it,lang).replace(/<span class="tag">.*?<\/span>/,'').replace(/^<li data-t="\w+">/,'<li>');
     return r;
   }).join('\n');
@@ -103,7 +105,7 @@ for(const lang of ['es','en']){
   const L=LANGS[lang];
   let html=readFileSync(L.page,'utf8');
   // Novedades: solo lo del último año. El resto vive en su página temática.
-  html=html.replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(i=>destino(i)!=='ninguno'&&i.date>=lim))}<!--/tl-->`);
+  html=html.replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(i=>destino(i)!=='ninguno'&&i.date>=limNov))}<!--/tl-->`);
   writeFileSync(L.page,html);
   let enc=readFileSync(L.enc.page,'utf8').replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(esEnc))}<!--/tl-->`);
   writeFileSync(L.enc.page,enc);
