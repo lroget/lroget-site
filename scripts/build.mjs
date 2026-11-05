@@ -26,8 +26,8 @@ const items=leer().map(i=>({...i,date:String(i.es.fecha_orden),year:String(i.es.
 const destino=it=>it.es.destino||(ENC.includes(it.tipo)?'encuentros':it.tipo==='convenio'?'argentinat':['pub','prensa'].includes(it.tipo)?'comunicacion':'novedades');
 const esEnc=it=>destino(it)==='encuentros';
 const lim=new Date(Date.now()-365*864e5).toISOString().slice(0,10);
-// Novedades (página y portada): nada anterior al primer día del mes anterior (pedido de Leo, 5/11/2026).
-const limNov=(()=>{const d=new Date();return new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth()-1,1)).toISOString().slice(0,10)})();
+// Novedades (página y portada): nada anterior a octubre de 2026; lo previo es archivo (decisión de Leo, 5/11/2026).
+const limNov='2026-10-01';
 const sitio=(it,lang)=>esEnc(it)?LANGS[lang].enc:LANGS[lang];
 const hasPage=(it)=>Boolean((it.es.cuerpo||'').trim()||(it.es.fotos||[]).length);
 const field=(it,lang,k)=>it[lang][k]||it.es[k]||'';
