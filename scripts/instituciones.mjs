@@ -10,25 +10,29 @@ function logo(it){
   for(const e of ['svg','png','webp','jpg']) if(existsSync(`public/img/instituciones/${it.id}.${e}`)) return `/img/instituciones/${it.id}.${e}`;
   return '';
 }
-function tile(it,lang){
+function fila(it,lang){
   const P=PAGES[lang], T=D.textos[lang];
-  const nombre=it.nombre[lang], lg=logo(it);
-  const mark=lg?`<span class="mk"><img src="${lg}" alt="" loading="lazy"></span>`:'';
+  const lg=logo(it), nombre=esc(it.nombre[lang]);
+  const mk=`<span class="mk">${lg?`<img src="${lg}" alt="${nombre}" loading="lazy">`:`<span class="txt">${nombre}</span>`}</span>`;
   const link=it.pagina?` <a href="${P[it.pagina]}">${T.ver}</a>.`:'';
-  return `<li class="inst-i${lg?' has-logo':''}">${mark}<span class="nm">${esc(nombre)}</span><span class="yr">${esc(it.anio||'')}</span><span class="wt">${esc(it.rotulo[lang])}${link}</span></li>`;
+  return `<li id="${it.id}">${mk}<div class="tx"><h3>${nombre}</h3><p>${esc(it.rotulo[lang])}${link}</p></div><span class="yr">${esc(it.anio||'')}</span></li>`;
+}
+function logoNube(it,lang){
+  const P=PAGES[lang], lg=logo(it), nombre=esc(it.nombre[lang].replace(/ \(.*\)$/,''));
+  return `<li><a href="${P.all}#${it.id}" title="${esc(it.nombre[lang])}">${lg?`<img src="${lg}" alt="${esc(it.nombre[lang])}" loading="lazy">`:`<span class="txt">${nombre}</span>`}</a></li>`;
 }
 export function paginaInstituciones(lang){
   const T=D.textos[lang];
   const grupos=D.grupos.map(g=>{
     const l=D.items.filter(i=>i.grupo===g.id);
     if(!l.length) return '';
-    return `<div class="inst-g"><h2>${esc(g[lang])}</h2>\n<ul class="inst">\n${l.map(i=>tile(i,lang)).join('\n')}\n</ul></div>`;
+    return `<div class="inst-g"><h2>${esc(g[lang])}</h2>\n<ul class="inst-l">\n${l.map(i=>fila(i,lang)).join('\n')}\n</ul></div>`;
   }).join('\n');
   return `${grupos}\n<p class="inst-note">${esc(D.otros_medios[lang])}</p>\n<p class="inst-note">${esc(T.aviso)}</p>`;
 }
 export function bloqueHome(lang){
-  const l=D.items.filter(i=>i.destacado);
-  return `<ul class="inst">\n${l.map(i=>tile(i,lang)).join('\n')}\n</ul>`;
+  const l=D.items.filter(i=>i.destacado||logo(i));
+  return `<ul class="inst-cloud">\n${l.map(i=>logoNube(i,lang)).join('\n')}\n</ul>`;
 }
 export function aplicar(){
   for(const lang of ['es','en']){
