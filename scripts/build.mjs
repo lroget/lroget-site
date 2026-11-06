@@ -3,6 +3,7 @@ import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {join} from 'node:path';
 import {marked} from 'marked';
 import {leer} from './contenido.mjs';
+import {aplicar as instituciones} from './instituciones.mjs';
 
 const LANGS={
   es:{home:'public/index.html',page:'public/novedades/index.html',base:'/novedades/',other:'/en/news/',root:'Inicio',rootHref:'/',sec:'Novedades',photo:'Foto',
@@ -122,6 +123,8 @@ for(const lang of ['es','en']){
     writeFileSync(join(dir,'index.html'),entry(it,lang,esEnc(it)?enc:html));
   }
 }
+
+instituciones();
 
 let sm=readFileSync('public/sitemap.xml','utf8').replace(/<!--entradas-->.*<!--\/entradas-->\n?/s,'');
 const urls=items.filter(hasPage).flatMap(it=>['es','en'].map(l=>{

@@ -273,3 +273,24 @@ html.encendiendo .ola,html.encendiendo .ola-vertical,html.encendiendo .ola-hero,
   html[data-theme="dark"] .hero figcaption{top:26%}
 }
 @media (prefers-reduced-motion:reduce){.apagon{display:none}html.encendiendo *{animation:none!important}}
+
+/* Instituciones: grilla de fichas con logo opcional */
+.inst-g{margin-bottom:clamp(36px,6vw,72px)}
+.inst-g h2{font-size:clamp(1.8rem,3.4vw,2.8rem);margin:0 0 .6em}
+ul.inst{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:14px}
+.inst-i{display:flex;flex-direction:column;gap:6px;padding:18px 18px 20px;border:1px solid var(--line);border-top:3px solid var(--h,var(--accent));border-radius:4px;background:color-mix(in srgb,var(--bg) 70%,transparent)}
+.inst-i:nth-child(4n+1){--h:var(--accent-text)}
+.inst-i:nth-child(4n+2){--h:var(--amber)}
+.inst-i:nth-child(4n+3){--h:var(--ember)}
+.inst-i:nth-child(4n+4){--h:var(--rose)}
+.inst-i .mk{display:flex;align-items:center;height:56px;margin-bottom:6px}
+.inst-i .mk img{max-height:56px;max-width:70%;width:auto;object-fit:contain}
+.inst-i .nm{font-family:var(--display);font-size:1.3rem;line-height:1.1}
+.inst-i .yr{font-family:var(--ui);font-stretch:80%;font-weight:700;font-size:.95rem;color:var(--h,var(--accent-text))}
+.inst-i .yr:empty{display:none}
+.inst-i .wt{color:var(--fg-soft);font-size:1rem;line-height:1.45}
+.inst-i .wt a{text-decoration-color:var(--h,var(--accent));text-decoration-thickness:2px;text-underline-offset:4px}
+.inst-note{color:var(--fg-soft);font-size:.95rem!important;max-width:70ch}
+.inst-home{background:var(--bg)}
+.inst-home ul.inst{margin-bottom:28px}
+.inst-all{margin:0;font-size:1.1rem}
