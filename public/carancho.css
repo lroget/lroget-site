@@ -298,3 +298,4 @@ ul.inst-l{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .inst-l .yr{font-family:var(--ui);font-stretch:80%;font-weight:700;font-size:1rem;color:var(--accent-text);white-space:nowrap}
 .inst-note{color:var(--fg-soft);font-size:.95rem!important;max-width:70ch}
 @media (max-width:700px){.inst-l li{grid-template-columns:1fr;gap:6px}.inst-l .mk{height:auto;min-height:36px}}
+.inst-cloud img,.inst-l .mk img{mix-blend-mode:multiply}
