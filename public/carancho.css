@@ -277,12 +277,17 @@ html.encendiendo .ola,html.encendiendo .ola-vertical,html.encendiendo .ola-hero,
 /* Instituciones: nube de logos (portada) y lista (página) */
 .inst-home{padding:clamp(56px,8vw,112px) 0;background:var(--bg)}
 .inst-home h2{font-size:clamp(1.8rem,3.6vw,3rem);max-width:22ch;margin:0 0 1em}
-ul.inst-cloud{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-wrap:wrap;gap:clamp(18px,3vw,40px) clamp(24px,4vw,56px);align-items:center}
-.inst-cloud a{display:flex;align-items:center;height:56px;color:var(--fg-soft);text-decoration:none;filter:grayscale(1);opacity:.6;transition:filter .3s,opacity .3s,color .3s}
-.inst-cloud img{max-height:56px;max-width:150px;width:auto;object-fit:contain}
-.inst-cloud .txt{font-family:var(--display);font-size:1.25rem;line-height:1.05;max-width:11ch}
-.inst-cloud a:hover,.inst-cloud a:focus-visible{filter:none;opacity:1;color:var(--accent-text)}
-@media (hover:none){.inst-cloud a{filter:none;opacity:.9}.inst-cloud img{max-height:44px;max-width:120px}}
+.inst-marquee{overflow:hidden;margin:0 0 14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.inst-marquee .track{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:clamp(36px,5vw,64px);width:max-content;animation:inst-slide 70s linear infinite}
+.inst-marquee.b .track{animation-direction:reverse;animation-duration:80s}
+.inst-marquee:hover .track,.inst-marquee:focus-within .track{animation-play-state:paused}
+@keyframes inst-slide{to{transform:translateX(calc(-50% - clamp(18px,2.5vw,32px)))}}
+.inst-marquee li{flex:none}
+.inst-marquee a{display:flex;align-items:center;height:34px;color:var(--fg-soft);text-decoration:none;filter:grayscale(1);opacity:.6;transition:filter .3s,opacity .3s}
+.inst-marquee img{max-height:34px;max-width:110px;width:auto;object-fit:contain;mix-blend-mode:multiply}
+.inst-marquee a:hover,.inst-marquee a:focus-visible{filter:none;opacity:1}
+@media (hover:none){.inst-marquee a{filter:none;opacity:.85}}
+@media (prefers-reduced-motion:reduce){.inst-marquee{-webkit-mask-image:none;mask-image:none}.inst-marquee .track{animation:none;flex-wrap:wrap;width:auto;gap:18px 36px}.inst-marquee li[aria-hidden],.inst-marquee a[aria-hidden]{display:none}.inst-marquee li:has(a[aria-hidden]){display:none}}
 .inst-all{margin:0;font-size:1.1rem}
 .inst-g{margin-bottom:clamp(36px,6vw,72px)}
 .inst-g h2{font-size:clamp(1.8rem,3.4vw,2.8rem);margin:0 0 .6em}

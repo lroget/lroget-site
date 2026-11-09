@@ -31,8 +31,13 @@ export function paginaInstituciones(lang){
   return `${grupos}\n<p class="inst-note">${esc(D.otros_medios[lang])}</p>\n<p class="inst-note">${esc(T.aviso)}</p>`;
 }
 export function bloqueHome(lang){
-  const l=D.items.filter(i=>i.destacado||logo(i));
-  return `<ul class="inst-cloud">\n${l.map(i=>logoNube(i,lang)).join('\n')}\n</ul>`;
+  const l=D.items.filter(i=>logo(i));
+  const mid=Math.ceil(l.length/2);
+  const fila=(arr,cls)=>{
+    const una=(aria)=>arr.map(i=>logoNube(i,lang).replace('<a ',aria?'<a tabindex="-1" aria-hidden="true" ':'<a ')).join('\n');
+    return `<div class="inst-marquee ${cls}"><ul class="track">\n${una(false)}\n${una(true)}\n</ul></div>`;
+  };
+  return `${fila(l.slice(0,mid),'a')}\n${fila(l.slice(mid),'b')}`;
 }
 export function aplicar(){
   for(const lang of ['es','en']){
