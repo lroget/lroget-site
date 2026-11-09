@@ -32,12 +32,10 @@ export function paginaInstituciones(lang){
 }
 export function bloqueHome(lang){
   const l=D.items.filter(i=>logo(i));
-  const mid=Math.ceil(l.length/2);
-  const fila=(arr,cls)=>{
-    const una=(aria)=>arr.map(i=>logoNube(i,lang).replace('<a ',aria?'<a tabindex="-1" aria-hidden="true" ':'<a ')).join('\n');
-    return `<div class="inst-marquee ${cls}"><ul class="track">\n${una(false)}\n${una(true)}\n</ul></div>`;
-  };
-  return `${fila(l.slice(0,mid),'a')}\n${fila(l.slice(mid),'b')}`;
+  const N=3, pages=Array.from({length:N},()=>[]);
+  l.forEach((i,k)=>pages[k%N].push(i));
+  const lbl=lang==='es'?'Ver grupo':'Show group';
+  return `<div class="inst-car">\n`+pages.map((pg,n)=>`<ul class="inst-pg" data-pg="${n}">\n${pg.map(i=>logoNube(i,lang)).join('\n')}\n</ul>`).join('\n')+`\n<div class="inst-dots" role="group">${pages.map((_,n)=>`<button type="button" aria-label="${lbl} ${n+1}"></button>`).join('')}</div>\n</div>`;
 }
 export function aplicar(){
   for(const lang of ['es','en']){
