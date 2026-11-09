@@ -116,18 +116,3 @@
   addEventListener('scroll',function(){meta=(window.scrollY||0)*.0034;if(!activo){activo=true;requestAnimationFrame(cuadro)}},{passive:true});
   addEventListener('resize',function(){pintar(true)},{passive:true});
 })();
-
-/* Instituciones: grupos de logos que rotan despacio (sin JS se ven todos juntos) */
-(function(){try{
-  var car=document.querySelector('.inst-car');if(!car)return;
-  var pgs=car.querySelectorAll('.inst-pg'),dots=car.querySelectorAll('.inst-dots button');
-  if(pgs.length<2||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var cur=0,t=null;car.classList.add('on');
-  function show(n){cur=(n+pgs.length)%pgs.length;pgs.forEach(function(p,i){p.classList.toggle('act',i===cur)});dots.forEach(function(d,i){d.classList.toggle('act',i===cur)})}
-  function play(){stop();t=setInterval(function(){show(cur+1)},7000)}
-  function stop(){if(t){clearInterval(t);t=null}}
-  dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);play()})});
-  car.addEventListener('mouseenter',stop);car.addEventListener('mouseleave',play);
-  car.addEventListener('focusin',stop);car.addEventListener('focusout',play);
-  show(0);play();
-}catch(e){}})();

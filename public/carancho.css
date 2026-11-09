@@ -277,21 +277,13 @@ html.encendiendo .ola,html.encendiendo .ola-vertical,html.encendiendo .ola-hero,
 /* Instituciones: nube de logos (portada) y lista (página) */
 .inst-home{padding:clamp(56px,8vw,112px) 0;background:var(--bg)}
 .inst-home h2{font-size:clamp(1.8rem,3.6vw,3rem);max-width:22ch;margin:0 0 1em}
-.inst-car{position:relative;margin:0 0 18px}
-ul.inst-pg{list-style:none;max-width:860px;margin:0 auto clamp(14px,2vw,26px);padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(18px,2.6vw,34px) clamp(28px,4.4vw,58px)}
-.inst-pg li:nth-child(3n+2){transform:translateY(6px)}
-.inst-pg li:nth-child(3n){transform:translateY(-5px)}
-.inst-pg a{display:flex;align-items:center;height:34px;color:var(--fg-soft);text-decoration:none;filter:grayscale(1);opacity:.6;transition:filter .3s,opacity .3s}
-.inst-pg img{max-height:34px;max-width:110px;width:auto;object-fit:contain;mix-blend-mode:multiply}
-.inst-pg a:hover,.inst-pg a:focus-visible{filter:none;opacity:1}
-@media (hover:none){.inst-pg a{filter:none;opacity:.85}}
-.inst-dots{display:none;justify-content:center;gap:10px;margin-top:20px}
-.inst-car.on{display:grid}
-.inst-car.on .inst-pg{grid-area:1/1;margin:0 auto;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s .9s}
-.inst-car.on .inst-pg.act{opacity:1;visibility:visible;transition:opacity .9s ease}
-.inst-car.on .inst-dots{display:flex;grid-area:2/1}
-.inst-dots button{width:9px;height:9px;padding:0;border-radius:50%;border:1px solid var(--fg-soft);background:transparent;cursor:pointer}
-.inst-dots button.act{background:var(--accent);border-color:var(--accent)}
+ul.inst-nube{list-style:none;max-width:1040px;margin:0 auto 22px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(16px,2.2vw,28px) clamp(24px,3.6vw,48px)}
+.inst-nube a{display:flex;align-items:center;height:34px;color:var(--fg-soft);text-decoration:none;filter:grayscale(1);opacity:.6;transition:filter .3s,opacity .3s,color .3s}
+.inst-nube img{max-height:34px;max-width:110px;width:auto;object-fit:contain;mix-blend-mode:multiply}
+.inst-nube .txt{font-family:var(--display);font-size:.95rem;line-height:1.1;white-space:nowrap;padding:5px 10px;border:1px dashed var(--line);border-radius:3px}
+.inst-nube a:hover,.inst-nube a:focus-visible{filter:none;opacity:1}
+.inst-nube a:hover .txt,.inst-nube a:focus-visible .txt{color:var(--accent-text);border-color:var(--accent)}
+@media (hover:none){.inst-nube a{filter:none;opacity:.85}}
 .inst-all{margin:0;font-size:1.1rem}
 .inst-g{margin-bottom:clamp(36px,6vw,72px)}
 .inst-g h2{font-size:clamp(1.8rem,3.4vw,2.8rem);margin:0 0 .6em}

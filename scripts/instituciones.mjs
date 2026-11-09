@@ -18,7 +18,7 @@ function fila(it,lang){
   return `<li id="${it.id}">${mk}<div class="tx"><h3>${nombre}</h3><p>${esc(it.rotulo[lang])}${link}</p></div><span class="yr">${esc(it.anio||'')}</span></li>`;
 }
 function logoNube(it,lang){
-  const P=PAGES[lang], lg=logo(it), nombre=esc(it.nombre[lang].replace(/ \(.*\)$/,''));
+  const P=PAGES[lang], lg=logo(it), nombre=esc((it.corto&&it.corto[lang])||it.nombre[lang].replace(/ \(.*\)$/,''));
   return `<li><a href="${P.all}#${it.id}" title="${esc(it.nombre[lang])}">${lg?`<img src="${lg}" alt="${esc(it.nombre[lang])}" loading="lazy">`:`<span class="txt">${nombre}</span>`}</a></li>`;
 }
 export function paginaInstituciones(lang){
@@ -31,11 +31,7 @@ export function paginaInstituciones(lang){
   return `${grupos}\n<p class="inst-note">${esc(D.otros_medios[lang])}</p>\n<p class="inst-note">${esc(T.aviso)}</p>`;
 }
 export function bloqueHome(lang){
-  const l=D.items.filter(i=>logo(i));
-  const N=3, pages=Array.from({length:N},()=>[]);
-  l.forEach((i,k)=>pages[k%N].push(i));
-  const lbl=lang==='es'?'Ver grupo':'Show group';
-  return `<div class="inst-car">\n`+pages.map((pg,n)=>`<ul class="inst-pg" data-pg="${n}">\n${pg.map(i=>logoNube(i,lang)).join('\n')}\n</ul>`).join('\n')+`\n<div class="inst-dots" role="group">${pages.map((_,n)=>`<button type="button" aria-label="${lbl} ${n+1}"></button>`).join('')}</div>\n</div>`;
+  return `<ul class="inst-pg inst-nube">\n${D.items.map(i=>logoNube(i,lang)).join('\n')}\n</ul>`;
 }
 export function aplicar(){
   for(const lang of ['es','en']){

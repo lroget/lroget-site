@@ -117,6 +117,10 @@
    "rotulo": {
     "es": "Charlas, congresos y trabajo conjunto sobre los datos abiertos de ArgentiNat.",
     "en": "Talks, conferences and joint work on ArgentiNat's open data."
+   },
+   "corto": {
+    "es": "GBIF Argentina",
+    "en": "GBIF Argentina"
    }
   },
   {
@@ -130,6 +134,10 @@
    "rotulo": {
     "es": "Charla y congreso con el nodo mexicano de iNaturalist.",
     "en": "Talk and conference with iNaturalist's Mexican node."
+   },
+   "corto": {
+    "es": "Naturalista (México)",
+    "en": "Naturalista (Mexico)"
    }
   },
   {
@@ -144,6 +152,10 @@
    "rotulo": {
     "es": "Convenio para usar ArgentiNat en reservas privadas.",
     "en": "Agreement to use ArgentiNat in private reserves."
+   },
+   "corto": {
+    "es": "RARNAP",
+    "en": "RARNAP"
    }
   },
   {
@@ -158,6 +170,10 @@
    "rotulo": {
     "es": "Convenio de uso de ArgentiNat.",
     "en": "Agreement to use ArgentiNat."
+   },
+   "corto": {
+    "es": "Fundación Natura",
+    "en": "Fundación Natura"
    }
   },
   {
@@ -214,6 +230,10 @@
    "rotulo": {
     "es": "Artículo en el Informe Ambiental 2019.",
     "en": "Article in the 2019 Environmental Report."
+   },
+   "corto": {
+    "es": "FARN",
+    "en": "FARN"
    }
   },
   {
@@ -227,6 +247,10 @@
    "rotulo": {
     "es": "Taller.",
     "en": "Workshop."
+   },
+   "corto": {
+    "es": "Fundación Verdepampa",
+    "en": "Fundación Verdepampa"
    }
   },
   {
@@ -255,6 +279,10 @@
    "rotulo": {
     "es": "Liberaciones de rapaces con el COA Carancho.",
     "en": "Raptor releases with COA Carancho."
+   },
+   "corto": {
+    "es": "PCRAR",
+    "en": "PCRAR"
    }
   },
   {
@@ -269,6 +297,10 @@
    "rotulo": {
     "es": "Plantaciones de especies nativas, una charla y diseño, con el COA Carancho.",
     "en": "Native species plantings, a talk and design work, with COA Carancho."
+   },
+   "corto": {
+    "es": "Árboles Nativos",
+    "en": "Árboles Nativos"
    }
   },
   {
@@ -311,6 +343,10 @@
    "rotulo": {
     "es": "Subsidio de ciencia ciudadana para ArgentiNat.",
     "en": "Citizen science grant for ArgentiNat."
+   },
+   "corto": {
+    "es": "MinCyT",
+    "en": "MinCyT"
    }
   },
   {
@@ -339,6 +375,10 @@
    "rotulo": {
     "es": "Convenio de uso de ArgentiNat.",
     "en": "Agreement to use ArgentiNat."
+   },
+   "corto": {
+    "es": "Municipalidad de Santa Fe",
+    "en": "City of Santa Fe"
    }
   },
   {
@@ -367,6 +407,10 @@
    "rotulo": {
     "es": "Convenio de uso de ArgentiNat y capacitación a guardaparques.",
     "en": "Agreement to use ArgentiNat, and training for park rangers."
+   },
+   "corto": {
+    "es": "Ambiente de Chaco",
+    "en": "Chaco Environment"
    }
   },
   {
@@ -408,6 +452,10 @@
    "rotulo": {
     "es": "Taller virtual de ciencia ciudadana para los planes de manejo de áreas protegidas.",
     "en": "Virtual citizen science workshop for protected area management plans."
+   },
+   "corto": {
+    "es": "Ambiente Prov. Buenos Aires",
+    "en": "Buenos Aires Prov. Environment"
    }
   },
   {
@@ -433,6 +481,10 @@
    "rotulo": {
     "es": "Trabajo conjunto durante el COA Carancho.",
     "en": "Joint work during COA Carancho."
+   },
+   "corto": {
+    "es": "Comuna 14",
+    "en": "Comuna 14"
    }
   },
   {
@@ -447,6 +499,10 @@
    "rotulo": {
     "es": "Declaración 609/2018 sobre el COA Carancho.",
     "en": "Declaration 609/2018 on COA Carancho."
+   },
+   "corto": {
+    "es": "Legislatura de la Ciudad",
+    "en": "City Legislature"
    }
   },
   {
@@ -461,6 +517,10 @@
    "rotulo": {
     "es": "Plantaciones de nativas con el COA Carancho.",
     "en": "Native plantings with COA Carancho."
+   },
+   "corto": {
+    "es": "Parque Tres de Febrero",
+    "en": "Parque Tres de Febrero"
    }
   },
   {
@@ -475,6 +535,10 @@
    "rotulo": {
     "es": "Plantación y censo de aves con el COA Carancho.",
     "en": "Planting and bird census with COA Carancho."
+   },
+   "corto": {
+    "es": "APrA",
+    "en": "APrA"
    }
   },
   {
@@ -598,6 +662,10 @@
    "rotulo": {
     "es": "Dos charlas con el COA Carancho.",
     "en": "Two talks with COA Carancho."
+   },
+   "corto": {
+    "es": "Planetario de Buenos Aires",
+    "en": "Buenos Aires Planetarium"
    }
   },
   {
@@ -612,6 +680,10 @@
    "rotulo": {
     "es": "Actividades organizadas con el COA Carancho.",
     "en": "Activities organized with COA Carancho."
+   },
+   "corto": {
+    "es": "Jardín Botánico",
+    "en": "Botanical Garden"
    }
   },
   {
@@ -653,6 +725,10 @@
    "rotulo": {
     "es": "Nodo de comunicación de la alianza.",
     "en": "The alliance's communications node."
+   },
+   "corto": {
+    "es": "AACA",
+    "en": "AACA"
    }
   },
   {
@@ -667,6 +743,10 @@
    "rotulo": {
     "es": "Charla, recorridas y convocatoria a través de ArgentiNat.",
     "en": "Talk, guided walks and a call to join through ArgentiNat."
+   },
+   "corto": {
+    "es": "Hora del Planeta",
+    "en": "Earth Hour"
    }
   },
   {
@@ -681,6 +761,10 @@
    "rotulo": {
     "es": "Charla en 2022 y panel en 2024.",
     "en": "A talk in 2022 and a panel in 2024."
+   },
+   "corto": {
+    "es": "Yurumí",
+    "en": "Yurumí"
    }
   },
   {
@@ -693,6 +777,10 @@
    "rotulo": {
     "es": "Capacitación sobre ArgentiNat.",
     "en": "Training on ArgentiNat."
+   },
+   "corto": {
+    "es": "Jóvenes por el Clima",
+    "en": "Youth for Climate"
    }
   },
   {
@@ -762,6 +850,10 @@
    "rotulo": {
     "es": "Artículos.",
     "en": "Articles."
+   },
+   "corto": {
+    "es": "Revista Vida Silvestre",
+    "en": "Revista Vida Silvestre"
    }
   }
  ],
