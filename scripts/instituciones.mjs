@@ -13,7 +13,7 @@ function logo(it){
 function fila(it,lang){
   const P=PAGES[lang], T=D.textos[lang];
   const lg=logo(it), nombre=esc(it.nombre[lang]);
-  const mk=`<span class="mk">${lg?`<img src="${lg}" alt="${nombre}" loading="lazy">`:`<span class="txt">${nombre}</span>`}</span>`;
+  const mk=`<span class="mk">${lg?`<img src="${lg}" alt="${nombre}" loading="lazy">`:""}</span>`;
   const link=it.pagina?` <a href="${P[it.pagina]}">${T.ver}</a>.`:'';
   return `<li id="${it.id}">${mk}<div class="tx"><h3>${nombre}</h3><p>${esc(it.rotulo[lang])}${link}</p></div><span class="yr">${esc(it.anio||'')}</span></li>`;
 }
@@ -31,7 +31,10 @@ export function paginaInstituciones(lang){
   return `${grupos}\n<p class="inst-note">${esc(D.otros_medios[lang])}</p>\n<p class="inst-note">${esc(T.aviso)}</p>`;
 }
 export function bloqueHome(lang){
-  return `<ul class="inst-pg inst-nube">\n${D.items.map(i=>logoNube(i,lang)).join('\n')}\n</ul>`;
+  const T=D.textos[lang], P=PAGES[lang];
+  const l=D.items.filter(i=>i.muro&&logo(i));
+  const n=D.items.length-l.length;
+  return `<ul class="inst-pg inst-nube">\n${l.map(i=>logoNube(i,lang)).join('\n')}\n</ul>\n    <p class="inst-all"><a href="${P.all}">${T.home_enlace.replace('{n}',n)}</a></p>`;
 }
 export function aplicar(){
   for(const lang of ['es','en']){

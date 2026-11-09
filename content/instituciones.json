@@ -45,7 +45,8 @@
    "rotulo": {
     "es": "ArgentiNat, Safaris, campañas y publicaciones.",
     "en": "ArgentiNat, Safaris, campaigns and publications."
-   }
+   },
+   "muro": true
   },
   {
    "id": "nat-geo",
@@ -59,7 +60,8 @@
    "rotulo": {
     "es": "Explorer y grant para lanzar ArgentiNat.",
     "en": "Explorer, and the grant to launch ArgentiNat."
-   }
+   },
+   "muro": true
   },
   {
    "id": "aves-argentinas",
@@ -74,7 +76,8 @@
    "rotulo": {
     "es": "Talleres, charlas y voluntariado. El COA Carancho nació dentro de su red de clubes.",
     "en": "Workshops, talks and volunteering. COA Carancho was born inside its network of clubs."
-   }
+   },
+   "muro": true
   },
   {
    "id": "macn-conicet",
@@ -89,7 +92,8 @@
    "rotulo": {
     "es": "Lanzamiento de ArgentiNat en el museo y subsidio de ciencia ciudadana.",
     "en": "ArgentiNat's launch at the museum, and a citizen science grant."
-   }
+   },
+   "muro": true
   },
   {
    "id": "inaturalist",
@@ -104,7 +108,8 @@
    "rotulo": {
     "es": "ArgentiNat es su nodo para Argentina.",
     "en": "ArgentiNat is its node for Argentina."
-   }
+   },
+   "muro": true
   },
   {
    "id": "gbif-argentina",
@@ -121,7 +126,8 @@
    "corto": {
     "es": "GBIF Argentina",
     "en": "GBIF Argentina"
-   }
+   },
+   "muro": false
   },
   {
    "id": "naturalista-mx",
@@ -138,7 +144,8 @@
    "corto": {
     "es": "Naturalista (México)",
     "en": "Naturalista (Mexico)"
-   }
+   },
+   "muro": false
   },
   {
    "id": "rarnap",
@@ -156,7 +163,8 @@
    "corto": {
     "es": "RARNAP",
     "en": "RARNAP"
-   }
+   },
+   "muro": false
   },
   {
    "id": "natura",
@@ -174,7 +182,8 @@
    "corto": {
     "es": "Fundación Natura",
     "en": "Fundación Natura"
-   }
+   },
+   "muro": false
   },
   {
    "id": "hongos",
@@ -188,7 +197,8 @@
    "rotulo": {
     "es": "Convenio de uso de ArgentiNat.",
     "en": "Agreement to use ArgentiNat."
-   }
+   },
+   "muro": false
   },
   {
    "id": "lillo",
@@ -203,7 +213,8 @@
    "rotulo": {
     "es": "Charla y taller para docentes en Tucumán.",
     "en": "Talk and teacher workshop in Tucumán."
-   }
+   },
+   "muro": true
   },
   {
    "id": "inta",
@@ -216,7 +227,8 @@
    "rotulo": {
     "es": "Capacitación al personal de San Pedro, Misiones.",
     "en": "Training for staff in San Pedro, Misiones."
-   }
+   },
+   "muro": true
   },
   {
    "id": "farn",
@@ -234,7 +246,8 @@
    "corto": {
     "es": "FARN",
     "en": "FARN"
-   }
+   },
+   "muro": false
   },
   {
    "id": "verdepampa",
@@ -251,7 +264,8 @@
    "corto": {
     "es": "Fundación Verdepampa",
     "en": "Fundación Verdepampa"
-   }
+   },
+   "muro": false
   },
   {
    "id": "caburei",
@@ -265,7 +279,8 @@
    "rotulo": {
     "es": "Censos de aves y liberaciones de rapaces con el COA Carancho.",
     "en": "Bird censuses and raptor releases with COA Carancho."
-   }
+   },
+   "muro": false
   },
   {
    "id": "pcrar",
@@ -283,7 +298,8 @@
    "corto": {
     "es": "PCRAR",
     "en": "PCRAR"
-   }
+   },
+   "muro": false
   },
   {
    "id": "arboles-nativos",
@@ -301,7 +317,8 @@
    "corto": {
     "es": "Árboles Nativos",
     "en": "Árboles Nativos"
-   }
+   },
+   "muro": false
   },
   {
    "id": "birdingpal",
@@ -314,7 +331,8 @@
    "rotulo": {
     "es": "Voluntariado como guía de observación de aves.",
     "en": "Volunteer bird guide."
-   }
+   },
+   "muro": false
   },
   {
    "id": "apn",
@@ -329,7 +347,8 @@
    "rotulo": {
     "es": "Convenio de uso de ArgentiNat.",
     "en": "Agreement to use ArgentiNat."
-   }
+   },
+   "muro": true
   },
   {
    "id": "mincyt",
@@ -347,7 +366,8 @@
    "corto": {
     "es": "MinCyT",
     "en": "MinCyT"
-   }
+   },
+   "muro": false
   },
   {
    "id": "mendoza",
@@ -361,7 +381,8 @@
    "rotulo": {
     "es": "Convenio de uso de ArgentiNat.",
     "en": "Agreement to use ArgentiNat."
-   }
+   },
+   "muro": false
   },
   {
    "id": "santa-fe",
@@ -379,7 +400,8 @@
    "corto": {
     "es": "Municipalidad de Santa Fe",
     "en": "City of Santa Fe"
-   }
+   },
+   "muro": false
   },
   {
    "id": "san-miguel",
@@ -393,7 +415,8 @@
    "rotulo": {
     "es": "Convenio de uso de ArgentiNat.",
     "en": "Agreement to use ArgentiNat."
-   }
+   },
+   "muro": false
   },
   {
    "id": "chaco",
@@ -411,7 +434,8 @@
    "corto": {
     "es": "Ambiente de Chaco",
     "en": "Chaco Environment"
-   }
+   },
+   "muro": false
   },
   {
    "id": "escobar",
@@ -425,7 +449,8 @@
    "rotulo": {
     "es": "Convenio de uso de ArgentiNat.",
     "en": "Agreement to use ArgentiNat."
-   }
+   },
+   "muro": false
   },
   {
    "id": "tigre",
@@ -439,7 +464,8 @@
    "rotulo": {
     "es": "Convenio de uso de ArgentiNat, que gestioné.",
     "en": "Agreement to use ArgentiNat, which I managed."
-   }
+   },
+   "muro": false
   },
   {
    "id": "pba-ambiente",
@@ -456,7 +482,8 @@
    "corto": {
     "es": "Ambiente Prov. Buenos Aires",
     "en": "Buenos Aires Prov. Environment"
-   }
+   },
+   "muro": false
   },
   {
    "id": "caba",
@@ -468,7 +495,8 @@
    "rotulo": {
     "es": "Charla sobre ArgentiNat.",
     "en": "Talk on ArgentiNat."
-   }
+   },
+   "muro": true
   },
   {
    "id": "comuna-14",
@@ -485,7 +513,8 @@
    "corto": {
     "es": "Comuna 14",
     "en": "Comuna 14"
-   }
+   },
+   "muro": false
   },
   {
    "id": "legislatura-caba",
@@ -503,7 +532,8 @@
    "corto": {
     "es": "Legislatura de la Ciudad",
     "en": "City Legislature"
-   }
+   },
+   "muro": false
   },
   {
    "id": "parque-tres-de-febrero",
@@ -521,7 +551,8 @@
    "corto": {
     "es": "Parque Tres de Febrero",
     "en": "Parque Tres de Febrero"
-   }
+   },
+   "muro": false
   },
   {
    "id": "apra",
@@ -539,7 +570,8 @@
    "corto": {
     "es": "APrA",
     "en": "APrA"
-   }
+   },
+   "muro": false
   },
   {
    "id": "acumar",
@@ -551,7 +583,8 @@
    "rotulo": {
     "es": "Censos de aves en la cuenca.",
     "en": "Bird censuses in the basin."
-   }
+   },
+   "muro": false
   },
   {
    "id": "toyota",
@@ -566,7 +599,8 @@
    "rotulo": {
     "es": "Capacitación de ArgentiNat para docentes y jornada en su reserva.",
     "en": "ArgentiNat training for teachers, and a day at its reserve."
-   }
+   },
+   "muro": true
   },
   {
    "id": "salesforce",
@@ -579,7 +613,8 @@
    "rotulo": {
     "es": "Jornadas de voluntariado corporativo con ArgentiNat.",
     "en": "Corporate volunteering days with ArgentiNat."
-   }
+   },
+   "muro": true
   },
   {
    "id": "prosegur",
@@ -592,7 +627,8 @@
    "rotulo": {
     "es": "Safari de voluntariado corporativo con ArgentiNat.",
     "en": "Corporate volunteering Safari with ArgentiNat."
-   }
+   },
+   "muro": true
   },
   {
    "id": "iguazu-jungle",
@@ -605,7 +641,8 @@
    "rotulo": {
     "es": "Taller sobre ArgentiNat.",
     "en": "Workshop on ArgentiNat."
-   }
+   },
+   "muro": false
   },
   {
    "id": "inkaterra",
@@ -618,7 +655,8 @@
    "rotulo": {
     "es": "Capacitación a guías de turismo en la Amazonia peruana, a través de National Geographic.",
     "en": "Training for tourism guides in the Peruvian Amazon, through National Geographic."
-   }
+   },
+   "muro": false
   },
   {
    "id": "museo-moderno",
@@ -632,7 +670,8 @@
    "rotulo": {
     "es": "Intervención pedagógica para las prácticas de la Tecnicatura en Pedagogía y Educación Social.",
     "en": "Pedagogical intervention for the Social Education and Pedagogy diploma practicum."
-   }
+   },
+   "muro": true
   },
   {
    "id": "c3",
@@ -647,7 +686,8 @@
    "rotulo": {
     "es": "Capacitación de guías y actividad abierta al público.",
     "en": "Guide training and an open public activity."
-   }
+   },
+   "muro": true
   },
   {
    "id": "planetario",
@@ -666,7 +706,8 @@
    "corto": {
     "es": "Planetario de Buenos Aires",
     "en": "Buenos Aires Planetarium"
-   }
+   },
+   "muro": false
   },
   {
    "id": "jardin-botanico",
@@ -684,7 +725,8 @@
    "corto": {
     "es": "Jardín Botánico",
     "en": "Botanical Garden"
-   }
+   },
+   "muro": false
   },
   {
    "id": "unso",
@@ -698,7 +740,8 @@
    "rotulo": {
     "es": "Taller de Biodiversidad Urbana.",
     "en": "Urban Biodiversity workshop."
-   }
+   },
+   "muro": true
   },
   {
    "id": "unam",
@@ -712,7 +755,8 @@
    "rotulo": {
     "es": "Capacitación a estudiantes de guardaparques.",
     "en": "Training for park ranger students."
-   }
+   },
+   "muro": true
   },
   {
    "id": "aaca",
@@ -729,7 +773,8 @@
    "corto": {
     "es": "AACA",
     "en": "AACA"
-   }
+   },
+   "muro": false
   },
   {
    "id": "hora-del-planeta",
@@ -747,7 +792,8 @@
    "corto": {
     "es": "Hora del Planeta",
     "en": "Earth Hour"
-   }
+   },
+   "muro": false
   },
   {
    "id": "yurumi",
@@ -765,7 +811,8 @@
    "corto": {
     "es": "Yurumí",
     "en": "Yurumí"
-   }
+   },
+   "muro": false
   },
   {
    "id": "jovenes-por-el-clima",
@@ -781,7 +828,8 @@
    "corto": {
     "es": "Jóvenes por el Clima",
     "en": "Youth for Climate"
-   }
+   },
+   "muro": false
   },
   {
    "id": "wikimedia",
@@ -793,7 +841,8 @@
    "rotulo": {
     "es": "Editatón organizada por mí. Fotos mías ilustran artículos de Wikipedia.",
     "en": "An edit-a-thon I organized. My photos illustrate Wikipedia articles."
-   }
+   },
+   "muro": true
   },
   {
    "id": "la-nacion",
@@ -808,7 +857,8 @@
    "rotulo": {
     "es": "Guía de Plantas Nativas, con fichas ilustradas con fotos mías.",
     "en": "Native Plants Guide, with entries illustrated by my photos."
-   }
+   },
+   "muro": true
   },
   {
    "id": "perfil",
@@ -822,7 +872,8 @@
    "rotulo": {
     "es": "Nota escrita por mí.",
     "en": "An article I wrote."
-   }
+   },
+   "muro": true
   },
   {
    "id": "endemico",
@@ -836,7 +887,8 @@
    "rotulo": {
     "es": "Reseña de libros.",
     "en": "Book review."
-   }
+   },
+   "muro": true
   },
   {
    "id": "revista-vida-silvestre",
@@ -854,7 +906,8 @@
    "corto": {
     "es": "Revista Vida Silvestre",
     "en": "Revista Vida Silvestre"
-   }
+   },
+   "muro": false
   }
  ],
  "otros_medios": {
@@ -865,7 +918,7 @@
   "es": {
    "home_titulo": "Algunas de las instituciones con las que trabajé",
    "home_texto": "",
-   "home_enlace": "Ver todas, con qué hice en cada una",
+   "home_enlace": "Y {n} más. Qué hice en cada una y cuándo.",
    "pagina_titulo": "Instituciones",
    "pagina_lead": "Con quién trabajé: qué hice y cuándo.",
    "aviso": "Los nombres y logos identifican a las instituciones con las que trabajé. No implican patrocinio ni aval de este sitio.",
@@ -874,7 +927,7 @@
   "en": {
    "home_titulo": "Some of the institutions I have worked with",
    "home_texto": "",
-   "home_enlace": "See all, with what I did at each one",
+   "home_enlace": "And {n} more. What I did at each, and when.",
    "pagina_titulo": "Institutions",
    "pagina_lead": "Who I have worked with: what I did and when.",
    "aviso": "Names and logos identify the institutions I worked with. They do not imply sponsorship or endorsement of this site.",
