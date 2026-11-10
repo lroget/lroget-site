@@ -295,3 +295,16 @@ html:not([data-theme="light"]) .pj .datos div:nth-child(3n){border-top-color:var
 .pj .frase p em{color:var(--c2)}
 .pj .roles li:nth-child(even) .y{color:var(--c2)}
 .pj .roles li:nth-child(3n) .y{color:var(--amber)}
+
+/* Bioma: lista de posters */
+.pj .posters{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(20px,3vw,44px)}
+.pj .posters li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.pj .posters b{font-family:var(--ui);font-stretch:80%;font-weight:700;font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.15;color:var(--accent-text)}
+.pj .posters li:nth-child(3n+2) b{color:var(--c2)}
+.pj .posters li:nth-child(3n) b{color:var(--amber)}
+.pj .posters span{font-size:1.05rem;line-height:1.4}
+.pj .posters .falta span{font-style:italic;opacity:.75}
+.pj .bioma-foto{margin:0;border-radius:6px;overflow:hidden}
+.pj .bioma-foto img{display:block;width:100%;height:auto}
+@media (max-width:820px){.pj .posters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pj .posters{grid-template-columns:1fr}}

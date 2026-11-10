@@ -60,6 +60,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/projects/coa-carancho/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lroget.com/proyectos/coa-carancho/"/>
   </url>
+  <url><loc>https://lroget.com/proyectos/bioma/</loc><lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/proyectos/bioma/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/projects/bioma/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lroget.com/proyectos/bioma/"/>
+  </url>
+  <url><loc>https://lroget.com/en/projects/bioma/</loc><lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/proyectos/bioma/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/projects/bioma/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lroget.com/proyectos/bioma/"/>
+  </url>
   <url><loc>https://lroget.com/instituciones/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/instituciones/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/institutions/"/>
