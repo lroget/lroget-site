@@ -128,9 +128,8 @@ html[data-theme="light"] .novedades li:nth-child(n){--h:var(--petroleo)}
 html[data-theme="light"] .novedades .name a,html[data-theme="light"] .novedades .what a{text-decoration-color:var(--petroleo)}
 
 /* Fotos con forma irregular. Tono unificado solo donde no importa el color exacto de una especie */
-html[data-theme="light"] .about figure img,html[data-theme="light"] .fotos img{filter:saturate(.8) sepia(.14) contrast(1.05)}
-.about figure img,.fotos img{-webkit-mask:var(--mancha-1) center/100% 100% no-repeat;mask:var(--mancha-1) center/100% 100% no-repeat}
-.fotos figure:nth-child(2n) img{-webkit-mask-image:var(--mancha-2);mask-image:var(--mancha-2)}
+html[data-theme="light"] .about figure img{filter:saturate(.8) sepia(.14) contrast(1.05)}
+.about figure img{-webkit-mask:var(--mancha-1) center/100% 100% no-repeat;mask:var(--mancha-1) center/100% 100% no-repeat}
 .about figure{position:sticky;top:calc(var(--bar) + 16px);height:calc(100svh - var(--bar) - 32px);display:flex;flex-direction:column;overflow:visible;background:none;padding:0 0 0 clamp(16px,3vw,48px)}
 .about figure::after{display:none}
 .about figure img{flex:1 1 0;min-height:0}
@@ -233,8 +232,8 @@ html[data-theme="dark"] .hero::before{background:linear-gradient(to top,var(--d2
 html[data-theme="dark"] .hero h1{color:var(--v)}
 html[data-theme="dark"] .hero .facts::before{background:var(--b)}
 /* Fotos: sin color cálido, en la misma luz */
-html[data-theme="dark"] .hero img,html[data-theme="dark"] .about figure img,html[data-theme="dark"] .fotos img{filter:grayscale(1) contrast(1.08) brightness(.94)!important}
-html[data-theme="dark"] .about figure,html[data-theme="dark"] .fotos figure{background:none;filter:drop-shadow(0 0 14px rgba(110,242,168,.32))}
+html[data-theme="dark"] .hero img,html[data-theme="dark"] .about figure img{filter:grayscale(1) contrast(1.08) brightness(.94)!important}
+html[data-theme="dark"] .about figure{background:none;filter:drop-shadow(0 0 14px rgba(110,242,168,.32))}
 html[data-theme="dark"] .about figcaption,html[data-theme="dark"] .fotos figcaption{color:var(--fg-soft)}
 /* Bordes que fluyen: una línea de luz */
 html[data-theme="dark"] .con-flujo{position:relative}
@@ -300,3 +299,7 @@ ul.inst-l{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .inst-note{color:var(--fg-soft);font-size:.95rem!important;max-width:70ch}
 @media (max-width:700px){.inst-l li{grid-template-columns:1fr;gap:6px}.inst-l .mk{height:auto;min-height:36px}}
 .inst-cloud img,.inst-l .mk img{mix-blend-mode:multiply}
+
+/* Fotos de las entradas: normales, a color, sin recorte */
+.fotos .wrap{align-items:start}
+.fotos img{border-radius:4px}
