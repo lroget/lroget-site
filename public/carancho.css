@@ -390,7 +390,7 @@ html[data-theme="light"] .trips.trayectoria .ola{fill:var(--tinta)}
 .card .card-img img{display:block;width:100%;max-width:520px;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
 @media (max-width:900px){.card .card-img{grid-row:auto;margin:16px 0 20px}}
 @media (min-width:901px){
-  .card>p:first-of-type{grid-row:1/span 2}
+  .card>p:first-of-type{grid-row:auto}
   .card .card-img{grid-row:2/span 8}
 }
 /* cifras de ArgentiNat: Jost es más ancha que IM Fell y se pisaban */
@@ -401,3 +401,10 @@ html[data-theme="light"] .trips.trayectoria .ola{fill:var(--tinta)}
 
 /* 10/11: la nota "Datos en vivo" es un div dentro de .counters y heredaba la linea ondulada; sin borde */
 html[data-theme] .counters .src,.counters .src{border:0!important;border-image:none!important;background:none!important;padding-top:.2rem}
+
+/* 10/11: tarjetas con logo: el logo va centrado en su columna y el titulo pasa a la columna del texto */
+@media (min-width:901px){
+  .card:has(.card-img.logo) h3{grid-column:2;grid-row:1;margin:0 0 1.2rem}
+  .card:has(.card-img.logo) .card-img.logo{grid-column:1;grid-row:1/span 10;margin:0;align-self:center;justify-self:center}
+}
+@media (max-width:900px){.card .card-img.logo{justify-self:center;margin:8px 0 24px}}
