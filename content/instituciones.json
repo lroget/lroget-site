@@ -908,6 +908,34 @@
     "en": "Revista Vida Silvestre"
    },
    "muro": false
+  },
+  {
+   "id": "fundacion-parques",
+   "grupo": "gobierno",
+   "anio": "2023",
+   "nombre": {
+    "es": "Fundación Parques",
+    "en": "Fundación Parques"
+   },
+   "rotulo": {
+    "es": "Safari especial de invierno en Campo de Mayo, organizado junto a la fundación.",
+    "en": "Special winter Safari at Campo de Mayo, organized together with the foundation."
+   },
+   "muro": false
+  },
+  {
+   "id": "reserva-el-corredor",
+   "grupo": "redes",
+   "anio": "2025",
+   "nombre": {
+    "es": "Reserva El Corredor",
+    "en": "El Corredor Reserve"
+   },
+   "rotulo": {
+    "es": "Hora del Planeta: recorrida interpretativa con ArgentiNat a mi cargo.",
+    "en": "Earth Hour: interpretive walk with ArgentiNat, led by me."
+   },
+   "muro": false
   }
  ],
  "otros_medios": {
