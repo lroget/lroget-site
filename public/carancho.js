@@ -101,7 +101,7 @@
   if(pr)flujo(pr,'flujo-papel',1);
   if(nv)flujo(nv,'flujo-negro',-1);
   var tr=document.querySelector('.trips.trayectoria');
-  if(tr){flujo(tr,'flujo-papel',-1);var sig=tr.nextElementSibling;if(sig&&sig.tagName==='SECTION'){flujo(sig,'flujo-naranja',1);var sig2=sig.nextElementSibling;if(sig2&&sig2.tagName==='SECTION')flujo(sig2,'flujo-petroleo',-1)}}
+  if(tr){franja(tr,-1);var sig=tr.nextElementSibling;if(sig&&sig.tagName==='SECTION'){var sig2=sig.nextElementSibling;if(sig2&&sig2.tagName==='SECTION')flujo(sig2,'flujo-petroleo',-1)}}
   // páginas de proyecto: data-flujo="clase|dir" y data-franja="dir" en cualquier sección
   document.querySelectorAll('[data-flujo]').forEach(function(e){var v=e.dataset.flujo.split('|');flujo(e,v[0],+(v[1]||1))});
   document.querySelectorAll('[data-franja]').forEach(function(e){franja(e,+(e.dataset.franja||1))});

@@ -379,3 +379,7 @@ html[data-theme="light"]{--ink-f:rgba(21,18,17,.4);--band-f:#151211}
 html[data-theme="light"] .novedades{--band-f:#b82000}
 html[data-theme="dark"]{--ink-f:rgba(243,234,219,.28);--band-f:#ff5a2e}
 .novedades li .row>*{align-self:stretch}.novedades .yr{border-image:none!important;background:none!important}
+
+/* 10/11: el bloque naranja entra con corte recto y ondas de líneas (sin borde ondulado relleno) */
+html[data-theme="light"] .trips.trayectoria .ola{fill:var(--tinta)}
+.trips.trayectoria.con-ola{padding-top:clamp(8px,1.5vw,20px)}
