@@ -21,6 +21,24 @@ const attr=s=>esc(s).replace(/"/g,'&quot;');
 const inline=s=>esc(s).replace(/\*([^*]+)\*/g,'<em>$1</em>');
 const plain=s=>String(s??'').replace(/\*/g,'');
 
+// Pie común de las páginas interiores: contacto, redes con nombre y enlaces al resto del sitio.
+const PIE={
+  es:{lead:'Para capacitaciones, proyectos de ciencia ciudadana y trabajo en educación socioambiental.',redes:'Perfiles y redes',sitio:'Seguir en el sitio',
+      nav:[['/#proyectos','Proyectos'],['/encuentros/','Encuentros'],['/comunicacion/','Comunicación'],['/instituciones/','Instituciones'],['/#viajes','Expediciones']]},
+  en:{lead:'For trainings, citizen science projects and socio-environmental education work.',redes:'Profiles',sitio:'More on this site',
+      nav:[['/en/#proyectos','Projects'],['/en/gatherings/','Gatherings'],['/en/communication/','Communication'],['/en/institutions/','Institutions'],['/en/#viajes','Expeditions']]}
+};
+const REDES=[['https://www.linkedin.com/in/lroget','LinkedIn'],['https://www.inaturalist.org/people/carancho','iNaturalist'],['https://orcid.org/0000-0003-4704-2024','ORCID'],['https://www.instagram.com/caranchx/','Instagram']];
+function pie(lang,path){
+  const P=PIE[lang];
+  return `<!--pie--><footer class="pie"><div class="wrap">
+  <div class="pie-c"><p>${P.lead}</p><p><a class="mail" href="mailto:lroget@gmail.com">lroget@gmail.com</a></p></div>
+  <nav class="pie-l" aria-label="${P.redes}">${REDES.map(([u,n])=>`<a href="${u}" rel="me noopener">${n}</a>`).join('')}</nav>
+  <nav class="pie-l pie-s" aria-label="${P.sitio}">${P.nav.filter(([u])=>u!==path).map(([u,n])=>`<a href="${u}">${n}</a>`).join('')}</nav>
+</div></footer><!--/pie-->`;
+}
+const conPie=(html,lang,path)=>html.replace(/<!--pie-->.*?<!--\/pie-->\n?/s,'').replace('</main>',`</main>\n${pie(lang,path)}`);
+
 const items=leer().map(i=>({...i,date:String(i.es.fecha_orden),year:String(i.es.fecha_orden).slice(0,4),tipo:i.es.tipo||'hito'}))
   .sort((a,b)=>b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug));
 
@@ -73,6 +91,8 @@ function entry(it,lang,tpl){
   }).join('');
   const url=field(it,lang,'enlace_url');
   const link=url?`<p class="go"><a href="${url}"${/^https?:/.test(url)?' rel="noopener"':''}>${esc(field(it,lang,'enlace_texto'))}</a></p>`:'';
+  const cuerpo=field(it,lang,'cuerpo')||'';
+  const resumen=!cuerpo.trim()&&field(it,lang,'resumen')?`<p class="resumen">${inline(field(it,lang,'resumen'))}</p>\n`:'';
   const main=`<main id="top">
 <section class="phead entry">
   <div class="wrap">
@@ -83,7 +103,7 @@ function entry(it,lang,tpl){
 </section>
 <section class="prose">
   <div class="wrap">
-${marked.parse(field(it,lang,'cuerpo')||'')}${link}
+${resumen}${marked.parse(cuerpo)}${link}
   </div>
 </section>${fotos?`\n<section class="fotos"><div class="wrap">${fotos}</div></section>`:''}
 </main>`;
@@ -107,16 +127,18 @@ for(const lang of ['es','en']){
   let html=readFileSync(L.page,'utf8');
   // Novedades: solo lo del último año. El resto vive en su página temática.
   html=html.replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(i=>destino(i)!=='ninguno'&&i.date>=limNov))}<!--/tl-->`);
+  html=conPie(html,lang,L.base);
   writeFileSync(L.page,html);
   let enc=readFileSync(L.enc.page,'utf8').replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(esEnc))}<!--/tl-->`);
+  enc=conPie(enc,lang,L.enc.base);
   writeFileSync(L.enc.page,enc);
   const com=readFileSync(L.com,'utf8').replace(/<!--tl-->.*<!--\/tl-->/s,`<!--tl-->${timeline(lang,items.filter(i=>destino(i)==='comunicacion'))}<!--/tl-->`);
-  writeFileSync(L.com,com);
+  writeFileSync(L.com,conPie(com,lang,lang==='es'?'/comunicacion/':'/en/communication/'));
   const plano=l=>l.map(i=>row(i,lang).replace(/<span class="tag">.*?<\/span>/,'').replace(/^<li data-t="\w+">/,'<li>')).join('\n');
   const arg=readFileSync(L.arg,'utf8').replace(/<!--arg-->.*<!--\/arg-->/s,`<!--arg-->${plano(items.filter(i=>destino(i)==='argentinat'))}\n<!--/arg-->`);
-  writeFileSync(L.arg,arg);
+  writeFileSync(L.arg,conPie(arg,lang,''));
   const coa=readFileSync(L.coa,'utf8').replace(/<!--coa-->.*<!--\/coa-->/s,`<!--coa-->${plano(items.filter(i=>destino(i)==='coa'))}\n<!--/coa-->`);
-  writeFileSync(L.coa,coa);
+  writeFileSync(L.coa,conPie(coa,lang,''));
   const home=readFileSync(L.home,'utf8').replace(/<!--rec-->.*<!--\/rec-->/s,`<!--rec-->${recientes(lang)}\n<!--/rec-->`);
   writeFileSync(L.home,home);
   for(const it of items.filter(hasPage)){
@@ -127,6 +149,8 @@ for(const lang of ['es','en']){
 }
 
 instituciones();
+for(const [lang,p,path] of [['es','public/instituciones/index.html','/instituciones/'],['en','public/en/institutions/index.html','/en/institutions/']])
+  writeFileSync(p,conPie(readFileSync(p,'utf8'),lang,path));
 
 let sm=readFileSync('public/sitemap.xml','utf8').replace(/<!--entradas-->.*<!--\/entradas-->\n?/s,'');
 const urls=items.filter(hasPage).flatMap(it=>['es','en'].map(l=>{

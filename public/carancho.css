@@ -304,3 +304,38 @@ ul.inst-l{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .fotos .wrap{align-items:start}
 .fotos img{border-radius:4px}
 
+
+/* ---------- 10/11/2026: pie común, cifras en portada, destacados, redes con nombre ---------- */
+.pie{padding:clamp(40px,6vw,80px) 0 clamp(36px,5vw,64px);border-top:1px solid var(--line);background:var(--bg);color:var(--fg)}
+.pie .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.pie-c p{margin:0 0 .6rem;max-width:34ch;font-size:1.1rem;line-height:1.45;color:var(--fg-soft)}
+.pie-c .mail{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.1;color:var(--fg);text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:6px}
+.pie-l{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.pie-l a{display:inline-flex;align-items:center;min-height:44px;font-family:var(--ui);font-stretch:85%;font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;border-bottom:2px solid transparent}
+.pie-l a:hover,.pie-l a:focus-visible{border-bottom-color:var(--accent)}
+.pie-s a{font-weight:500;color:var(--fg-soft)}
+html[data-theme="light"] .pie{background:var(--papel);--line:rgba(21,18,17,.26)}
+html[data-theme="dark"] .pie{background:var(--d1);--accent:var(--v)}
+@media (max-width:700px){.pie .wrap{grid-template-columns:1fr 1fr}.pie-c{grid-column:1/-1}}
+
+.prose .resumen{max-width:38ch;font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.4}
+
+.counters.mini{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 24px;margin:1.4rem 0 1.2rem}
+.counters.mini dd{font-size:clamp(1.7rem,2.8vw,2.5rem)}
+.counters.mini dt{font-size:.92rem}
+.counters.mini .src{font-size:.85rem}
+@media (max-width:560px){.counters.mini{grid-template-columns:1fr 1fr}}
+
+.destacados .hlg{margin-top:clamp(28px,4vw,48px)}
+.destacados .go{margin-top:clamp(24px,3vw,40px)}
+html[data-theme="light"] .destacados .hlc:nth-child(n){--h:var(--tinta);border-top:2px solid var(--tinta);border-image:none}
+html[data-theme="light"] .destacados .hlc p,html[data-theme="light"] .destacados .hlc h3,html[data-theme="light"] .destacados .go a{color:var(--tinta)}
+html[data-theme="dark"] .destacados .hlc:nth-child(n){--h:var(--v)}
+
+/* año de Destacados sobre papel: el naranja puro no llega a 4,5:1 */
+html[data-theme="light"] .prose .hlc:nth-child(4n+3) .hy{color:#b82000}
+
+.social li.wide a{display:inline-flex;align-items:center;gap:10px;font-family:var(--ui);font-stretch:85%;font-weight:700;font-size:1rem}
+
+/* tema oscuro: las piezas de diseño y las fotos de aves van a color */
+html[data-theme="dark"] .muro img,html[data-theme="dark"] .pj .vecinos .tira img{filter:none}
