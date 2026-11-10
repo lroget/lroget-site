@@ -440,3 +440,8 @@ html[data-theme] .tline .yg li:nth-child(n){--h:var(--k)}
 .hlc{box-shadow:inset 0 4px 0 var(--k)!important}
 .hlc .hy{color:var(--k)!important}
 .hlc .hlk a{text-decoration-color:var(--k)}
+
+/* tarjetas de proyecto: título y logo enlazan al proyecto */
+.projects .card h3 a{color:inherit;text-decoration:none}
+.projects .card h3 a:hover,.projects .card h3 a:focus-visible{text-decoration:underline;text-decoration-thickness:.06em;text-underline-offset:.12em}
+.card-img.logo>a{display:block;border-radius:50%;line-height:0}
