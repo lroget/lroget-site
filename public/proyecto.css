@@ -28,8 +28,8 @@
 
 /* filtros de foto según tema, como en la portada del sitio */
 html[data-theme="light"] .pj .foto img{filter:saturate(.82) sepia(.12) contrast(1.05)}
-html[data-theme="dark"] .pj .foto img{filter:grayscale(1) contrast(1.08) brightness(.94)}
-html[data-theme="dark"] .pj .mancha{filter:drop-shadow(0 0 14px rgba(110,242,168,.28))}
+html[data-theme="dark"] .pj .foto img{filter:contrast(1.04) saturate(.92) brightness(.96)}
+html[data-theme="dark"] .pj .mancha{filter:drop-shadow(0 0 14px rgba(255,90,46,.28))}
 
 /* ---------- portada ---------- */
 .ph-hero{padding-bottom:clamp(40px,6vw,88px)}
@@ -40,7 +40,7 @@ html[data-theme="dark"] .pj .mancha{filter:drop-shadow(0 0 14px rgba(110,242,168
 .ph-hero .vis-hero .mancha{width:min(100%,560px);margin-left:auto}
 .sello{position:absolute;left:-5%;top:-8%;width:clamp(130px,17vw,240px);transform:rotate(-9deg);filter:drop-shadow(0 6px 14px rgba(0,0,0,.25))}
 .sello img{display:block;width:100%;height:auto}
-html[data-theme="dark"] .sello{filter:drop-shadow(0 0 16px rgba(110,242,168,.35))}
+html[data-theme="dark"] .sello{filter:drop-shadow(0 0 16px rgba(255,90,46,.35))}
 
 .datos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:clamp(40px,6vw,72px) 0 0;padding:0}
 .datos div{padding:16px 18px 0 0;background:var(--linea) 0 0/var(--periodo,1800px) 10px repeat-x}
@@ -129,7 +129,7 @@ html:not([data-theme="light"]) .roles li{background:none;border-bottom:1px solid
 .muro figure:nth-child(3){margin-top:-48px}
 .muro figure:hover{transform:translateY(-6px)}
 .muro img{display:block;width:100%;height:auto}
-html[data-theme="dark"] .muro img{filter:grayscale(1) contrast(1.05)}
+html[data-theme="dark"] .muro img{filter:none}
 
 /* ---------- frase ---------- */
 .frase{padding:clamp(64px,10vw,140px) 0}
@@ -209,7 +209,7 @@ html[data-theme] .hacelo .btn:hover{background:#f7f1e6;border-color:#f7f1e6;colo
 /* fotos rectas, en grilla como los afiches (decisión de Leo, 5/11/2026): sin máscara de mancha */
 .pj .mancha img,.pj .mancha.m2 img{-webkit-mask:none;mask:none;object-fit:cover}
 html[data-theme="dark"] .pj .mancha{filter:none}
-html[data-theme="dark"] .pj .mancha img{box-shadow:0 0 0 1px rgba(110,242,168,.22)}
+html[data-theme="dark"] .pj .mancha img{box-shadow:0 0 0 1px rgba(255,90,46,.22)}
 .pj .media.par{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
 .pj .par>figure:nth-child(1){grid-column:1;grid-row:1;margin:0}
 .pj .par>figure:nth-child(2){grid-column:2;grid-row:1;margin-top:64px}
@@ -241,7 +241,7 @@ html[data-theme="dark"] .frase p em,html[data-theme="dark"] .frase .kicker{color
 .ph-hero .wrap.tope{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);min-height:calc(100svh - var(--bar) - 40px)}
 .ph-hero .vis-hero{align-self:center;justify-self:end;width:min(100%,78svh)}
 .emblema{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 34px rgba(30,14,6,.28));animation:none}
-html[data-theme="dark"] .emblema{filter:drop-shadow(0 0 28px rgba(110,242,168,.35))}
+html[data-theme="dark"] .emblema{filter:drop-shadow(0 0 28px rgba(255,90,46,.35))}
 @media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){
   .emblema{animation:gira-emblema linear both;animation-timeline:scroll(root);animation-range:0 100vh}
   @keyframes gira-emblema{from{transform:rotate(-6deg) scale(1)}to{transform:rotate(8deg) scale(.92)}}}}

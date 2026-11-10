@@ -11,7 +11,7 @@ const LANGS={
   en:{home:'public/en/index.html',page:'public/en/news/index.html',base:'/en/news/',other:'/novedades/',root:'Home',rootHref:'/en/',sec:'News',photo:'Photo',
       tags:{charla:'Talk',taller:'Workshop',congreso:'Conference',convenio:'Agreement',reco:'Recognition',prensa:'Press',pub:'Publication',hito:'Milestone',voluntariado:'Volunteer'}}
 };
-for(const [l,page,base,other,sec] of [['es','public/encuentros/index.html','/encuentros/','/en/gatherings/','Encuentros'],['en','public/en/gatherings/index.html','/en/gatherings/','/encuentros/','Gatherings']])
+for(const [l,page,base,other,sec] of [['es','public/encuentros/index.html','/encuentros/','/en/gatherings/','Encuentros'],['en','public/en/gatherings/index.html','/en/gatherings/','/encuentros/','Talks &amp; workshops']])
   LANGS[l].enc={page,base,other,sec};
 const ENC=['charla','taller','congreso'];
 Object.assign(LANGS.es,{com:'public/comunicacion/index.html',arg:'public/proyectos/argentinat/index.html',coa:'public/proyectos/coa-carancho/index.html'});
@@ -26,7 +26,7 @@ const PIE={
   es:{lead:'Para capacitaciones, proyectos de ciencia ciudadana y trabajo en educación socioambiental.',redes:'Perfiles y redes',sitio:'Seguir en el sitio',
       nav:[['/#proyectos','Proyectos'],['/encuentros/','Encuentros'],['/comunicacion/','Comunicación'],['/instituciones/','Instituciones'],['/#viajes','Expediciones']]},
   en:{lead:'For trainings, citizen science projects and socio-environmental education work.',redes:'Profiles',sitio:'More on this site',
-      nav:[['/en/#proyectos','Projects'],['/en/gatherings/','Gatherings'],['/en/communication/','Communication'],['/en/institutions/','Institutions'],['/en/#viajes','Expeditions']]}
+      nav:[['/en/#proyectos','Projects'],['/en/gatherings/','Talks &amp; workshops'],['/en/communication/','Communication'],['/en/institutions/','Institutions'],['/en/#viajes','Expeditions']]}
 };
 const REDES=[['https://www.linkedin.com/in/lroget','LinkedIn'],['https://www.inaturalist.org/people/carancho','iNaturalist'],['https://orcid.org/0000-0003-4704-2024','ORCID'],['https://www.instagram.com/caranchx/','Instagram']];
 function pie(lang,path){
@@ -93,11 +93,12 @@ function entry(it,lang,tpl){
   const link=url?`<p class="go"><a href="${url}"${/^https?:/.test(url)?' rel="noopener"':''}>${esc(field(it,lang,'enlace_texto'))}</a></p>`:'';
   const cuerpo=field(it,lang,'cuerpo')||'';
   const resumen=!cuerpo.trim()&&field(it,lang,'resumen')?`<p class="resumen">${inline(field(it,lang,'resumen'))}</p>\n`:'';
+  const tit=String(field(it,lang,'titulo')).split(' | ');
   const main=`<main id="top">
 <section class="phead entry">
   <div class="wrap">
     <p class="crumb"><a href="${L.rootHref}">${L.root}</a> / <a href="${L.base}">${L.sec}</a></p>
-    <h1>${esc(field(it,lang,'titulo'))}</h1>
+    ${tit.length>1?`<p class="inst-t">${esc(tit[0])}</p>\n    `:''}<h1>${esc(tit.length>1?tit.slice(1).join(' | '):tit[0])}</h1>
     <p class="lead">${esc(field(it,lang,'fecha'))}</p>
   </div>
 </section>

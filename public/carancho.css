@@ -154,7 +154,7 @@ html[lang="es"] .bar .op.es,html[lang="en"] .bar .op.en{color:var(--bg);font-wei
 html[data-theme] .bar nav #themeBtn:hover,html[data-theme] .bar nav a.lang:hover{background:none;color:var(--fg);opacity:.75}
 .bar nav #themeBtn:focus-visible,.bar nav a.lang:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 html[data-theme="dark"] .bar nav #themeBtn,html[data-theme="dark"] .bar nav a.lang{--fg:var(--v);border-color:var(--v)}
-html[data-theme="dark"] .bar nav #themeBtn::before,html[data-theme="dark"] .bar nav a.lang::before{box-shadow:0 0 5px rgba(110,242,168,.4)}
+html[data-theme="dark"] .bar nav #themeBtn::before,html[data-theme="dark"] .bar nav a.lang::before{box-shadow:0 0 5px rgba(255,90,46,.4)}
 @media (prefers-reduced-motion:reduce){.bar nav #themeBtn::before,.bar nav a.lang::before{transition:none}}
 @media (max-width:820px){
   .bar nav #themeBtn{margin-left:0}
@@ -168,7 +168,7 @@ html[data-theme="dark"] .bar nav #themeBtn::before,html[data-theme="dark"] .bar 
 .rumbo dd{margin:0;font-family:var(--display);font-size:clamp(1.3rem,1.9vw,1.6rem);line-height:1.28}
 html[data-theme="light"] .rumbo{background:var(--petroleo);color:var(--blanco)}
 html[data-theme="light"] .rumbo dt{color:var(--blanco);opacity:.85}
-html[data-theme="dark"] .rumbo{background:none;border:1.5px solid var(--v);box-shadow:0 0 10px rgba(110,242,168,.35),inset 0 0 12px rgba(110,242,168,.1)}
+html[data-theme="dark"] .rumbo{background:none;border:1.5px solid var(--v);box-shadow:0 0 10px rgba(255,90,46,.35),inset 0 0 12px rgba(255,90,46,.1)}
 html[data-theme="dark"] .rumbo dt{color:var(--v)}
 
 @media (max-width:820px){
@@ -183,16 +183,16 @@ html[data-theme="dark"] .rumbo dt{color:var(--v)}
   .about figure{position:relative;top:auto;height:72svh;padding:16px var(--gutter) 0}
 }
 
-/* ===== Tema oscuro: se apaga la luz. Negro grisáceo, blanco y verde agua que brilla ===== */
+/* ===== Tema oscuro (10/11/2026): la misma marca de noche. Marrones y petróleo muy oscuros, blanco hueso y naranja que brilla. Fotos a color ===== */
 html[data-theme="dark"]{
-  --v:#6ef2a8;--b:#edf4f0;
-  /* casi negros: gris, verde, azul y petróleo */
-  --n-gris:#0e1012;--n-noche:#060b12;--n-verde:#040e09;--n-azul:#050b18;--n-petroleo:#031113;--n-musgo:#07140e;
+  --v:#ff5a2e;--b:#f3eadb;
+  /* casi negros cálidos: los nombres de variable vienen de la paleta anterior (verde agua) */
+  --n-gris:#14100d;--n-noche:#18110c;--n-verde:#1f150e;--n-azul:#0c1b20;--n-petroleo:#2b1307;--n-musgo:#0a2630;
   --d1:var(--n-noche);--d2:var(--n-gris);
-  --brillo-fuerte:0 0 8px rgba(110,242,168,.55),0 0 26px rgba(110,242,168,.28);
-  --night:var(--d2);--on-night:var(--b);--on-night-soft:#a9c4b7;
-  --lamp:var(--v);--amber:var(--v);--ember:var(--v);--rose:var(--v);
-  --bg:var(--d1);--bg-2:var(--d1);--fg:var(--b);--fg-soft:#a9c4b7;--line:rgba(110,242,168,.24);
+  --brillo-fuerte:0 0 8px rgba(255,90,46,.55),0 0 26px rgba(255,90,46,.28);
+  --night:var(--d2);--on-night:var(--b);--on-night-soft:#c9b8a4;
+  --lamp:var(--v);--amber:#ffb05a;--ember:var(--v);--rose:#ffb05a;
+  --bg:var(--d1);--bg-2:var(--d1);--fg:var(--b);--fg-soft:#c9b8a4;--line:rgba(255,90,46,.24);
   --accent:var(--v);--accent-text:var(--v);--h:var(--v);--trazo:var(--v);
   --flow:linear-gradient(var(--v),var(--v));
   background:var(--d1)}
@@ -212,11 +212,11 @@ html[data-theme="dark"] .bar .lang{border-color:var(--v);color:var(--v)}
 html[data-theme="dark"] .bar .lang:hover{background:var(--v);color:var(--d2)}
 html[data-theme="dark"] main h2,html[data-theme="dark"] main h1,html[data-theme="dark"] main h3{color:var(--b)}
 html[data-theme="dark"] main h2::after{background:var(--v);filter:drop-shadow(0 0 5px var(--v))}
-html[data-theme="dark"] .btn{border-color:var(--v);color:var(--v);box-shadow:0 0 10px rgba(110,242,168,.25),inset 0 0 8px rgba(110,242,168,.1)}
+html[data-theme="dark"] .btn{border-color:var(--v);color:var(--v);box-shadow:0 0 10px rgba(255,90,46,.25),inset 0 0 8px rgba(255,90,46,.1)}
 html[data-theme="dark"] .btn.solid{background:var(--v);border-color:var(--v);color:var(--d2);box-shadow:var(--brillo-fuerte)}
 html[data-theme="dark"] .btn:hover,html[data-theme="dark"] .btn.solid:hover{background:var(--b);border-color:var(--b);color:var(--d2);box-shadow:var(--brillo-fuerte)}
 html[data-theme="dark"] .chip{border-color:var(--line);color:var(--b)}
-html[data-theme="dark"] .chip.on{background:var(--v);border-color:var(--v);color:var(--d2);box-shadow:0 0 12px rgba(110,242,168,.55)}
+html[data-theme="dark"] .chip.on{background:var(--v);border-color:var(--v);color:var(--d2);box-shadow:0 0 12px rgba(255,90,46,.55)}
 html[data-theme="dark"] .social a{border-color:var(--line);color:var(--v)}
 html[data-theme="dark"] .social a:hover,html[data-theme="dark"] .social a:focus-visible{background:var(--v);border-color:var(--v);color:var(--d2)}
 html[data-theme="dark"] footer{border-top-color:var(--line)}
@@ -224,7 +224,7 @@ html[data-theme="dark"] .cards{border:0;border-image:none}
 html[data-theme="dark"] .card,html[data-theme="dark"] .hlc,html[data-theme="dark"] .counters div{border:0;border-image:none;background:none;border-top:1px solid var(--line)}
 html[data-theme="dark"] .card::before,html[data-theme="dark"] .contact::before{display:none}
 /* Ondas y líneas que brillan */
-html[data-theme="dark"] .ola,html[data-theme="dark"] .ola-esquina,html[data-theme="dark"] .ola-vertical,html[data-theme="dark"] .ola-hero{fill:var(--v);filter:drop-shadow(0 0 6px rgba(110,242,168,.6))}
+html[data-theme="dark"] .ola,html[data-theme="dark"] .ola-esquina,html[data-theme="dark"] .ola-vertical,html[data-theme="dark"] .ola-hero{fill:var(--v);filter:drop-shadow(0 0 6px rgba(255,90,46,.6))}
 html[data-theme="dark"] .trips li>a::after,html[data-theme="dark"] .trips li .row::after{box-shadow:none;filter:drop-shadow(0 0 3px var(--v))}
 /* Portada */
 html[data-theme="dark"] .hero{position:relative;z-index:6;overflow-x:clip;overflow-y:visible;background:var(--d2);color:var(--b)}
@@ -232,14 +232,14 @@ html[data-theme="dark"] .hero::before{background:linear-gradient(to top,var(--d2
 html[data-theme="dark"] .hero h1{color:var(--v)}
 html[data-theme="dark"] .hero .facts::before{background:var(--b)}
 /* Fotos: sin color cálido, en la misma luz */
-html[data-theme="dark"] .hero img,html[data-theme="dark"] .about figure img{filter:grayscale(1) contrast(1.08) brightness(.94)!important}
-html[data-theme="dark"] .about figure{background:none;filter:drop-shadow(0 0 14px rgba(110,242,168,.32))}
+html[data-theme="dark"] .hero img,html[data-theme="dark"] .about figure img{filter:contrast(1.05) saturate(.92) brightness(.95)!important}
+html[data-theme="dark"] .about figure{background:none;filter:drop-shadow(0 0 14px rgba(255,90,46,.32))}
 html[data-theme="dark"] .about figcaption,html[data-theme="dark"] .fotos figcaption{color:var(--fg-soft)}
 /* Bordes que fluyen: una línea de luz */
 html[data-theme="dark"] .con-flujo{position:relative}
 html[data-theme="dark"] .flujo{display:block;position:absolute;z-index:5;left:0;top:-1px;width:100%;height:clamp(64px,8vw,110px);pointer-events:none;overflow:visible}
 .flujo-luz{display:none}
-html[data-theme="dark"] .flujo-luz{display:block;fill:none;stroke:var(--v);stroke-width:2;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 6px rgba(110,242,168,.8))}
+html[data-theme="dark"] .flujo-luz{display:block;fill:none;stroke:var(--v);stroke-width:2;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 6px rgba(255,90,46,.8))}
 html[data-theme="dark"] .about .flujo-negro{fill:var(--d2)}
 html[data-theme="dark"] .projects .flujo-papel{fill:var(--n-noche)}
 html[data-theme="dark"] .novedades .flujo-negro{fill:var(--n-verde)}
@@ -250,9 +250,9 @@ html[data-theme="dark"] .projects,html[data-theme="dark"] .novedades,html[data-t
 html[data-theme="dark"] .trips.trayectoria,html[data-theme="dark"] .trips.trayectoria+section{padding-top:calc(clamp(64px,8vw,110px) + clamp(40px,6vw,80px))}
 /* Restos cálidos de la hoja base */
 html[data-theme="dark"] .hero,html[data-theme="dark"] .plates,html[data-theme="dark"] .field,html[data-theme="dark"] .contact,html[data-theme="dark"] .phead,html[data-theme="dark"] .bar,html[data-theme="dark"] #viajes{--amber:var(--v);--ember:var(--v);--rose:var(--v)}
-html[data-theme="dark"] .trips,html[data-theme="dark"] .trips#viajes,html[data-theme="dark"] .trips.trayectoria{--fg:var(--b);--fg-soft:#a9c4b7;--line:rgba(110,242,168,.24);--accent:var(--v);--accent-text:var(--v);color:var(--b)}
+html[data-theme="dark"] .trips,html[data-theme="dark"] .trips#viajes,html[data-theme="dark"] .trips.trayectoria{--fg:var(--b);--fg-soft:#c9b8a4;--line:rgba(255,90,46,.24);--accent:var(--v);--accent-text:var(--v);color:var(--b)}
 html[data-theme="dark"] .trips li:nth-child(n),html[data-theme="dark"] .trips#viajes li:nth-child(n),html[data-theme="dark"] .cards .card:nth-child(n){--h:var(--v)}
-html[data-theme="dark"] .trips li>a:hover{background:rgba(110,242,168,.08)}
+html[data-theme="dark"] .trips li>a:hover{background:rgba(255,90,46,.08)}
 html[data-theme="dark"] .plate button{background:var(--d2)}
 html[data-theme="dark"] .plate .sci{border-bottom-color:var(--v)}
 html[data-theme="dark"] .contact::before,html[data-theme="dark"] .phead::before{display:none}
@@ -263,7 +263,7 @@ html[data-theme="dark"] .trips#viajes{background:var(--n-musgo);background-image
 html.encendiendo main p,html.encendiendo main h1,html.encendiendo main h2,html.encendiendo main h3,html.encendiendo main li,html.encendiendo main figure,html.encendiendo main .btn,html.encendiendo main .links,html.encendiendo main .chips,html.encendiendo .bar .wrap{animation:aparece 1.3s .9s both!important}
 html.encendiendo .ola,html.encendiendo .ola-vertical,html.encendiendo .ola-hero,html.encendiendo .ola-esquina,html.encendiendo .flujo-luz{animation:carga 2.6s ease-out both}
 @keyframes aparece{from{opacity:0}to{opacity:1}}
-@keyframes carga{from{filter:drop-shadow(0 0 16px rgba(110,242,168,1))}to{filter:drop-shadow(0 0 6px rgba(110,242,168,.6))}}
+@keyframes carga{from{filter:drop-shadow(0 0 16px rgba(255,90,46,1))}to{filter:drop-shadow(0 0 6px rgba(255,90,46,.6))}}
 /* Telón de apagón */
 .apagon{position:fixed;inset:0;z-index:9999;background:#000;opacity:0;pointer-events:none}
 @media (max-width:820px){
@@ -339,3 +339,25 @@ html[data-theme="light"] .prose .hlc:nth-child(4n+3) .hy{color:#b82000}
 
 /* tema oscuro: las piezas de diseño y las fotos de aves van a color */
 html[data-theme="dark"] .muro img,html[data-theme="dark"] .pj .vecinos .tira img{filter:none}
+
+/* ---------- 10/11/2026 (2): Proyectos sobre blanco, títulos más chicos, institución como etiqueta, menú de celular ---------- */
+html[data-theme="light"] .projects{--fg:var(--tinta);--fg-soft:#4a3f37;--line:rgba(21,18,17,.26);--accent-text:#b82000;background:var(--blanco);color:var(--tinta)}
+html[data-theme="light"] main>section.projects:not(.hero){background:var(--blanco);background-image:none}
+html[data-theme="light"] .projects .ola{fill:var(--tinta)}
+html[data-theme="light"] .projects .card{border-top:1px solid rgba(21,18,17,.3)}
+html[data-theme="light"] .projects .card h3,html[data-theme="light"] .projects h2{color:var(--tinta)}
+html[data-theme="light"] .projects .go a{color:#b82000}
+html[data-theme="light"] .novedades .flujo-negro{fill:var(--blanco)}
+
+.phead .inst-t{margin:0 0 .7rem;font-family:var(--ui);font-stretch:85%;font-weight:700;font-size:clamp(1rem,1.5vw,1.25rem);letter-spacing:.01em;color:var(--accent-text)}
+html[data-theme="light"] .phead .inst-t{color:#b82000}
+
+@media (max-width:900px){
+  :root{--bar:106px}
+  .bar nav{flex-wrap:wrap;overflow:visible;gap:0 16px;-webkit-mask-image:none;mask-image:none}
+  .bar nav a:not(.lang){height:31px;font-size:.98rem}
+  .bar nav #themeBtn,.bar nav a.lang{position:absolute;top:11px;margin:0}
+  .bar nav #themeBtn{right:calc(var(--gutter) + 60px)}
+  .bar nav a.lang{right:var(--gutter)}
+  .bar .wrap{padding-bottom:6px}
+}

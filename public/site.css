@@ -64,7 +64,7 @@ html[data-theme="light"] body::before{filter:invert(1);opacity:.06}
 .wrap{max-width:calc(var(--max) + 2*var(--gutter));margin:0 auto;padding:0 var(--gutter)}
 section{padding:clamp(80px,12vw,168px) 0}
 h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1;letter-spacing:-.01em;font-synthesis:none}
-h2{font-size:clamp(2.8rem,7.4vw,6.4rem);margin-bottom:.45em}
+h2{font-size:clamp(2.4rem,5.4vw,4.6rem);margin-bottom:.45em}
 p{margin:0 0 1em;max-width:60ch}
 
 .skip{position:absolute;left:-999px;top:8px;z-index:80;background:var(--lamp);color:#0b0a08;padding:10px 18px;font-family:var(--ui);font-weight:700}
@@ -123,7 +123,7 @@ p{margin:0 0 1em;max-width:60ch}
 .projects .head h2{margin:0}
 .cards{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
 .card{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-rows:auto 1fr;column-gap:clamp(24px,5vw,80px);align-items:start;padding:clamp(28px,4.5vw,64px) 0;border-top:1px solid var(--line)}
-.card h3{grid-row:1/span 2;font-size:clamp(2.8rem,8vw,7.4rem);line-height:.92;transition:color .3s,transform .5s cubic-bezier(.2,.7,.2,1)}
+.card h3{grid-row:1/span 2;font-size:clamp(2.4rem,5.6vw,4.8rem);line-height:.92;transition:color .3s,transform .5s cubic-bezier(.2,.7,.2,1)}
 .card p{grid-column:2;margin:0 0 1.2rem;max-width:46ch;font-size:1.15rem;line-height:1.5;color:var(--fg-soft)}
 .card .go,.card .soon{grid-column:2;align-self:end;margin:0;font-family:var(--ui);font-stretch:85%;font-weight:700;font-size:1.1rem}
 .card .soon{font-weight:500;color:var(--fg-soft)}
@@ -193,7 +193,7 @@ dialog button:hover{background:var(--on-night);color:var(--night)}
 /* ---------- contacto ---------- */
 .contact{position:relative;background:var(--night);color:var(--on-night);overflow:hidden;isolation:isolate}
 .contact::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 70% at 85% 105%,rgba(255,138,31,.2),transparent 70%)}
-.contact h2{font-size:clamp(3.4rem,11vw,10rem);letter-spacing:-.04em}
+.contact h2{font-size:clamp(3rem,7vw,6rem);letter-spacing:-.04em}
 .contact p{color:var(--on-night)}
 .contact a.mail{display:inline-block;font-family:var(--display);font-size:clamp(1.6rem,5.4vw,4.6rem);line-height:1.05;letter-spacing:-.03em;text-decoration-color:var(--lamp);text-decoration-thickness:3px;text-underline-offset:10px;word-break:break-all}
 .contact .links{margin-top:2.2rem}
@@ -210,7 +210,7 @@ footer{margin-top:clamp(56px,9vw,120px);padding-top:20px;border-top:1px solid rg
 /* ---------- páginas interiores ---------- */
 .phead{position:relative;padding:calc(var(--bar) + clamp(72px,14vh,160px)) 0 clamp(56px,9vw,112px);background:var(--night);color:var(--on-night);overflow:hidden;isolation:isolate}
 .phead::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 90% at 88% 0%,rgba(255,138,31,.2),transparent 62%),radial-gradient(60% 80% at 0% 100%,rgba(48,120,128,.16),transparent 60%)}
-.phead h1{font-size:clamp(3.8rem,12.5vw,11.5rem);line-height:.88;letter-spacing:-.045em;margin-bottom:.3em}
+.phead h1{font-size:clamp(3.2rem,9vw,7.5rem);line-height:.88;letter-spacing:-.045em;margin-bottom:.3em}
 .phead .lead{max-width:40ch;margin:0;font-size:clamp(1.3rem,2.2vw,1.8rem);line-height:1.35}
 .crumb{margin:0 0 1.6rem;font-family:var(--ui);font-stretch:85%;font-weight:500;font-size:1rem;color:var(--on-night-soft)}
 .crumb a{color:var(--on-night-soft);text-decoration-color:var(--lamp);text-underline-offset:4px}

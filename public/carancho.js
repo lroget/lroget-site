@@ -2,7 +2,7 @@
 /* Se apaga la luz: al pasar al tema oscuro, la pantalla cae a negro y lo que brilla aparece de a poco. */
 (function(){
   var tb=document.getElementById('themeBtn'),root=document.documentElement,meta=document.querySelector('meta[name="theme-color"]'),paso=false;
-  function color(){if(meta)meta.content=root.dataset.theme==='dark'?'#0e1012':'#eadfcb'}
+  function color(){if(meta)meta.content=root.dataset.theme==='dark'?'#14100d':'#eadfcb'}
   color();
   if(!tb)return;
   tb.addEventListener('click',function(e){
