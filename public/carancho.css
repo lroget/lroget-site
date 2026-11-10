@@ -361,3 +361,21 @@ html[data-theme="light"] .phead .inst-t{color:#b82000}
   .bar nav a.lang{right:var(--gutter)}
   .bar .wrap{padding-bottom:6px}
 }
+
+/* 10/11: fichas sobrias en Novedades y Encuentros destacados (año en franja superior, línea fina, sin relleno) */
+.hlg{gap:clamp(16px,2vw,24px)}
+html .destacados .hlc:nth-child(n),html .hlc{border:1px solid var(--ink-f)!important;border-image:none!important;background:transparent!important;padding:0!important;display:flex;flex-direction:column}
+.hlc .hy{margin:0!important;padding:9px 16px;border-bottom:1px solid var(--ink-f);font-family:var(--ui);font-stretch:85%;font-weight:700;font-size:.95rem;letter-spacing:.06em;color:var(--band-f)!important}
+.hlc h3,.hlc p:not(.hy){padding:0 16px}
+.hlc h3{padding-top:16px}
+.hlc>p:last-child{padding-bottom:18px}
+.novedades ul{display:grid;gap:16px;border-top:0}
+.novedades li .row{display:flex!important;flex-direction:column;gap:10px;padding:0!important;border:1px solid var(--ink-f);background:transparent;max-width:820px}
+.novedades li .row::after{display:none}
+.novedades .yr{display:block;white-space:normal;padding:9px 16px;border-bottom:1px solid var(--ink-f);font-size:.95rem!important;letter-spacing:.06em;color:var(--band-f)!important}
+.novedades .name,.novedades .what{padding:0 16px}
+.novedades .what{padding-bottom:18px}
+html[data-theme="light"]{--ink-f:rgba(21,18,17,.4);--band-f:#151211}
+html[data-theme="light"] .novedades{--band-f:#b82000}
+html[data-theme="dark"]{--ink-f:rgba(243,234,219,.28);--band-f:#ff5a2e}
+.novedades li .row>*{align-self:stretch}.novedades .yr{border-image:none!important;background:none!important}
