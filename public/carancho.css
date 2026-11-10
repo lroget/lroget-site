@@ -383,3 +383,15 @@ html[data-theme="dark"]{--ink-f:rgba(243,234,219,.28);--band-f:#ff5a2e}
 /* 10/11: el bloque naranja entra con corte recto y ondas de líneas (sin borde ondulado relleno) */
 html[data-theme="light"] .trips.trayectoria .ola{fill:var(--tinta)}
 .trips.trayectoria.con-ola{padding-top:clamp(8px,1.5vw,20px)}
+
+/* 10/11: imagen en cada tarjeta de proyecto (columna izquierda, debajo del título) */
+.card h3{grid-row:1}
+.card .card-img{grid-column:1;grid-row:2/span 8;margin:clamp(16px,2vw,28px) 0 0;align-self:start}
+.card .card-img img{display:block;width:100%;max-width:520px;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+@media (max-width:900px){.card .card-img{grid-row:auto;margin:16px 0 20px}}
+@media (min-width:901px){
+  .card>p:first-of-type{grid-row:1/span 2}
+  .card .card-img{grid-row:2/span 8}
+}
+/* cifras de ArgentiNat: Jost es más ancha que IM Fell y se pisaban */
+.counters.mini dd{font-size:clamp(1.4rem,2.1vw,1.9rem)!important;letter-spacing:0!important}
