@@ -415,3 +415,28 @@ html[data-theme] .counters .src,.counters .src{border:0!important;border-image:n
 @media (min-width:901px){
   .card:has(.card-img.logo)>p,.card:has(.card-img.logo)>.counters{max-width:none}
 }
+
+/* 10/11 (tarde): paleta completa y coherente en las páginas internas: rojo, petróleo y naranja por turnos (en oscuro, celeste en lugar de petróleo) */
+html[data-theme="light"]{--c2:var(--petroleo);--c3:var(--amber)}
+html[data-theme="dark"]{--c2:#6fc0d2;--c3:var(--amber)}
+main{--k:var(--accent-text)}
+main:has(>section.phead)>section:nth-of-type(3n+2){--trazo:var(--c2)}
+main:has(>section.phead)>section:nth-of-type(3n){--trazo:var(--c3)}
+/* líneas de tiempo (Comunicación, Encuentros, Novedades): un color por año */
+.yg:nth-child(3n+2){--k:var(--c2)}
+.yg:nth-child(3n){--k:var(--c3)}
+.yg .yh,.yg .yr{color:var(--k)}
+.yg .what a{text-decoration-color:var(--k)}
+html[data-theme] .tline .yg li:nth-child(n){--h:var(--k)}
+/* Instituciones: un color por grupo */
+.inst-g:nth-of-type(3n+2){--k:var(--c2)}
+.inst-g:nth-of-type(3n){--k:var(--c3)}
+.inst-g .yr{color:var(--k)}
+.inst-g .tx a{text-decoration-color:var(--k)}
+.inst-g h2::after{background:var(--k)}
+/* Destacados */
+.hlc:nth-child(3n+2){--k:var(--c2)}
+.hlc:nth-child(3n){--k:var(--c3)}
+.hlc{box-shadow:inset 0 4px 0 var(--k)!important}
+.hlc .hy{color:var(--k)!important}
+.hlc .hlk a{text-decoration-color:var(--k)}
