@@ -275,3 +275,23 @@ html[data-theme="dark"] .bosque i:nth-child(3n){background:#2a8f5e}
 /* ArgentiNat: cinco datos en toda la fila */
 .datos.cinco{grid-column:1/-1;grid-template-columns:repeat(5,minmax(0,1fr));gap:0 clamp(12px,2vw,28px)}
 @media (max-width:820px){.datos.cinco{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* 10/11 (tarde): paleta completa en las páginas de proyecto (rojo, petróleo, naranja) y números con relleno, sin trazo */
+.pj{--c2:var(--petroleo)}
+html[data-theme="dark"] .pj{--c2:#6fc0d2}
+.pj .ficha{--fc:var(--accent-text)}
+.pj article.ficha:nth-of-type(2){--fc:var(--c2)}
+.pj article.ficha:nth-of-type(3){--fc:var(--amber)}
+.pj article.ficha:nth-of-type(4){--fc:var(--c2)}
+.pj .ficha .num{color:var(--fc)}
+.pj .ficha .num b{color:var(--fc);-webkit-text-stroke:0}
+.pj .ficha+.ficha::before{background:var(--fc)}
+.pj .ficha a{text-decoration-color:var(--fc)}
+.pj .ficha .fuente .y{color:var(--fc)}
+.pj .datos div:nth-child(3n+2) dt{color:var(--c2)}
+.pj .datos div:nth-child(3n) dt{color:var(--amber)}
+html:not([data-theme="light"]) .pj .datos div:nth-child(3n+2){border-top-color:var(--c2)}
+html:not([data-theme="light"]) .pj .datos div:nth-child(3n){border-top-color:var(--amber)}
+.pj .frase p em{color:var(--c2)}
+.pj .roles li:nth-child(even) .y{color:var(--c2)}
+.pj .roles li:nth-child(3n) .y{color:var(--amber)}
