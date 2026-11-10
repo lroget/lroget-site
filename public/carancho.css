@@ -395,3 +395,6 @@ html[data-theme="light"] .trips.trayectoria .ola{fill:var(--tinta)}
 }
 /* cifras de ArgentiNat: Jost es más ancha que IM Fell y se pisaban */
 .counters.mini dd{font-size:clamp(1.4rem,2.1vw,1.9rem)!important;letter-spacing:0!important}
+
+/* 10/11: logos redondos en las tarjetas de proyecto de la home (reemplazan las fotos) */
+.card .card-img.logo img{width:clamp(150px,18vw,240px);height:auto;max-width:none;aspect-ratio:1/1;border-radius:50%;object-fit:cover}
