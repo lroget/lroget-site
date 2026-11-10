@@ -409,3 +409,9 @@ html[data-theme] .counters .src,.counters .src{border:0!important;border-image:n
   .card:has(.card-img.logo) .card-img.logo{grid-column:1;grid-row:1/span 10;margin:0;align-self:center;justify-self:center}
 }
 @media (max-width:900px){.card .card-img.logo{justify-self:center;margin:8px 0 24px}}
+
+/* 10/11: tarjetas de proyecto en la home: texto a todo el ancho de su celda y titulos un nivel por debajo de "Proyectos" */
+.projects .card h3{font-size:clamp(1.9rem,3.6vw,3.1rem);line-height:1}
+@media (min-width:901px){
+  .card:has(.card-img.logo)>p,.card:has(.card-img.logo)>.counters{max-width:none}
+}
