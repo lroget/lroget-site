@@ -1,6 +1,8 @@
 /* lroget.com — capa visual. Noche de campo: oscuridad, una sola luz (naranja carancho), imagen a sangre. */
 
 @font-face{font-family:"IM Fell DW Pica";src:url(/fonts/imfell-dwpica-latin-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Jost Display";src:url(/fonts/jost-latin-600-normal.woff2) format("woff2");font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:"Jost Display";src:url(/fonts/jost-latin-700-normal.woff2) format("woff2");font-weight:600 900;font-style:normal;font-display:swap}
 @font-face{font-family:"Slackside One";src:url(/fonts/slackside-one-latin-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Bricolage";src:url(/fonts/bricolage-latin-wdth.woff2) format("woff2");font-weight:200 800;font-stretch:75% 100%;font-style:normal;font-display:swap}
 @font-face{font-family:"Noto Serif";src:url(/fonts/notoserif-latin-wght.woff2) format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
@@ -24,7 +26,7 @@
   --accent:#ff8a1f;
   --accent-text:#ff8a1f;
 
-  --display:"IM Fell DW Pica","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --display:"Jost Display","Futura","Iowan Old Style","Palatino Linotype",Georgia,serif;
   --ui:"Bricolage","Arial Narrow",Arial,sans-serif;
   --body:"Noto Serif",Georgia,"Times New Roman",serif;
 
@@ -464,3 +466,9 @@ main h2::after,.trips.trayectoria h2::after,.trips.trayectoria main h2::after,.h
 .fotos figure{margin:0;min-width:0}
 .fotos img{display:block;width:100%;height:auto}
 .fotos figcaption{padding-top:8px;font-family:var(--ui);font-stretch:85%;font-size:.95rem;color:var(--fg-soft)}
+
+/* Títulos en Jost (10/11): Jost Display usa el peso 600 donde antes había IM Fell 400. Tracking más abierto que con IM Fell. */
+.hero h1{letter-spacing:-.02em;line-height:.86}
+.phead h1{letter-spacing:-.02em}
+.contact h2{letter-spacing:-.02em}
+.contact a.mail,.counters dd{letter-spacing:-.01em}
