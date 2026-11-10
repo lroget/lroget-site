@@ -261,3 +261,13 @@ html[data-theme="dark"] .bosque i:nth-child(3n){background:#2a8f5e}
 @media (max-width:520px){.diseno .muro{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 .diseno h3.sub{margin:clamp(36px,5vw,64px) 0 0;font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,3vw,2.4rem)}
+
+/* ArgentiNat: manifiesto sin foto, listas con fecha */
+.manifiesto.solo .wrap{grid-template-columns:minmax(0,1fr)}
+.manifiesto.solo p{max-width:56ch}
+.fuente li{margin:0 0 1rem}
+.fuente .y{font-weight:700;color:var(--accent-text);white-space:nowrap}
+.ficha .fuente .what,.prose .fuente .what{font-family:var(--body);font-stretch:100%;font-size:clamp(1.05rem,1.3vw,1.2rem);line-height:1.5;color:var(--fg)}
+.ficha .fuente a,.prose .fuente a{white-space:nowrap}
+.ficha.sola .fuente{max-width:760px}
+.ph-hero h1.largo{font-size:clamp(3rem,7.4vw,7.4rem)}
