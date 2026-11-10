@@ -303,3 +303,6 @@ ul.inst-l{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 /* Fotos de las entradas: normales, a color, sin recorte */
 .fotos .wrap{align-items:start}
 .fotos img{border-radius:4px}
+
+/* Prueba: títulos en Slackside One */
+h1,h2,h3{font-family:"Slackside One",var(--display)}
