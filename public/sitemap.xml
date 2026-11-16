@@ -79,6 +79,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/institutions/"/>
   </url>
 <!--entradas-->
+  <url><loc>https://lroget.com/encuentros/vicente-lopez-escuelas-sustentables/</loc><lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/encuentros/vicente-lopez-escuelas-sustentables/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/gatherings/vicente-lopez-escuelas-sustentables/"/>
+  </url>
+  <url><loc>https://lroget.com/en/gatherings/vicente-lopez-escuelas-sustentables/</loc><lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/encuentros/vicente-lopez-escuelas-sustentables/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/gatherings/vicente-lopez-escuelas-sustentables/"/>
+  </url>
   <url><loc>https://lroget.com/encuentros/talleres-y-capacitaciones-en-misiones/</loc><lastmod>2026-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lroget.com/encuentros/talleres-y-capacitaciones-en-misiones/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lroget.com/en/gatherings/talleres-y-capacitaciones-en-misiones/"/>
