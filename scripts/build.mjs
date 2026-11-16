@@ -1,5 +1,6 @@
 // Genera la línea de tiempo y las páginas de entrada a partir de content/trayectoria.
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {ocultar} from './ocultar.mjs';
 import {join} from 'node:path';
 import {marked} from 'marked';
 import {leer} from './contenido.mjs';
@@ -171,3 +172,4 @@ if(process.env.SITE_STAGING==='1') writeFileSync('public/_headers','/*\n  X-Robo
 const pend=items.filter(i=>i.pendiente).map(i=>i.slug);
 if(pend.length) console.warn('Traducción pendiente:',pend.join(', '));
 console.log(items.length,'entradas;',items.filter(hasPage).length,'con página');
+ocultar();
