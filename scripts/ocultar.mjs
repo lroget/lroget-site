@@ -4,7 +4,7 @@
 import {readFileSync,writeFileSync,rmSync,existsSync,readdirSync,statSync} from 'node:fs';
 import {join} from 'node:path';
 const OCULTOS=['argentinat','bioma','coa-carancho'];
-const INSTITUCIONES=true;
+const INSTITUCIONES = false;
 const enCI=process.env.WORKERS_CI||process.env.CI;
 const activo=process.env.OCULTAR_PROYECTOS==='1'||(enCI&&process.env.SITE_STAGING!=='1');
 export function ocultar(pub='public'){
