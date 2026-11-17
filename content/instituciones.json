@@ -834,13 +834,14 @@
   {
    "id": "wikimedia",
    "grupo": "redes",
+   "anio": "2021",
    "nombre": {
     "es": "Wikimedia Argentina",
     "en": "Wikimedia Argentina"
    },
    "rotulo": {
-    "es": "Editatón organizada por mí. Fotos mías ilustran artículos de Wikipedia.",
-    "en": "An edit-a-thon I organized. My photos illustrate Wikipedia articles."
+    "es": "Junto con Wikimedia Argentina, organicé una editatón para crear y mejorar artículos de Wikipedia sobre especies de Argentina, empezando por las más observadas en ArgentiNat. Fue del 20 al 24 de julio de 2021, con el Museo de La Plata y el Museo Argentino de Ciencias Naturales.",
+    "en": "Together with Wikimedia Argentina, I organized an edit-a-thon to create and improve Wikipedia articles on species of Argentina, starting with those most observed in ArgentiNat. It ran from 20 to 24 July 2021, with the Museo de La Plata and the Museo Argentino de Ciencias Naturales."
    },
    "muro": true
   },
