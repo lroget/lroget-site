@@ -58,7 +58,7 @@
     "en": "National Geographic Society"
    },
    "rotulo": {
-    "es": "Explorer y grant para lanzar ArgentiNat.",
+    "es": "Tengo el honor de ser Explorador de National Geographic. Con mi grant se creó y lanzó ArgentiNat, el nodo para Argentina de iNaturalist.\n\nGracias a National Geographic además tuve la oportunidad de participar del Primer Taller Latinoamericano sobre Ciencia Ciudadana (Ciudad de México, 2018), del Segundo Encuentro Latinoamericano de la red iNaturalist (Mérida, 2019) y de un Leadership Training para Explorers en Montevideo (2025).",
     "en": "Explorer, and the grant to launch ArgentiNat."
    },
    "muro": true
@@ -90,7 +90,7 @@
     "en": "MACN-CONICET (Argentine Museum of Natural Sciences)"
    },
    "rotulo": {
-    "es": "Lanzamiento de ArgentiNat en el museo y subsidio de ciencia ciudadana.",
+    "es": "ArgentiNat se presentó a sala llena en el auditorio del Museo. Además, en 2023 colaboré con el MACN para obtener un subsidio de fortalecimiento a la ciencia ciudadana, que permitió realizar una gira por Tucumán y Catamarca para presentar la plataforma, y una expedición por profesionales del Museo a Misiones, hecho que derivó en el registro de cuatro especies de arañas sin registros científicos publicados para Argentina.",
     "en": "ArgentiNat's launch at the museum, and a citizen science grant."
    },
    "muro": true
@@ -180,8 +180,8 @@
     "en": "Agreement to use ArgentiNat."
    },
    "corto": {
-    "es": "Fundación Natura",
-    "en": "Fundación Natura"
+    "es": "Fundación Naturaleza",
+    "en": "Fundación Naturaleza"
    },
    "muro": false
   },
@@ -360,7 +360,7 @@
     "en": "MinCyT (Ministry of Science, Technology and Innovation)"
    },
    "rotulo": {
-    "es": "Subsidio de ciencia ciudadana para ArgentiNat.",
+    "es": "Recibí un subsidio de fomento a la ciencia ciudadana entregado por el (ex) Ministerio de Ciencia, Tecnología e Innovación. Los fondos fueron gestionados por el MACN-CONICET y permitieron realizar una gira por Tucumán y Catamarca para difundir el uso de la plataforma en el NOA, y una expedición por investigadores del MACN a Misiones, que derivó en el registro de cuatro especies de arañas sin registros científicos publicados para Argentina.",
     "en": "Citizen science grant for ArgentiNat."
    },
    "corto": {
@@ -871,7 +871,7 @@
     "en": "Perfil"
    },
    "rotulo": {
-    "es": "Nota escrita por mí.",
+    "es": "“ArgentiNat: la innovadora plataforma digital donde la ciudadanía identifica biodiversidad”. Colaboración.",
     "en": "An article I wrote."
    },
    "muro": true
@@ -886,7 +886,7 @@
     "en": "Revista Endémico"
    },
    "rotulo": {
-    "es": "Reseña de libros.",
+    "es": "Reseña de libros. Colaboración.",
     "en": "Book review."
    },
    "muro": true
