@@ -15,7 +15,7 @@ function fila(it,lang){
   const lg=logo(it), nombre=esc(it.nombre[lang]);
   const mk=`<span class="mk">${lg?`<img src="${lg}" alt="${nombre}" loading="lazy">`:""}</span>`;
   const link=it.pagina?` <a href="${P[it.pagina]}">${T.ver}</a>.`:'';
-  return `<li id="${it.id}">${mk}<div class="tx"><h3>${nombre}</h3><p>${esc(it.rotulo[lang])}${link}</p></div><span class="yr">${esc(it.anio||'')}</span></li>`;
+  return `<li id="${it.id}">${mk}<div class="tx"><h3>${nombre}</h3>${esc(it.rotulo[lang]).split(/\n\n+/).map((t,k,a)=>`<p>${t}${k===a.length-1?link:''}</p>`).join('')}</div><span class="yr">${esc(it.anio||'')}</span></li>`;
 }
 function logoNube(it,lang){
   const P=PAGES[lang], lg=logo(it), nombre=esc((it.corto&&it.corto[lang])||it.nombre[lang].replace(/ \(.*\)$/,''));
